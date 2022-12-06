@@ -1,0 +1,2 @@
+# Docs
+The Smithed Docs

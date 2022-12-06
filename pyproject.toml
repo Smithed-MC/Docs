@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "smithed-docs"
+version = "0.1.0"
+description = "Smithed Docs"
+authors = ["Smithed Council <team@smithed.dev>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "smithed_docs"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mudkip = "^0.8.0"
+sphinx_design = "^0.3.0"
+sphinx-pyproject = "^0.1.0"
+
+[tool.mudkip]
+preset = "furo"
+title = "smithed-docs"
+
+[tool.mudkip.override]
+html_title = "Smithed Documentation"
+html_logo = "assets/icon.png"
+html_favicon = "assets/favicon.ico"
+suppress_warnings = ["myst.header"]
+extensions = ["sphinx_design"]
+myst_enable_extensions = ["colon_fence"]
+html_static_path = ['_static']
+html_css_files = ["css/custom.css"]
+
+[tool.mudkip.override.html_theme_options]
+sidebar_hide_name = true
+
+[tool.mudkip.override.html_theme_options.light_css_variables]
+color-brand-primary = "#1b48c4"
+color-brand-content = "#1b48c4"
+font-stack = "Inconsolata, sans-serif"
+
+[tool.mudkip.override.html_theme_options.dark_css_variables]
+color-brand-primary = "#6b83c5"
+color-brand-content = "#6b83c5"
+font-stack = "Inconsolata, sans-serif"
+# color-background-primary = "#282a2c"
+# color-background-secondary = "#12121f"
+# color-admonition-background = "#1b48c4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

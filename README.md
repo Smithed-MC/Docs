@@ -1,2 +1,1 @@
-# Docs
-The Smithed Docs
+# Smithed Wiki

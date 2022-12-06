@@ -1,0 +1,50 @@
+name: Docs
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "pyproject.toml"
+
+jobs:
+  main:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Cache poetry
+        id: cache-poetry
+        uses: actions/cache@v3
+        with:
+          path: ~/.local
+          key: poetry-${{ runner.os }}
+      - name: Install poetry
+        if: steps.cache-poetry.outputs.cache-hit != 'true'
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-in-project: true
+      - name: Cache venv
+        id: cache-venv
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
+          restore-keys: |
+            venv-${{ runner.os }}-
+      - name: Install dependencies
+        if: steps.cache-venv.outputs.cache-hit != 'true'
+        run: poetry install
+      - name: Build and deploy documentation
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
+          poetry run mudkip build --check --skip-broken-links --update-gh-pages --repository https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}

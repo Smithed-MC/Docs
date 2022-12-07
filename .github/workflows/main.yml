@@ -62,11 +62,6 @@ jobs:
       #----------------------------------------------
       #  -----       build & deploy docs       -----
       #----------------------------------------------
-      - name: Generate library Docs
-        run: |
-          beet -p libraries.yaml
-          cp dist/* docs/libraries/*
-
       - name: Build and deploy documentation
         run: |
           git config --global user.name "github-actions"

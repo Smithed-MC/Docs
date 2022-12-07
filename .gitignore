@@ -10,3 +10,5 @@ docs/_build/
 .DS_Store
 .beet_cache
 .vscode
+
+dist

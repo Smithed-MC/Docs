@@ -5,13 +5,13 @@ description = "Smithed Docs"
 authors = ["Smithed Council <team@smithed.dev>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "smithed_docs"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 mudkip = "^0.8.0"
 sphinx_design = "^0.3.0"
 sphinx-pyproject = "^0.1.0"
+smithed-libraries = {git = "https://github.com/Smithed-MC/Libraries/"}
 
 [tool.mudkip]
 preset = "furo"
@@ -23,9 +23,13 @@ html_logo = "assets/icon.png"
 html_favicon = "assets/favicon.ico"
 suppress_warnings = ["myst.header"]
 extensions = ["sphinx_design"]
-myst_enable_extensions = ["colon_fence"]
-html_static_path = ['_static']
-html_css_files = ["css/custom.css"]
+myst_enable_extensions = ["substitution", "colon_fence"]
+html_static_path = ["_static"]
+html_css_files = [
+    "css/custom.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+]
+exclude_patterns = ["libraries/actionbar/*", "libraries/damage/*", "libraries/prevent-aggression/*"]
 
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true

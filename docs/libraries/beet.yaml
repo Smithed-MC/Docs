@@ -1,0 +1,14 @@
+output: .
+
+data_pack:
+  load:
+    - "@smithed_libraries/packs/actionbar"
+    - "@smithed_libraries/packs/crafter"
+    - "@smithed_libraries/packs/crafter-addon"
+    - "@smithed_libraries/packs/damage"
+    - "@smithed_libraries/packs/item"
+    - "@smithed_libraries/packs/prevent-aggression"
+
+pipeline:
+  - smithed_libraries.plugins.documentation
+  - beet.contrib.clear

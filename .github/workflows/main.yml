@@ -15,23 +15,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      #----------------------------------------------
+      #  -----          gather repo            -----
+      #----------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v3
+
+      #----------------------------------------------
+      #  -----     install python & poetry     -----
+      #----------------------------------------------
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
+
       - name: Cache poetry
         id: cache-poetry
         uses: actions/cache@v3
         with:
           path: ~/.local
           key: poetry-${{ runner.os }}
+
       - name: Install poetry
         if: steps.cache-poetry.outputs.cache-hit != 'true'
         uses: snok/install-poetry@v1
         with:
           virtualenvs-in-project: true
+
+      #----------------------------------------------
+      #  -----       install dependencies      -----
+      #----------------------------------------------
       - name: Cache venv
         id: cache-venv
         uses: actions/cache@v3
@@ -40,9 +54,19 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
           restore-keys: |
             venv-${{ runner.os }}-
+
       - name: Install dependencies
         if: steps.cache-venv.outputs.cache-hit != 'true'
         run: poetry install --no-root
+
+      #----------------------------------------------
+      #  -----       build & deploy docs       -----
+      #----------------------------------------------
+      - name: Generate library Docs
+        run: |
+          beet -p libraries.yaml
+          cp dist/* docs/libraries/*
+
       - name: Build and deploy documentation
         run: |
           git config --global user.name "github-actions"

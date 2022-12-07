@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths:
+      - ".github/workflows/main.yml"
       - "docs/**"
       - "README.md"
       - "pyproject.toml"
@@ -63,6 +64,7 @@ jobs:
       #  -----       build & deploy docs       -----
       #----------------------------------------------
       - name: Build and deploy documentation
+        continue-on-error: true
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"

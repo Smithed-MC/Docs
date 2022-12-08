@@ -55,7 +55,7 @@ We use simple aspects of bolt within our libraries' source as well!
 
 ---
 
-::::{grid} 3
+::::{grid} 1 1 2 3
 :gutter: 4
 
 ```{grid-item-card}

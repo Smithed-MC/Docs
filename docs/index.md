@@ -11,7 +11,7 @@ These docs are heavily in-progress and may rapidly change as we improve them. Pl
 
 -----
 
-::::{grid} 2
+::::{grid} 1 2 2 2
 :gutter: 3
 
 ```{grid-item-card}

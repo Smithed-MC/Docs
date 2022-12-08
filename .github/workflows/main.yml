@@ -63,7 +63,7 @@ jobs:
         run: poetry install --no-root
       
       - name: Install dependencies
-        if: github.event.event_type == "update-libraries"
+        if: github.event.event_type == 'update-libraries'
         run: |
           echo "Re-installing `smithed-libraries` to gather updated api docs"
           poetry run pip install git+https://github.com/Smithed-MC/Libraries

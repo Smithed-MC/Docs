@@ -2,6 +2,8 @@ name: Docs
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [update-libraries]
   push:
     branches: [main]
     paths:
@@ -59,6 +61,12 @@ jobs:
       - name: Install dependencies
         if: steps.cache-venv.outputs.cache-hit != 'true'
         run: poetry install --no-root
+      
+      - name: Install dependencies
+        if: github.event.event_type == "update-libraries"
+        run: |
+          echo "Re-installing `smithed-libraries` to gather updated api docs"
+          poetry run pip install git+https://github.com/Smithed-MC/Libraries
 
       #----------------------------------------------
       #  -----       build & deploy docs       -----

@@ -55,4 +55,6 @@ Much of the libraries source, especially API docs are written alongside the actu
 
 ## Endnote
 
-While sphinx has a ton of customizabillity options, the core of good documentation are purely well written pieces of text which simply and accurately explain behavior. We are always looking to improve our docs so do not fret to make suggestions and refinements. We will work our best to integrate the best pieces of work so our docs can accurately describe the Smithed project as a whole.
+The core of good documentation is based on well written text which simplify complex behavior. While we use use many fancy bells and whistles from Sphinx, there's no need to overcomplicate the purpose of these docs and let that not dissuade you from making contributions.
+
+We are always looking to improve our docs so please do not fret to make suggestions and refinements. We will work our best to integrate the best pieces of work so our docs can accurately describe the Smithed ecosystem to the best of our abilities.

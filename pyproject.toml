@@ -15,6 +15,7 @@ smithed-libraries = {git = "https://github.com/Smithed-MC/Libraries/"}
 
 [tool.mudkip]
 preset = "furo"
+base_url = "https://wiki.smithed.dev"
 title = "smithed-docs"
 
 [tool.mudkip.override]

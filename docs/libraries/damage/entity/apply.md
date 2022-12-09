@@ -10,7 +10,7 @@ scoreboard players set @s smithed.damage 3    # Does 1.5 damage (3 half-hearts)
 function #smithed.damage:entity/apply         # Apply the damage
 ```
 
-To apply damage that respects armor, use their specific commands:
-* [`function #smithed.damage:entity/apply/armor`](apply/armor.md): Respects armor, protection, and resistance
-* [`function #smithed.damage:entity/apply/explosion`](apply/explosion.md): Respects the same as `armor`, but blast protection as well
-* [`function #smithed.damage:entity/apply/projectile`](apply/projectile.md): Respects the same as `armor`, but projectile protection as well
+To apply damage that respects armor, use their specific commands:  
+* [`function #smithed.damage:entity/apply/armor`](apply/armor.md): Respects armor, protection, and resistance  
+* [`function #smithed.damage:entity/apply/explosion`](apply/explosion.md): Respects the same as `armor`, but blast protection as well  
+* [`function #smithed.damage:entity/apply/projectile`](apply/projectile.md): Respects the same as `armor`, but projectile protection as well  

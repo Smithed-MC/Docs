@@ -1332,7 +1332,7 @@ pydantic = "^1.10.2"
 type = "git"
 url = "https://github.com/Smithed-MC/Libraries/"
 reference = "HEAD"
-resolved_reference = "349c7167302633e49c6b83b118c65c26ce8b72e4"
+resolved_reference = "7bf02377ac2bb57bbe9dd4c5ad8bf93d0e5e3e1c"
 
 [[package]]
 name = "sniffio"

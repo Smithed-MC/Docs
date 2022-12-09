@@ -37,6 +37,11 @@
 ```{include} damage/entity/apply.md
 ```
 
+## Custom Death Messages Events
+```{include} damage/player/damage_messages.md
+```
+
+
 ## Damage Events
 ```{include} damage/player/damage_events.md
 ```

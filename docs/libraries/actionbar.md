@@ -1,4 +1,5 @@
 # Actionbar
+> A small library that helps to coordinate actionbar usage across various data packs
 
 ::::{grid} 2
 
@@ -22,8 +23,7 @@
 
 ::::
 
-## Message
-Actionbar has one main API route: `#smithed.actionbar:message`. 
+## `#smithed.actionbar:message`
 
 ```{include} actionbar/message.md
 ```

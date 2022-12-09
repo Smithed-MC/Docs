@@ -29,10 +29,13 @@ html_css_files = [
     "css/custom.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 ]
+pygments_style = "zenburn"
+pygments_dark_style = "material"
 exclude_patterns = ["libraries/actionbar/*", "libraries/damage/*", "libraries/prevent-aggression/*"]
 
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true
+announcement = "Checkout our brand new <em>docs</em>!"
 
 [tool.mudkip.override.html_theme_options.light_css_variables]
 color-brand-primary = "#1b48c4"

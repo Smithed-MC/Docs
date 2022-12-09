@@ -3,7 +3,7 @@
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://smithed.dev/packs/smithed/damage
+```{button-link} https://api.smithed.dev/download?pack=smithed:damage
 :color: primary
 :outline:
 :expand:

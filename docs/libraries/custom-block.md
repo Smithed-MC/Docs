@@ -3,7 +3,7 @@
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://smithed.dev/packs/smithed/custom-block
+```{button-link} https://api.smithed.dev/download?pack=smithed:custom-block
 :color: primary
 :outline:
 :expand:

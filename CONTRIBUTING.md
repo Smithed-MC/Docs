@@ -53,8 +53,57 @@ Much of the libraries source, especially API docs are written alongside the actu
     - Instead, use `##` or `###` and below for hierachy.
     - This ensures the sidebar doesn't get polluted with internal markings.
 
+### `mcfunction` syntax
+
+Instead of using raw, vanilla syntax, we bend the rules of the original syntax slightly for legibility:
+  - Commands longer than 80 characters are often seperated into multiple lines
+  - Multiple files (such as loot tables or functions) are represented in the same file
+
+Here is an example of how that usually looks:
+```mcfunction
+execute as @a if score @s my_obj matches 10 if entity @s {Health: 20.0f} run function namespace:hello_world
+
+# namespace:hello_world
+scoreboard players set @s my_obj 10
+tag @s remove self
+tellraw @a [{"text": "Really long tellraw", "color": "blue"}, {"text": "like, really, really long", "color": "yellow"}, {"text": "like whoa"}]
+```
+*versus*
+```mcfunction
+execute
+    as @a
+    if score @s my_obj matches 10
+    if entity @s {Health: 20.0f}
+    run function namespace:hello_world
+        scoreboard players set @s my_obj 10
+        tag @s remove self
+        tellraw @a [
+            {"text": "Really long tellraw", "color": "blue"},
+            {"text": "like, really, really long", "color": "yellow"},
+            {"text": "like whoa"}
+        ]
+```
+
+The commands in sphinx are handled by [pygments](https://github.com/pygments/pygments), a python-based syntax highlighter. You can explore how `mcfunction` gets highlighted by checking out the project and testing out the highlighter by itself!
+
+In terms of how we control multi-line commands:
+  - `execute` should stand on it's own lines with each sub-command on their own line
+  - Long `json` components can be split as if it's an embedded `.json` file.
+  - Other containers such as long selectors or nbt can be treated similar to `.json` files.
+  - Embedded files such as loot tables and functions should be written in an indented fashion:
+
+```{code-block} mcfunction
+:force:
+loot_table minecraft:entity/zombie {"hello": "world"}
+function namespace:other:
+    command 1
+    command 2
+```
+
+> All code examples across this documentation are actually based on the [bolt](https://github.com/mcbeet/bolt) format which means they can compile directly into normal commands!
+
 ## Endnote
 
-The core of good documentation is based on well written text which simplify complex behavior. While we use use many fancy bells and whistles from Sphinx, there's no need to overcomplicate the purpose of these docs and let that not dissuade you from making contributions.
+The core of good documentation is based on well written text. While we use use many fancy bells and whistles from Sphinx, there's no need to overcomplicate the purpose of these docs and so don't let that dissuade you from making contributions!
 
 We are always looking to improve our docs so please do not fret to make suggestions and refinements. We will work our best to integrate the best pieces of work so our docs can accurately describe the Smithed ecosystem to the best of our abilities.

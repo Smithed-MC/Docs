@@ -1,4 +1,4 @@
-# Prevent Aggression
+# Prevent Aggression (v{{ prevent_aggression_version }})
 
 ::::{grid} 2
 

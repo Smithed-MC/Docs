@@ -1,4 +1,4 @@
-# Enchanter
+# Enchanter (v{{ enchanter_version }})
 ```{admonition} 🚧 In Construction 🚧
 :class: warning
 

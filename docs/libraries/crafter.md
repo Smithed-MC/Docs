@@ -1,4 +1,4 @@
-# Crafter
+# Crafter (v{{ crafter_version }})
 
 ::::{grid} 2
 

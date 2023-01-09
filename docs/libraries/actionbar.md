@@ -1,4 +1,4 @@
-# Actionbar
+# Actionbar (v{{ actionbar_version }})
 > A small library that helps to coordinate actionbar usage across various data packs
 
 ::::{grid} 2
@@ -23,7 +23,14 @@
 
 ::::
 
-## `#smithed.actionbar:message`
+### `#smithed.actionbar:message`
 
 ```{include} actionbar/message.md
+```
+
+## Events / Extras
+
+### `#smithed.actionbar:event/player/on_click_locked_container`
+
+```{include} actionbar/player/on_click_locked_container.md
 ```

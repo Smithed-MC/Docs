@@ -11,7 +11,11 @@ python = "^3.10"
 mudkip = "^0.8.0"
 sphinx_design = "^0.3.0"
 sphinx-pyproject = "^0.1.0"
-smithed-libraries = {git = "https://github.com/Smithed-MC/Libraries/"}
+smithed-libraries = "^0.2.0"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.28.1"
+tomlkit = "^0.11.6"
 
 [tool.mudkip]
 preset = "furo"
@@ -22,21 +26,35 @@ title = "smithed-docs"
 html_title = "Smithed Documentation"
 html_logo = "assets/icon.png"
 html_favicon = "assets/favicon.ico"
-suppress_warnings = ["myst.header"]
-extensions = ["sphinx_design"]
+
 myst_enable_extensions = ["substitution", "colon_fence"]
+extensions = ["sphinx_design"]
+
 html_static_path = ["_static"]
 html_css_files = [
     "css/custom.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 ]
+
 pygments_style = "zenburn"
 pygments_dark_style = "material"
+suppress_warnings = ["myst.header"]
+
 exclude_patterns = ["libraries/actionbar/*", "libraries/damage/*", "libraries/prevent-aggression/*"]
+
+[tool.mudkip.override.myst_substitutions]
+actionbar_version = "0.2.0"
+custom_block_version = "0.1.0"
+crafter_addon_version = "0.1.0"
+prevent_aggression_version = "0.1.1"
+damage_version = "0.1.0"
+crafter_version = "0.1.0"
+item_version = "0.1.0"
+enchanter_version = "0.1.0"
 
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true
-announcement = "Checkout our brand new <em>docs</em>!"
+announcement = "New docs on !"
 
 [tool.mudkip.override.html_theme_options.light_css_variables]
 color-brand-primary = "#1b48c4"

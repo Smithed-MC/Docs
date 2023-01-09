@@ -1,4 +1,4 @@
-# Custom Block
+# Custom Block (v{{ custom_block_version }})
 
 ::::{grid} 2
 

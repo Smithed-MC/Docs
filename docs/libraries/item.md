@@ -1,4 +1,4 @@
-# Item
+# Item (v{{ item_version }})
 
 ::::{grid} 2
 

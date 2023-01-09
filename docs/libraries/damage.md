@@ -1,4 +1,4 @@
-# Damage
+# Damage (v{{ damage_version }})
 > This library implements complex damage calculation math in order to emulate applying damage to both players and entities
 
 ::::{grid} 2

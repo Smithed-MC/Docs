@@ -118,68 +118,68 @@ We use simple parts of bolt within our libraries' source as well!
 ::::{grid} 1 1 2 3
 :gutter: 4
 
-```{grid-item-card}
+:::{grid-item-card}
 :link: actionbar
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/actionbar/pack.png
 
-Actionbar
+Actionbar ・ v{{ actionbar_version }}
 ^^^
 
 **Required** for packs that use the actionbar as it coordinates actiobar usage across data packs.
-```
+:::
 
-```{grid-item-card}
+:::{grid-item-card}
 :link: crafter
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/crafter/pack.png
 
-Crafter
+Crafter ・ v{{ crafter_version }}
 ^^^
 
 Provides a polished custom crafting block for you to use.
-```
+:::
 
-```{grid-item-card}
+:::{grid-item-card}
 :link: custom-block
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/custom-block/pack.png
 
-Custom Block
+Custom Block ・ v{{ custom_block_version }}
 ^^^
 
 A customizable API to make custom blocks easier to work with.
-```
+:::
 
-```{grid-item-card}
+:::{grid-item-card}
 :link: damage
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/damage/pack.png
 
-Damage
+Damage ・ {{ damage_version }}
 ^^^
 
 Allows you to apply score-based damage values to both players and entities
-```
+:::
 
-```{grid-item-card}
+:::{grid-item-card}
 :link: prevent-aggression
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/prevent-aggression/pack.png
 
-Prevent Aggression
+Prevent Aggression ・ {{ prevent_aggression_version }}
 ^^^
 
 Simply protects custom wandering traders from aggressive zombies
-```
+:::
 
-```{grid-item-card}
+:::{grid-item-card}
 :link: item
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/item/pack.png
 
-Item
-^^^
+Item ・ {{ item_version }}
+:::
 
 *TODO*
 ```

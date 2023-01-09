@@ -11,6 +11,9 @@ on:
       - "docs/**"
       - "README.md"
       - "pyproject.toml"
+  
+env:
+  MC_VERSION: '1.19'
 
 jobs:
   main:
@@ -73,6 +76,8 @@ jobs:
       #----------------------------------------------
       - name: Build and deploy documentation
         run: |
+          poetry run beet -p docs/libraries
+          echo "https://github.com/Smithed-MC/Libraries/blob/releases/$MC_VERSION/manifest.json"
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"
           poetry run mudkip build --update-gh-pages --repository https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}

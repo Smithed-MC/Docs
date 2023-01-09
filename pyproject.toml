@@ -54,7 +54,7 @@ enchanter_version = "0.1.0"
 
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true
-announcement = "New docs on !"
+announcement = "<a href='api'> New API docs! <a/>"
 
 [tool.mudkip.override.html_theme_options.light_css_variables]
 color-brand-primary = "#1b48c4"

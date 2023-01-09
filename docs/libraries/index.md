@@ -179,10 +179,10 @@ Simply protects custom wandering traders from aggressive zombies
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/item/pack.png
 
 Item ・ {{ item_version }}
-:::
+^^^
 
 *TODO*
-```
+:::
 
 ::::
 

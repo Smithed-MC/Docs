@@ -18,7 +18,6 @@ requests = "^2.28.1"
 tomlkit = "^0.11.6"
 
 [tool.mudkip]
-preset = "furo"
 base_url = "https://wiki.smithed.dev"
 title = "smithed-docs"
 
@@ -26,9 +25,10 @@ title = "smithed-docs"
 html_title = "Smithed Documentation"
 html_logo = "assets/icon.png"
 html_favicon = "assets/favicon.ico"
+html_theme = "furo"
 
-myst_enable_extensions = ["substitution", "colon_fence"]
 extensions = ["sphinx_design"]
+myst_enable_extensions = ["substitution", "colon_fence"]
 
 html_static_path = ["_static"]
 html_css_files = [

@@ -113,6 +113,7 @@ conventions/index
 libraries/index
 weld/index
 launcher/index
+api/index
 meta/contributing
 ```
 

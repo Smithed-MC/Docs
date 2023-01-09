@@ -1,1 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+.sidebar-drawer {
+    width: 15em !important;
+}
+
+.content {
+    width: 100% !important;
+}

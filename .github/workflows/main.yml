@@ -65,7 +65,7 @@ jobs:
         if: steps.cache-venv.outputs.cache-hit != 'true'
         run: poetry install --no-root
       
-      - name: Install dependencies
+      - name: Update `smithed-libraries`
         if: github.event.event_type == 'update-libraries'
         run: |
           echo "Re-installing `smithed-libraries` to gather updated api docs"
@@ -77,7 +77,7 @@ jobs:
       - name: Build and deploy documentation
         run: |
           poetry run beet -p docs/libraries
-          echo "https://github.com/Smithed-MC/Libraries/blob/releases/$MC_VERSION/manifest.json"
+          poetry run python .github/workflows/load-manifest.py
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"
           poetry run mudkip build --update-gh-pages --repository https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}

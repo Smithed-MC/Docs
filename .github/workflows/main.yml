@@ -76,7 +76,6 @@ jobs:
       #----------------------------------------------
       - name: Build and deploy documentation
         run: |
-          poetry run beet -p docs/libraries
           poetry run python .github/workflows/load-manifest.py
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"

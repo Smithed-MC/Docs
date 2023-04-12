@@ -43,10 +43,10 @@ suppress_warnings = ["myst.header"]
 exclude_patterns = ["libraries/actionbar/*", "libraries/damage/*", "libraries/prevent-aggression/*"]
 
 [tool.mudkip.override.myst_substitutions]
-actionbar_version = "0.2.0"
+actionbar_version = "0.3.0"
 custom_block_version = "0.1.0"
 crafter_addon_version = "0.1.0"
-prevent_aggression_version = "0.1.1"
+prevent_aggression_version = "0.1.2"
 damage_version = "0.1.0"
 crafter_version = "0.1.0"
 item_version = "0.1.0"

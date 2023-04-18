@@ -21,7 +21,7 @@ Reference for data structures used within the api server
 ```
 
 ```{grid-item-card}
-:link: routes.md
+:link: routes
 :link-type: doc
 
 Routes

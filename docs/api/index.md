@@ -21,13 +21,13 @@ Reference for data structures used within the api server
 ```
 
 ```{grid-item-card}
-:link: content-manangement.md
+:link: routes.md
 :link-type: doc
 
-Content Management
+Routes
 ^^^
 
-APIs to manage and edit content hosted on the Smithed platform
+Documentation for all API Routes available through the platform
 ```
 
 ::::
@@ -38,5 +38,5 @@ APIs to manage and edit content hosted on the Smithed platform
 ```{toctree}
 :hidden:
 data-types
-content-management
+routes
 ```

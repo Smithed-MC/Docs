@@ -61,7 +61,7 @@ The valid semver version number to assign
 #### Body Parameters
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-dark}`data` <label class="sd-text-secondary">[PackVersion](/api/data-types#packdata)</label>
+{bdg-dark}`data` <label class="sd-text-secondary">[PackVersion](/api/data-types)</label>
 The data to add to the list
 
 

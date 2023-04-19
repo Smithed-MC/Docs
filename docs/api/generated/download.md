@@ -12,7 +12,7 @@ This route facilitates the download and merging of packs off of the platform.
 The ID (uid or plaintext) of the pack to merge. A specific version can be specified with the following format `<id>@<version>`. Version can be a semver comparison.
 Many packs can be downloaded by specifiying the parameter multiple times
 
-{bdg-dark}`version` <label class="sd-text-secondary">[MinecraftVersion](/api/data-types#packdata)?</label>
+{bdg-dark}`version` <label class="sd-text-secondary">[MinecraftVersion](/api/data-types)?</label>
 The targeted version of Minecraft. Any packs that do not have atleast 1 version supporting this will be skipped.
 
 {bdg-dark}`mode` <label class="sd-text-secondary">'datapack'|'resourcepack'|'both' = 'both'</label>

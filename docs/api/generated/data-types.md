@@ -40,3 +40,43 @@
   categories: PackCategory[]
 }
 ```
+### PackMetaData
+```ts
+{
+  docId: string
+  rawId: string
+  stats: {
+    updated: number?
+    added: number
+    downloads: {
+      total: number
+      today: number
+    }
+  }
+  owner: string
+  contributors: string[]
+}
+```
+### PackBundle
+```ts
+{
+  owner: string
+  name: string
+  version: MinecraftVersion
+  packs: PackReference[]
+  public: boolean
+  uid: string?
+}
+```
+### UserData
+```ts
+{
+  displayName: string
+  cleanName: string
+  uid: string
+}
+```
+### SortOptions
+```ts
+'trending' | 'downloads' | 'alphabetically' | 'newest'
+```

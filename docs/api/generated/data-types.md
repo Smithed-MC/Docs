@@ -11,7 +11,7 @@
 ```
 ### MinecraftVersion
 ```ts
-'1.17' | '1.17.1' | '1.18' | '1.18.1' | '1.18.2' | '1.19' | '1.19.4'
+'1.17' | '1.17.1' | '1.18' | '1.18.1' | '1.18.2' | '1.19' | '1.19.4' | '1.20' | '1.20.1'
 ```
 ### PackVersion
 ```ts
@@ -73,6 +73,7 @@
 {
   displayName: string
   cleanName: string
+  creationTime: number
   uid: string
 }
 ```

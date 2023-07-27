@@ -40,13 +40,41 @@
 
 ::::
 
-## Data types
-
-```{include} crafter/data_types.md
+```{admonition} Disclaimer 
+:class: warning 
+This documentation is extremely technical and using it may require the usage of third party libraries.
 ```
 
-## Functions tag
+---
 
-```{include} crafter/functions_tag.md
+::::{grid} 1 1 2 2
+```{grid-item-card}
+:link: data_types
+:link-type: doc
+
+Data Types
+^^^
+
+Reference for data structures used for crafting recipes
 ```
+
+```{grid-item-card}
+:link: function_tag
+:link-type: doc
+
+Function Tag
+^^^
+
+Documentation for the implementing crafting recipes
+```
+
+::::
+
+---
+
+
+```{toctree}
+:hidden:
+data_types
+function_tag
 ```

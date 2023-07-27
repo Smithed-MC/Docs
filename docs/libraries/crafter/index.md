@@ -42,7 +42,7 @@
 
 ```{admonition} Disclaimer 
 :class: warning 
-This documentation is extremely technical and using it may require the usage of third party libraries.
+This documentation is extremely technical.
 ```
 
 ---

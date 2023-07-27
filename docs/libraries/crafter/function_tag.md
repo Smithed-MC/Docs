@@ -95,3 +95,13 @@ Where ShapelessRecipe is :
     {id:"minecraft:flint",Count:1b}
 ]
 ```
+
+
+## Advanced uses :
+A list of advanced uses of the crafter library.
+
+- [Flags](https://github.com/Smithed-MC/Libraries/blob/main/smithed_libraries/packs/crafter/data/smithed.crafter/functions/impl/block/table/crafting/output/clear_input/advanced.mcfunction) To register custom flags when crafting to use tools, empty buckets, etc...
+- [Item Tags](https://github.com/Smithed-MC/Libraries/blob/main/smithed_libraries/packs/crafter/data/smithed.crafter/functions/impl/block/table/crafting/input/query_tags.mcfunction) To register custom items tags
+- [Custom crafting table](https://github.com/Smithed-MC/Libraries/blob/main/smithed_libraries/packs/crafter/data/smithed.crafter/functions/impl/block/table/break/drop_item.mcfunction) To register your own crafting table.
+
+

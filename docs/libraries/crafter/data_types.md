@@ -68,23 +68,19 @@ A list of items and with a count for each item and no slots.
 
 #### Format :
 ```ts
-{
-    shapeless_crafting_input:Item[]
-}
+Item[]
 ```
 
 
 
 #### Example with a 4 items recipe :
 ```SNBT
-{
-    shapeless_crafting_input:[
-        {id:"minecraft:barrel",Count:1b},
-        {id:"minecraft:iron_nugget",Count:1b},
-        {id:"minecraft:book",Count:1b},
-        {item_tag:["#minecraft:planks"],Count:1b}
-    ]
-}
+[
+    {id:"minecraft:barrel",Count:1b},
+    {id:"minecraft:iron_nugget",Count:1b},
+    {id:"minecraft:book",Count:1b},
+    {item_tag:["#minecraft:planks"],Count:1b}
+]
 ```
 
 

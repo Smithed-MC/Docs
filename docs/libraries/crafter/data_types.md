@@ -28,7 +28,7 @@ A modified version of vanilla SNBT. The Count and Slot tags may or may not be re
 ```SNBT
 {
     Count:1b,
-    tag:{ctc:{from:"airdox_:simpledrawer",id:"drawer"}}
+    tag:{smithed:{id:"airdox_:simpledrawer/drawer"}}
 }
 ```
 

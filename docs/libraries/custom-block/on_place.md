@@ -11,7 +11,7 @@ This library tracks the full block data of the placed block in data storage `smi
 
 
 
-### Example Implementation
+### Example Implementation :
 `function: example:give_custom_block`
 ```mcfunction
 give @s barrel{

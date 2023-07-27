@@ -130,7 +130,7 @@ Actionbar ・ v{{ actionbar_version }}
 :::
 
 :::{grid-item-card}
-:link: crafter
+:link: crafter/index
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/crafter/pack.png
 
@@ -209,7 +209,7 @@ Repo where the source for all the libraries are located.
 ```{toctree}
 :hidden:
 actionbar
-crafter
+crafter/index
 custom-block
 damage
 prevent-aggression

@@ -11,7 +11,7 @@ A function tag to implement shaped recipes.
 
 
 ### Format :
-Register your recipes in the function tag like this:
+The function tag will be called, implement your recipes like this
 
 ```mcfunction
 execute 
@@ -61,8 +61,7 @@ A function tag to implement shapeless recipes.
 
 
 ### Format :
-Register your recipes in the function tag like this:
-
+The function tag will be called, implement your recipes like this
 ```mcfunction
 execute 
     # Success of the craft (for performance)
@@ -74,5 +73,25 @@ execute
     if data storage smithed.crafter:input recipe<ShapelessRecipe>
     # The result of the recipe
     run loot replace block ~ ~ ~ container.16 loot example:my_craft_shapeless
+```
 
+
+### Examples :
+
+#### Flint and Copper :
+
+```mcfunction
+execute 
+    store result score @s smithed.data 
+    if entity @s[scores={smithed.data=0}] 
+    if score count smithed.data matches 2
+    if data storage smithed.crafter:input recipe<ShapelessRecipe>
+    run loot replace block ~ ~ ~ container.16 loot example:flint_and_copper
+```
+Where ShapelessRecipe is :
+```SNBT
+[
+    {id:"minecraft:copper_ingot",Count:1b},
+    {id:"minecraft:flint",Count:1b}
+]
 ```

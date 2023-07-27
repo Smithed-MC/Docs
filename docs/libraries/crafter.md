@@ -12,7 +12,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter-addon/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter/
 :color: primary
 :outline:
 :expand:
@@ -39,3 +39,14 @@
 :::
 
 ::::
+
+## Data types
+
+```{include} crafter/data_types.md
+```
+
+## Functions tag
+
+```{include} crafter/functions_tag.md
+```
+```

@@ -12,7 +12,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter-addon/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter/
 :color: primary
 :outline:
 :expand:
@@ -39,3 +39,42 @@
 :::
 
 ::::
+
+```{admonition} Disclaimer 
+:class: warning 
+This documentation is extremely technical.
+```
+
+---
+
+::::{grid} 1 1 2 2
+```{grid-item-card}
+:link: data_types
+:link-type: doc
+
+Data Types
+^^^
+
+Reference for data structures used for crafting recipes
+```
+
+```{grid-item-card}
+:link: function_tag
+:link-type: doc
+
+Function Tag
+^^^
+
+Documentation for the implementing crafting recipes
+```
+
+::::
+
+---
+
+
+```{toctree}
+:hidden:
+data_types
+function_tag
+```

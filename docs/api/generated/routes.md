@@ -47,6 +47,9 @@
 ```{include} generated/users/id.md
 ```
 
+```{include} generated/users/id/pfp.md
+```
+
 ```{include} generated/users/id/packs.md
 ```
 

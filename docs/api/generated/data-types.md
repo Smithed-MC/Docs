@@ -75,6 +75,7 @@
   cleanName: string
   creationTime: number
   uid: string
+  pfp: string?
 }
 ```
 ### SortOptions

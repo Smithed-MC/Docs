@@ -23,6 +23,9 @@ How far into the queries should be counted
 {bdg-dark}`category` <label class="sd-text-secondary">[PackCategory](/api/data-types)[]?</label>
 Which categories should the pack be a part of
 
+{bdg-dark}`version` <label class="sd-text-secondary">[MinecraftVersion](/api/data-types)[]?</label>
+Which versions should the pack support
+
 {bdg-dark}`hidden` <label class="sd-text-secondary">boolean = false</label>
 Should unlisted packs be returned.
 

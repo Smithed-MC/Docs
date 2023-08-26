@@ -1,4 +1,5 @@
 # Custom Block (v{{ custom_block_version }})
+> A customizable API to make custom blocks easier to work with.
 
 ::::{grid} 2
 
@@ -21,3 +22,10 @@
 :::
 
 ::::
+
+
+### `#smithed.custom_block:event/on_place`
+
+```{include} custom-block/on_place.md
+```
+

@@ -43,7 +43,7 @@ How to properly override vanilla assets to be **Weld** Compatible
 Tag Specification
 ^^^
 
-A set of custom tags to respect while interacting with entities
+A set of custom tags to respect while interacting with blocks, entities, and items
 ```
 
 ::::

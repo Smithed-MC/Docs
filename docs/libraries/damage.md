@@ -1,4 +1,9 @@
 # Damage (v{{ damage_version }})
+
+```{caution}
+This library is deprecated as of Minecraft 1.20 with the introduction of the `/damage` command.
+```
+
 > This library implements complex damage calculation math in order to emulate applying damage to both players and entities
 
 ::::{grid} 2

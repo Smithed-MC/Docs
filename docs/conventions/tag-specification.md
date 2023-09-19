@@ -1,4 +1,14 @@
+---
+myst:
+  substitutions:
+    summary:  "Standarized tags to specify on your custom entities and items"
+    required: "On any custom entity or item you add. Also for selectors selecting arbitrary entities"
+    example:  "Transforming zombies into a custom frozen zombie would need a `smithed.entity` tag"
+---
+
 # Tag Specification
+{{ convention_header }}
+
 Smithed contains a set of standardized entity and item tags to help protect and indicate custom behavior to other packs. These allow packs to understand which blocks, entities, and items are normal and which ones are "custom."
 
 ## Custom Entities

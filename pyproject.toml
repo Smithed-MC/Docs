@@ -28,7 +28,7 @@ html_logo = "assets/icon.png"
 html_favicon = "assets/favicon.ico"
 html_theme = "furo"
 
-extensions = ["sphinx_design"]
+extensions = ["sphinx_design", "sphinx.ext.autosectionlabel"]
 myst_enable_extensions = ["substitution", "colon_fence"]
 
 html_static_path = ["_static"]
@@ -53,9 +53,40 @@ crafter_version = "0.2.0"
 item_version = "0.2.1"
 enchanter_version = "0.1.0"
 
+convention_header = """
+::::{grid} 2 2 2 2
+:class-container: sd-p-2 sd-pl-3 sd-outline-muted sd-border-1 sd-rounded-1 sd-outline-muted
+
+:::{grid-item}
+:columns: 10 2 2 2
+**Summary**
+:::
+:::{grid-item}
+:columns: 10
+{{ summary }}
+:::
+:::{grid-item}
+:columns: 10 2 2 2
+**Required**
+:::
+:::{grid-item}
+:columns: 10
+{{ required }}
+:::
+:::{grid-item}
+:columns: 10 2 2 2
+**Example**
+:::
+:::{grid-item}
+:columns: 10
+{{ example }}
+:::
+::::
+"""
+
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true
-announcement = "<a href='api'> New API docs! <a/>"
+announcement = "<a href='/api'> New API docs! <a/>"
 
 [tool.mudkip.override.html_theme_options.light_css_variables]
 color-brand-primary = "#1b48c4"
@@ -69,6 +100,9 @@ font-stack = "Inconsolata, sans-serif"
 # color-background-primary = "#282a2c"
 # color-background-secondary = "#12121f"
 # color-admonition-background = "#1b48c4"
+
+[tool.poe.tasks]
+dev = "mudkip develop"
 
 [build-system]
 requires = ["poetry-core"]

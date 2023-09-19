@@ -3,3 +3,7 @@
 .sidebar-drawer {
     width: 15em !important;
 }
+
+.admonition.toggle-hidden button::before {
+    display: none !important;
+}

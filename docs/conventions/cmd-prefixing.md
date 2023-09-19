@@ -1,4 +1,14 @@
+---
+myst:
+  substitutions:
+    summary:  "Formatting your `CustomModelData` to avoid clashing with other packs"
+    required: "Any usage of the `CustomModelData` field on custom items"
+    example:  "Items from The Creeper's Code should have `CustomModelData` beginning with `033`"
+---
+
 # CMD Prefixing
+{{ convention_header }}
+
 ```{admonition} 🚧 In Construction 🚧
 :class: warning
 

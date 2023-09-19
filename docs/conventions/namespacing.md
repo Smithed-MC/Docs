@@ -1,4 +1,14 @@
+---
+myst:
+  substitutions:
+    summary:  "Adding friendly prefixes to names of content in your pack"
+    required: "On file paths, tags, scores, teams, and storage"
+    example:  "`tcc` as a namespace for the `tcc.dummy` scoreboard"
+---
+
 # Namespacing
+{{ convention_header }}
+
 Namespacing is when you prefix your content with something in order to prevent the collision of names.
 
 Your packs should have a consistent and clear namespace which can be attributed towards you. These can be based off of your pack name, your author name, some sort of abbreviation commonly attributed towards your pack, etc.

@@ -17,6 +17,16 @@ How to name your tags, scores, and more!
 ```
 
 ```{grid-item-card}
+:link: pack-ids
+:link-type: doc
+
+Pack IDs
+^^^
+
+Extra metadata to include in your `pack.mcmeta`
+```
+
+```{grid-item-card}
 :link: cmd-prefixing
 :link-type: doc
 
@@ -62,6 +72,7 @@ Many of these ideas were curated and refined from the Minecraft Datapack Discord
 ```{toctree}
 :hidden:
 namespacing
+pack-ids
 cmd-prefixing
 vanilla-overrides
 tag-specification

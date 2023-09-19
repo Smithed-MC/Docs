@@ -27,7 +27,7 @@ print(versions)
 # Load into MyST subsitutions (usable inside docs)
 print("Loading into `pyproject.toml`")
 config = toml.loads(pyproject.read_text())
-config["tool"]["mudkip"]["override"]["myst_substitutions"] = versions
+config["tool"]["mudkip"]["override"]["myst_substitutions"] |= versions
 pyproject.write_text(toml.dumps(config))
 
 print("Done!")

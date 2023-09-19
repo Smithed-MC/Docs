@@ -86,7 +86,7 @@ convention_header = """
 
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true
-announcement = "<a href='/api'> New API docs! <a/>"
+announcement = "<a href='/weld'> Checkout the in-depth weld docs! <a/>"
 
 [tool.mudkip.override.html_theme_options.light_css_variables]
 color-brand-primary = "#1b48c4"

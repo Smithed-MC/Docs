@@ -69,12 +69,13 @@ tag @s remove self
 tellraw @a [{"text": "Really long tellraw", "color": "blue"}, {"text": "like, really, really long", "color": "yellow"}, {"text": "like whoa"}]
 ```
 *versus*
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute
     as @a
     if score @s my_obj matches 10
     if entity @s {Health: 20.0f}
-    run function namespace:hello_world
+    run function namespace:hello_world:
         scoreboard players set @s my_obj 10
         tag @s remove self
         tellraw @a [

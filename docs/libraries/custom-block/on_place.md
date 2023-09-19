@@ -26,11 +26,12 @@ give @s barrel{
 
 
 `function: example:on_place`
-```mcfunction
+```{code-block} mcfunction
+:force:
 # check if this is my custom block
 execute 
     if data storage smithed.custom_block:main {blockApi:{id:"example:my_custom_block"}}
-    run function example:my_custom_block/place
+    run function example:my_custom_block/place:
         # Handle the custom block placement (the command is executed at the block location, and as the player)
         # You have to remove the first item in the block entity tag (if the block is a container)
         # And adding an entity at the block location

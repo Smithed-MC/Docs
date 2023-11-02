@@ -9,7 +9,7 @@ This library is deprecated as of Minecraft 1.20 with the introduction of the `/d
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://api.smithed.dev/download?pack=smithed:damage
+```{button-link} https://api.smithed.dev/v2/download?pack=damage
 :color: primary
 :outline:
 :expand:

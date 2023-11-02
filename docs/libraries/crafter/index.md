@@ -3,7 +3,7 @@
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://api.smithed.dev/download?pack=smithed:crafter
+```{button-link} https://api.smithed.dev/v2/download?pack=crafter
 :color: primary
 :outline:
 :expand:
@@ -21,7 +21,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://api.smithed.dev/download?pack=smithed:crafter-addon
+```{button-link} https://api.smithed.dev/v2/download?pack=crafter-addon
 :color: primary
 :outline:
 :expand:

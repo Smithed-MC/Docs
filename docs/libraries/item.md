@@ -3,7 +3,7 @@
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://api.smithed.dev/download?pack=smithed:item
+```{button-link} https://api.smithed.dev/v2/download?pack=item
 :color: primary
 :outline:
 :expand:

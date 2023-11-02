@@ -3,7 +3,7 @@
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://api.smithed.dev/download?pack=smithed:prevent-aggression
+```{button-link} https://api.smithed.dev/v2/download?pack=prevent-aggression
 :color: primary
 :outline:
 :expand:

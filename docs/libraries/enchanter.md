@@ -8,7 +8,7 @@ This page isn't complete yet, check back often for future updates!
 ::::{grid} 2
 
 :::{grid-item}
-```{button-link} https://api.smithed.dev/download?pack=smithed:enchanter
+```{button-link} https://api.smithed.dev/v2/download?pack=enchanter
 :color: primary
 :outline:
 :expand:

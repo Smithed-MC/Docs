@@ -9,7 +9,7 @@ myst:
 # Vanilla Overrides
 {{ convention_header }}
 
-One rough edge of compatibility between data packs are the vanilla namespaced resources. The default game's biomes, loot tables, advancements — these are difficult to override as other packs might clash causing a lost of behavior. We have solved this problem by integrating a custom merging solution into [**Weld**](weld).
+One rough edge of compatibility between data packs are the vanilla namespaced resources. The default game's biomes, loot tables, advancements — these are difficult to override as other packs might clash causing a loss of behavior. We have solved this problem by integrating a custom merging solution into [**Weld**](weld).
 
 **Weld** is a tool to help merge data and resource packs in an efficient manner. Similar to how the game automatically merges tag files, **Weld** allows you to define extra metadata to define how you would like your JSON-type files to merge. This allows you to define an override which is **compatible** with other weld-enabled packs!
 

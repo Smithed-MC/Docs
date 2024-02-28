@@ -13,7 +13,7 @@ Weld is mainly available as a web-app [here](https://weld.smithed.dev).
 Weld is also a command-line tool that requires Python 3.10+ or higher to run. We recommend [`pipx`](https://pypa.github.io/pipx/) as the preferred way to install `weld`.
 
 ```bash
-pipx install weld
+pipx install smithed
 ```
 
 Once installed, you can run `weld` from the command line.

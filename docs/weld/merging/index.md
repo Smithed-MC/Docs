@@ -26,6 +26,10 @@ At the base of `__smithed__`, you can define the following fields.
 The Smithed data model has a ton of reasonable defaults so there's no need to overwelm youself with every fields' functionality. The abundunce is here for flexibility *when you need it*!
 ```
 
+## Other
+
+Additionally, there are some extra details you can include in the [pack.mcmeta](mcmeta.md) of your project.
+
 ---
 
 ```{toctree}
@@ -34,4 +38,5 @@ rule
 source
 priority
 condition
+mcmeta
 ```

@@ -1,4 +1,4 @@
-# `pack.mcmeta``
+# `pack.mcmeta`
 
 In the `pack.mcmeta`, you can define a `__smithed__` field.
 

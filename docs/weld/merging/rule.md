@@ -20,7 +20,7 @@ The type of rule to apply. A `weld:` can be prefixed on the rule type.
 ### `merge`, `append`, `prepend`, `insert`, `replace`
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-info-line}`source` <code class="sd-text-secondary">Source</code> - A source definition which specifies the data to append/prepend to the target.
+{bdg-info-line}`source` <code class="sd-text-secondary">[Source](/weld/merging/source)</code> - A source definition which specifies the data to append/prepend to the target.
 
 ### `append`/`prepend`
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>

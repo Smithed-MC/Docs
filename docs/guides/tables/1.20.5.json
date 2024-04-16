@@ -63,6 +63,9 @@
   ],
   "random_sequence": "minecraft:blocks/yellow_shulker_box",
   "__smithed__": {
+    "priority": {
+      "stage": "early"
+    },
     "rules": [
       {
         "type": "append",

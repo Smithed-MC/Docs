@@ -1,7 +1,7 @@
-## /packs/:id
+## /packs/:id/contributors
 ### {bdg-success}`GET`
 
-Retrieve a pack's data
+Get a list of contributors to a pack
 
 
 #### URL Parameters
@@ -16,7 +16,7 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">PackData</label>
+{bdg-primary}`OK - 200` <label class="sd-text-secondary">string</label>
 
 {bdg-primary}`NOT_FOUND - 404` <label class="sd-text-secondary">ApiError</label>
 
@@ -25,19 +25,19 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Fetch a packs's data
+::::{admonition} Set a packs's data
     :class: note        
 ```ts
-fetch('https://api.smithed.dev/v2/packs/coc')
+fetch('https://api.smithed.dev/v2/packs/coc/contributors')
 ```
 ::::
 
 <br/>
 
 
-### {bdg-success}`PATCH/PUT`
+### {bdg-success}`POST`
 
-Update a pack's data
+Add a list of contributors to a pack
 
 
 #### URL Parameters
@@ -53,12 +53,8 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 {bdg-dark}`token` <label class="sd-text-secondary">string</label>
 Either Firebase Id Token or a valid PAT
 
+{bdg-dark}`contributors` <label class="sd-text-secondary">string[]</label>
 
-
-#### Body Parameters
-<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
-
-{bdg-dark}`data` <label class="sd-text-secondary">[PackData](/api/data-types)</label>
 
 
 
@@ -81,10 +77,8 @@ Either Firebase Id Token or a valid PAT
 ::::{admonition} Set a packs's data
     :class: note        
 ```ts
-fetch('https://api.smithed.dev/v2/packs/coc?token=NOT_TODAY_HAHA', {
-  method:'PATCH',
-  body: {data: <Pack Data>},
-  headers: {'Content-Type': 'application/json'}
+fetch('https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&contributors=CreeperMagnet_', {
+  method:'POST'
 })
 ```
 ::::
@@ -94,7 +88,7 @@ fetch('https://api.smithed.dev/v2/packs/coc?token=NOT_TODAY_HAHA', {
 
 ### {bdg-success}`DELETE`
 
-Delete a specific pack
+Remove a list of contributors from a pack
 
 
 #### URL Parameters
@@ -109,6 +103,8 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 
 {bdg-dark}`token` <label class="sd-text-secondary">string</label>
 Either Firebase Id Token or a valid PAT
+
+{bdg-dark}`contributors` <label class="sd-text-secondary">string[]</label>
 
 
 
@@ -132,7 +128,7 @@ Either Firebase Id Token or a valid PAT
 ::::{admonition} Set a packs's data
     :class: note        
 ```ts
-fetch('https://api.smithed.dev/v2/packs/coc?token=NOT_TODAY_HAHA', {
+fetch('https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&contributors=CreeperMagnet_', {
   method:'DELETE'
 })
 ```

@@ -40,7 +40,7 @@ html_static_path = ["_static"]
 
 pygments_dark_style = "material"
 pygments_style = "zenburn"
-suppress_warnings = ["myst.header"]
+suppress_warnings = ["myst.header", "autosectionlabel.*"]
 
 exclude_patterns = ["libraries/actionbar/*", "libraries/damage/*", "libraries/prevent-aggression/*"]
 

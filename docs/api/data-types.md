@@ -1,4 +1,4 @@
 # Data Types
 
-```{include} generated/data-types.md
+```{include} generated/data-types.inc
 ```

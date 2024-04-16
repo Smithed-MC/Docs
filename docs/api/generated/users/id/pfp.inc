@@ -1,21 +1,14 @@
-## /bundles/:id/download
+## /users/:id/pfp
 ### {bdg-success}`GET`
 
-Download a pack bundle. This route wraps `/download` and returns the same information.
+Retrieve a specific user's pfp
 
 
 #### URL Parameters
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
 **id**:
-The bundle's UID, unlike packs and users, bundles do not have a plaintext ID
-
-
-#### Query Parameters
-<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
-
-{bdg-dark}`mode` <label class="sd-text-secondary">'datapack' | 'resourcepack' | 'both' = 'both'</label>
-Which files should be downloaded from the API.
+The user's UID or plain text username. Using UID is more performant as it is a direct lookup.
 
 
 
@@ -32,10 +25,10 @@ Which files should be downloaded from the API.
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Download a bundle's resourcepack
+::::{admonition} Fetch a user's pfp
     :class: note        
 ```ts
-fetch('https://api.smithed.dev/v2/bundles/123456789/download?mode=resourcepack')
+fetch('https://api.smithed.dev/v2/users/TheNuclearNexus/pfp')
 ```
 ::::
 

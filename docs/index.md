@@ -39,13 +39,13 @@ A novel way of merging packs providing extra compatibility benefits
 ```
 
 ```{grid-item-card}
-:link: launcher/index
+:link: guides/index
 :link-type: doc
 
-📱 ・ Launcher
+📝 ・ Guides
 ^^^
 
-Our official launcher for an all-in-one experience
+Distilled guides for specific pack making techniques
 ```
 
 ::::

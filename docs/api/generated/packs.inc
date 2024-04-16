@@ -29,23 +29,26 @@ Which versions should the pack support
 {bdg-dark}`hidden` <label class="sd-text-secondary">boolean = false</label>
 Should unlisted packs be returned.
 
+{bdg-dark}`scope` <label class="sd-text-secondary">string[]?</label>
+A list of variable lookups starting with `data.` or `meta.`
+
 
 
 
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">string[]</label>
+{bdg-primary}`OK - 200` <label class="sd-text-secondary">{id: string, displayName: string, data?: any, meta?: any}</label>
 
 
 
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Get a list of packs that are marked as Extensive
+::::{admonition} Get a list of packs that are marked as Extensive and their descriptions
     :class: note        
 ```ts
-fetch('https://api.smithed.dev/v2/packs?category=Extensive')
+fetch('https://api.smithed.dev/v2/packs?category=Extensive&scope=data.display.description')
 ```
 ::::
 

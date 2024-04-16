@@ -36,7 +36,7 @@ What should be downloaded, if both is specified then the datapack and resourcepa
 ::::{admonition} Download packs
     :class: note        
 ```ts
-fetch('https://api.smithed.dev/v2/download?pack=tcc&pack=manic&version=1.19)
+fetch('https://api.smithed.dev/v2/download?pack=tcc&pack=manic&version=1.19')
 ```
 ::::
 

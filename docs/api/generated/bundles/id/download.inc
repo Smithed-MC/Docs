@@ -17,6 +17,10 @@ The bundle's UID, unlike packs and users, bundles do not have a plaintext ID
 {bdg-dark}`mode` <label class="sd-text-secondary">'datapack' | 'resourcepack' | 'both' = 'both'</label>
 Which files should be downloaded from the API.
 
+{bdg-dark}`version` <label class="sd-text-secondary">string? = '</label>
+'
+Which version of the bundle to download
+
 
 
 

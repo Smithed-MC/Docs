@@ -1,12 +1,12 @@
 # Yellow Shulker Box
 > An ancient technique empowering data pack artists since 1.14
 
-Shulker boxes normally drop themselves containing their contents inside. In 1.14, new loot table changes have allowed us to directly drop their contents into the world. Using a standardized loot table, we can directly use commands such as `loot replace` to simulate the shulker box breaking and drop items into the player's inventory, ender chest, and more. Over the years, new techniques were introduce (e.g. item modifiers) to be able to modify items within the player inventory which are more convinent but at times, we've still relied on this table for our player item data manipulation needs.
+Shulker boxes normally drop themselves containing their contents inside. In 1.14, new loot table changes have allowed us to directly drop their contents into the world. Using a standardized loot table, we can directly use commands such as `loot replace` to simulate the shulker box breaking and drop items into the player's inventory, ender chest, and more. Over the years, new techniques were introduce (e.g. item modifiers) to be able to modify items within the player inventory which are more convinient, but at times, we've still relied on this table for our player item data manipulation needs.
 
-Normally, this loot table will function 1:1 with vanilla (just dropping the shulker box containing it's contents). If the shulker box is mined with a specific item containing custom data, `{drop_contents: 1b}`, it'll drop the contents itself instead. Generally, pack creators use a shulker box stuffed aware in a force loaded chunk (often outside the max world border), where they stuff items into the shulker box and inject into the player's inventory.
+Normally, this loot table will function 1:1 with vanilla (just dropping the shulker box containing it's contents). If the shulker box is mined with a specific item containing custom data, `{drop_contents: 1b}`, it'll drop the contents itself instead. Generally, pack creators use a shulker box stuffed away in a force loaded chunk (often outside the max world border), where they stuff items into the shulker box and inject into the player's inventory.
 
 ```{important}
-It's critical that pack creators using this loot table use the exact same table since this directly overrides the in-game table. Otherwise, behavior is not consistent due to pack order, especially if the methodology changed between tables.
+It's critical that pack creators using this loot table use the exact same table since this directly overrides the in-game table. Otherwise, behavior is not consistent due to pack order, especially if the methodology changes between tables.
 ```
 
 ```{hint}

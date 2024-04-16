@@ -8,5 +8,5 @@ Guides are new and in-construction. Check back later to see what we are cooking 
 
 ```{toctree}
 :caption: Guides
-yellow_shulker_box
+yellow-shulker-box
 ```

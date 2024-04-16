@@ -3,12 +3,6 @@
 
 Welcome to the Smithed ecosystem, a tool for Minecraft: Java Edition pack developers. Our ecosystem includes a database of packs, a launcher for easy installation, and a set of standards to improve compatibility between packs. Whether you're a seasoned pack developer or just starting out, Smithed has something to offer.
 
-```{admonition} 🚧 In Construction 🚧
-:class: warning
-
-These docs are heavily in-progress and may rapidly change as we improve them. Please let us know in our Discord if you have any ideas or suggestions!
-```
-
 -----
 
 ::::{grid} 1 2 2 2
@@ -114,6 +108,7 @@ libraries/index
 weld/index
 launcher/index
 api/index
+guides/index
 meta/contributing
 ```
 

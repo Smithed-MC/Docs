@@ -22,5 +22,5 @@
 
 ::::
 
-```{include} prevent_aggression/team.md
+```{include} prevent-aggression/team.md
 ```

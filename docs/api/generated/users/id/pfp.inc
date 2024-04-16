@@ -8,7 +8,7 @@ Retrieve a specific user's pfp
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
 **id**:
-The user's UID or plaintext username. Using UID is more performant as it is a direct lookup.
+The user's UID or plain text username. Using UID is more performant as it is a direct lookup.
 
 
 

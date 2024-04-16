@@ -47,7 +47,7 @@ Additionally, the loot table has abandoned the `air` item since this is no longe
 
 ::::
 
-::::{dropdown} 1.18-1.20.4
+::::{dropdown} 1.18 - 1.20.4
 
 ```{literalinclude} tables/1.18-1.20.4.json
 :language: json
@@ -63,7 +63,7 @@ Additionally, the loot table has abandoned the `air` item since this is no longe
 
 ::::
 
-::::{dropdown} 1.14-1.16
+::::{dropdown} 1.14 - 1.16
 
 ```{literalinclude} tables/1.14-1.16.json
 :language: json

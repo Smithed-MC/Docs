@@ -27,7 +27,7 @@ A modified version of vanilla SNBT. The count and Slot tags may or may not be re
 ```
 ```SNBT
 {
-    Count:1b,
+    count:1,
     components:{"minecraft:custom_data":{
         smithed:{id:"airdox_:simpledrawer/drawer"}
     }}

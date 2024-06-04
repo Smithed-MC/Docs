@@ -62,5 +62,8 @@
 ```{include} generated/users/id/packs.inc
 ```
 
+```{include} generated/users.inc
+```
+
 ```{include} generated/validate-download.inc
 ```

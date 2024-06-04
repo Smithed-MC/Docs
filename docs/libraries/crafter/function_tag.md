@@ -48,7 +48,7 @@ execute
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 
     if data storage smithed.crafter:input recipe<ShapedRecipe>
-    if data storage smithed.crafter:main root.temp{crafting_input:{2:[]}} 
+    if data storage smithed.crafter:input recipe{2:[]} 
     run loot replace block ~ ~ ~ container.16 loot simpledrawer:impl/items/guide
 ```
 Where ShapedRecipe is [this](https://wiki.smithed.dev/libraries/crafter/data_types/#example-with-a-2-lines-recipe)

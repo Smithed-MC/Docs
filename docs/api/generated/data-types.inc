@@ -44,6 +44,10 @@
       type: 'bucket'
       uid: string
       content: string?
+    } | {
+      type: 'file'
+      uid: string
+      content: string?
     } | string[]?
   }
   versions: PackVersion[]

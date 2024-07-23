@@ -13,13 +13,13 @@ This library tracks the full block data of the placed block in data storage `smi
 
 ### Example Implementation :
 `function: example:give_custom_block`
-```mcfunction
-give @s barrel{
-    BlockEntityTag:{Items:[{id:"minecraft:stone",Count:1b,Slot:0b,tag:{
+```{code-block} mcfunction
+:force:
+give @s barrel[
+    custom_name='{"translate":"My Custom Block","color":"white","italic":false}',
+    container=[{slot:0,item:{id:"minecraft:stone",count:1b,components:{"minecraft:custom_data":{
         smithed:{block:{id:"example:my_custom_block"}}
-    }}]},
-    display:{Name:'{"translate":"My Custom Block","color":"white","italic":false}'}
-}
+    }}}}]]
 # All available block are listed in the block tag #smithed.custom_block:placeable
 ```
 
@@ -37,8 +37,8 @@ execute
         # And adding an entity at the block location
 
         # Example:
-        data remove block ~ ~ ~ Items[{Slot:0b}]
         execute summon marker run function example:my_custom_block/place_entity
+        data remove block ~ ~ ~ Items[{Slot:0b}]
 ```
 `tag: #smithed.custom_block:event/on_place`
 ```json

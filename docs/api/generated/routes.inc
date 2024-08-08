@@ -59,6 +59,9 @@
 ```{include} generated/users/id/pfp.inc
 ```
 
+```{include} generated/users/id/banner.inc
+```
+
 ```{include} generated/users/id/packs.inc
 ```
 

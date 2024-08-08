@@ -117,8 +117,24 @@
   cleanName: string
   creationTime: number
   uid: string
-  pfp: string?
-  banner: string?
+  pfp: {
+    type: 'bucket'
+    uid: string
+    content: string?
+  } | {
+    type: 'file'
+    uid: string
+    content: string?
+  } | string?
+  banner: {
+    type: 'bucket'
+    uid: string
+    content: string?
+  } | {
+    type: 'file'
+    uid: string
+    content: string?
+  } | string?
   biography: string?
   role: 'member' | 'admin'
 }

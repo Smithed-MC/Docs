@@ -16,13 +16,13 @@
 ### PackVersion
 ```ts
 {
-  name: string
   downloads: {
     datapack: string?
     resourcepack: string?
   }
-  supports: MinecraftVersion[]
   dependencies: PackReference[]
+  name: string
+  supports: MinecraftVersion[]
 }
 ```
 ### PackData
@@ -99,13 +99,13 @@
   }
   visibility: 'public' | 'unlisted' | 'private'
   versions: {
-    name: string
     patches: {
       datapack: string?
       resourcepack: string?
     }[]
-    supports: MinecraftVersion[]
     packs: PackReference[]
+    name: string
+    supports: MinecraftVersion[]
   }[]
   categories: 'Extensive' | 'Lightweight' | 'QoL' | 'Vanilla+' | 'Tech' | 'Magic' | 'Exploration' | 'World Overhaul' | 'Quest Driven' | 'Multiplayer Focus'[]
 }

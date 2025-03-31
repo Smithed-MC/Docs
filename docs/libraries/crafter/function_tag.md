@@ -13,7 +13,8 @@ A function tag to implement shaped recipes.
 ### Format :
 The function tag will be called, implement your recipes like this
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     # Success of the craft (for performance)
     store result score @s smithed.data 
@@ -29,7 +30,8 @@ execute
 
 #### Heavy Workbench:
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 
@@ -40,12 +42,13 @@ Where ShapedRecipe is [this](https://wiki.smithed.dev/libraries/crafter/data_typ
 
 
 #### Guide : 
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 
     if data storage smithed.crafter:input recipe<ShapedRecipe>
-    if data storage smithed.crafter:main root.temp{crafting_input:{2:[]}} 
+    if data storage smithed.crafter:input recipe{2:[]} 
     run loot replace block ~ ~ ~ container.16 loot simpledrawer:impl/items/guide
 ```
 Where ShapedRecipe is [this](https://wiki.smithed.dev/libraries/crafter/data_types/#example-with-a-2-lines-recipe)
@@ -62,7 +65,8 @@ A function tag to implement shapeless recipes.
 
 ### Format :
 The function tag will be called, implement your recipes like this
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     # Success of the craft (for performance)
     store result score @s smithed.data 
@@ -70,7 +74,7 @@ execute
     # The count check
     if score count smithed.data matches ItemCount
     # The actual recipe check
-    if data storage smithed.crafter:input recipe<ShapelessRecipe>
+    if data storage smithed.crafter:input {recipe:<ShapelessRecipe>}
     # The result of the recipe
     run loot replace block ~ ~ ~ container.16 loot example:my_craft_shapeless
 ```
@@ -80,19 +84,20 @@ execute
 
 #### Flint and Copper :
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 
     if score count smithed.data matches 2
-    if data storage smithed.crafter:input recipe<ShapelessRecipe>
+    if data storage smithed.crafter:input {recipe:<ShapelessRecipe>}
     run loot replace block ~ ~ ~ container.16 loot example:flint_and_copper
 ```
 Where ShapelessRecipe is :
 ```SNBT
 [
-    {id:"minecraft:copper_ingot",Count:1b},
-    {id:"minecraft:flint",Count:1b}
+    {id:"minecraft:copper_ingot",count:1},
+    {id:"minecraft:flint",count:1}
 ]
 ```
 

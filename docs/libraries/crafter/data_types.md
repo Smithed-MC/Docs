@@ -3,12 +3,12 @@
 
 ### Item
 
-A modified version of vanilla SNBT. The Count and Slot tags may or may not be required, depending on the situation.
+A modified version of vanilla SNBT. The count and Slot tags may or may not be required, depending on the situation.
 #### Format :
 ```ts
 {
     id: string
-    tag: dict
+    components: dict[string, any]
     item_tag: string[]
 }
 ```
@@ -22,13 +22,15 @@ A modified version of vanilla SNBT. The Count and Slot tags may or may not be re
 ```SNBT
 {
     Slot: 0b,
-    item_tag: ["minecraft:logs"]
+    item_tag: ["#minecraft:logs"]
 }
 ```
 ```SNBT
 {
-    Count:1b,
-    tag:{smithed:{id:"airdox_:simpledrawer/drawer"}}
+    count:1,
+    components:{"minecraft:custom_data":{
+        smithed:{id:"airdox_:simpledrawer/drawer"}
+    }}
 }
 ```
 
@@ -76,10 +78,10 @@ Item[]
 #### Example with a 4 items recipe :
 ```SNBT
 [
-    {id:"minecraft:barrel",Count:1b},
-    {id:"minecraft:iron_nugget",Count:1b},
-    {id:"minecraft:book",Count:1b},
-    {item_tag:["#minecraft:planks"],Count:1b}
+    {id:"minecraft:barrel",count:1},
+    {id:"minecraft:iron_nugget",count:1},
+    {id:"minecraft:book",count:1},
+    {item_tag:["#minecraft:planks"],count:1}
 ]
 ```
 

@@ -29,6 +29,9 @@
 ```{include} generated/packs/id/versions/latest.inc
 ```
 
+```{include} generated/packs/id/gallery/index.inc
+```
+
 ```{include} generated/packs.inc
 ```
 

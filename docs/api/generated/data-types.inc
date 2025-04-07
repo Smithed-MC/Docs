@@ -62,9 +62,11 @@
   stats: {
     updated: number?
     added: number
+    score: number // Used to calculate which pack is trending
     downloads: {
       total: number
       today: number
+      pastWeek: number
     }
   }
   owner: string

@@ -1,5 +1,13 @@
 # Yellow Shulker Box
-> An ancient technique empowering data pack artists since 1.14
+
+```{article-info}
+:avatar: https://avatars.githubusercontent.com/u/20506548
+:avatar-link: https://github.com/rx-modules
+:author: rx97
+:date: Apr 16, 2024
+:read-time: 5 min read
+:class-container: sd-p-2 sd-outline-muted sd-rounded-1
+```
 
 Shulker boxes normally drop themselves containing their contents inside. In 1.14, new loot table changes have allowed us to directly drop their contents into the world. Using a standardized loot table, we can directly use commands such as `loot replace` to simulate the shulker box breaking and drop items into the player's inventory, ender chest, and more. Over the years, new techniques were introduce (e.g. item modifiers) to be able to modify items within the player inventory which are more convinient, but at times, we've still relied on this table for our player item data manipulation needs.
 
@@ -23,7 +31,8 @@ You might be wondering why the loot table is *specifically* the `yellow_shulker_
 - Add desired items into shulker box
   - e.g. `data modify block 0 0 0 Items append value {Slot: 0b, ...}`
 - Load items into player inventory
-  - `loot replace entity @s inventory.0 mine 0 0 0 stick{drop_contents:1b}`
+  - post 1.20.5: `loot replace entity @s inventory.0 mine 0 0 0 stick[custom_data={drop_contents:1b}]`
+  - pre 1.20.5: `loot replace entity @s inventory.0 mine 0 0 0 stick{drop_contents:1b}`
 
 ## Changes to the loot table
 
@@ -33,7 +42,7 @@ Over the years, Mojang has adjusted the loot table format and conditions for thi
 These loot tables were standardized long before Smithed and `weld` existed. Therefore, there are no `weld` rules generally created for the older tables. However, in 1.20.5, we've decided to introduce `weld` rules to increase compatibility with packs that decide to do other forms of modification to these loot tables.
 ```
 
-::::{dropdown} **1.20.5** (Latest)
+::::{dropdown} **1.20.5+** (Latest)
 
 ```{important}
 1.20.5 introduced major breaking changes to items which affects this loot table. We've taken the opportunity to modernize this loot table to enable better `weld` adaptability (by separating the logic into multiple pools).

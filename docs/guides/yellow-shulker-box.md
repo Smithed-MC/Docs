@@ -31,8 +31,12 @@ You might be wondering why the loot table is *specifically* the `yellow_shulker_
 - Add desired items into shulker box
   - e.g. `data modify block 0 0 0 Items append value {Slot: 0b, ...}`
 - Load items into player inventory
-  - post 1.20.5: `loot replace entity @s inventory.0 mine 0 0 0 stick[custom_data={drop_contents:1b}]`
-  - pre 1.20.5: `loot replace entity @s inventory.0 mine 0 0 0 stick{drop_contents:1b}`
+  - `loot replace entity @s inventory.0 mine 0 0 0 stick[custom_data={drop_contents:1b}]`
+
+```{note}
+If you are still using this loot table prior to 1.20.5, use the following command:
+`loot replace entity @s inventory.0 mine 0 0 0 stick{drop_contents:1b}`
+```
 
 ## Changes to the loot table
 

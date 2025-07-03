@@ -109,12 +109,15 @@ If I add a custom item that is a clock, it should be exempt from someone else's 
 You should use these tags when creating the item.
 ```mcfunction
 # We could apply this data now or later, which ever you prefer
-give @s coal{display: {Name: '"Fossil Fuel"'}, smithed: {ignore: {functionality: 1b}}}
+give @s coal[item_name='Fossil Fuel', custom_data={smithed: {ignore: {functionality: 1b}}}]
 ```
 You should *respect* these tags by excluding it from certain item checks.
 ```mcfunction
 # Note, we only apply effects to players holding coal if the item doesn't have the ignore flag
-effect give @a[nbt={SelectedItem: {id: "minecraft:coal"}}, nbt=!{SelectedItem: {tag: {smithed: {ignore: {functionality: 1b}}}}}] weakness 10 0
+execute
+  as @a
+  if items entity @s weapon.mainhand coal[custom_data~{smithed: {ignore: {functionality: 1b}}}]
+  run effect give @s weakness 10 0
 ```
 ### `{smithed:{ignore:{functionality:1b}}}`
 > This tag should be used to mark an item that shouldn’t act like the base item for custom abilities.

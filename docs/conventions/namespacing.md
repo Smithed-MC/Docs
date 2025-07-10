@@ -1,9 +1,9 @@
 ---
 myst:
   substitutions:
-    summary:  "Adding friendly prefixes to names of content in your pack"
+    summary: "Adding friendly prefixes to names of content in your pack"
     required: "On file paths, tags, scores, teams, and storage"
-    example:  "`tcc` as a namespace for the `tcc.dummy` scoreboard"
+    example: "`tcc` as a namespace for the `tcc.dummy` scoreboard"
 ---
 
 # Namespacing

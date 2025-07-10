@@ -1,9 +1,9 @@
 ---
 myst:
   substitutions:
-    summary:  "Extra metadata to define custom merging for any `json` resource"
+    summary: "Extra metadata to define custom merging for any `json` resource"
     required: "Only when overriding any vanilla resource (under `minecraft` namespace)"
-    example:  "Replacing iron ingots with iron nuggets for zombies (loot table)"
+    example: "Replacing iron ingots with iron nuggets for zombies (loot table)"
 ---
 
 # Vanilla Overrides

@@ -1,5 +1,5 @@
 # Conventions
-Smithed imposes conventions for pack creators to follow allowing for a compatible pack ecosystem. Many of these conventions are required for packs to be submitted to the Smithed ecosystem. They allow for pack interoperability both within and without the ecosystem (i.e. they are designed to work in normal worlds).
+Smithed imposes conventions for pack creators to follow allowing for a compatible pack ecosystem. These conventions are highly recommended to help . They allow for pack interoperability both within and without the ecosystem (i.e. they are designed to work in normal worlds).
 
 ----
 
@@ -33,7 +33,7 @@ Extra metadata to include in your `pack.mcmeta`
 CMD ID Prefixing
 ^^^
 
-What numbers to choose for the `CustomModelData` field on items for custom models
+What format to choose for the `custom_model_data` component on items
 ```
 
 ```{grid-item-card}
@@ -43,7 +43,7 @@ What numbers to choose for the `CustomModelData` field on items for custom model
 Vanilla Overrides
 ^^^
 
-How to properly override vanilla assets to be **Weld** Compatible
+How to properly override vanilla assets to be **Weld** compatible
 ```
 
 ```{grid-item-card}

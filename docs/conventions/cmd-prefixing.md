@@ -1,9 +1,9 @@
 ---
 myst:
   substitutions:
-    summary:  "Formatting your `custom_model_data` to avoid clashing with other packs"
+    summary: "Formatting your `custom_model_data` to avoid clashing with other packs"
     required: "Any usage of the `custom_model_data` field on custom items based on vanilla item models"
-    example:  "Items from Gamemode4 should have `custom_model_data` that use `strings` with a `gm4` namespace"
+    example: "Items from Gamemode4 should have `custom_model_data` that use `strings` with a `gm4` namespace"
 ---
 
 # CMD Prefixing

@@ -2,8 +2,8 @@
 myst:
   substitutions:
     summary:  "Extra `id` metadata to include in your `pack.mcmeta`"
-    required: "Every pack should include this field in their `pack.mcmeta`"
-    example:  "For the pack, The Creeper's Code, the `id` field in `pack.mcmeta` should be \"tcc\""
+    required: "For every pack should include this field in their `pack.mcmeta`"
+    example:  "The Creeper's Code should include an `id` field in `pack.mcmeta` of \"tcc\""
 ---
 
 # Pack IDs

@@ -49,7 +49,7 @@ The dialog located at `namespace:about` can then be designed as you see fit. Whi
 This dialog above includes the pack's name alongside a short description of the pack, the pack's author and version, and some buttons that link to external websites or other sub-menus (such as for configuration). You can choose what details are important or relevant to your pack (if any at all).
 
 ```{important}
-Dialogs can also specify exit actions that occur when using :kbd:`ESC` or clicking the `Back` button. To keep a sense of continuity among dialogs, it's highly recommended to use a specific `exit_action` that redirects to the main data pack menu dialog. This can be done by specifying the `exit_action` field in the dialog definition like so:
+Dialogs can also specify exit actions that occur when using {kbd}`ESC` or clicking the `Back` button. To keep a sense of continuity among dialogs, it's highly recommended to use a specific `exit_action` that redirects to the main data pack menu dialog. This can be done by specifying the `exit_action` field in the dialog definition like so:
 
 ```json
 {

@@ -84,6 +84,7 @@ convention_header = """
 :::
 ::::
 """
+new_bdg = '<span class="light-only">{bdg-success}`NEW`</span><span class="dark-only">{bdg-success-line}`NEW`</span>'
 
 [tool.mudkip.override.html_theme_options]
 announcement = "<a href='/weld'> Checkout the in-depth weld docs! <a/>"

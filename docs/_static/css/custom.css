@@ -7,3 +7,42 @@
 .admonition.toggle-hidden button::before {
     display: none !important;
 }
+
+/* Enable dark-mode-overrides, if requested. */
+[data-theme="dark"] .dark-only {
+    display: inline-block !important;
+}
+
+[data-theme="dark"] .light-only {
+    display: none !important;
+}
+
+/* Enable light-mode-overrides, if requested. */
+[data-theme="light"] .light-only {
+    display: inline-block !important;
+}
+
+[data-theme="light"] .dark-only {
+    display: none !important;
+}
+
+/* If "auto", uses media preference */
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] .dark-only {
+        display: inline-block !important;
+    }
+
+    [data-theme="auto"] .light-only {
+        display: none !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    [data-theme="auto"] .light-only {
+        display: inline-block !important;
+    }
+
+    [data-theme="auto"] .dark-only {
+        display: none !important;
+    }
+}

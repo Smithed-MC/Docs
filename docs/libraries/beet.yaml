@@ -8,6 +8,7 @@ data_pack:
     - "@smithed_libraries/packs/damage"
     - "@smithed_libraries/packs/item"
     - "@smithed_libraries/packs/prevent-aggression"
+    - "@smithed_libraries/packs/title"
 
 pipeline:
   - smithed_libraries.plugins.documentation

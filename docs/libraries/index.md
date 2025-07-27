@@ -184,6 +184,17 @@ Item ・ {{ item_version }}
 *TODO*
 :::
 
+:::{grid-item-card}
+:link: title
+:link-type: doc
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/title/pack.png
+
+Title ・ v{{ title_version }}
+^^^
+
+**Required** for packs that use the title & subtitle as it coordinates title & subtitle usage across data packs.
+:::
+
 ::::
 
 ---
@@ -214,4 +225,5 @@ custom-block
 damage
 prevent-aggression
 item
+title
 ```

@@ -71,23 +71,7 @@ Dialogs can also specify exit actions that occur when using {kbd}`ESC` or clicki
 :::::{tab-set}
 ::::{tab-item} Root Data Pack Dialog
 
-`data/smithed/dialogs/data_packs`
-```json
-{
-  "values": [
-    {
-      "id": "smithed:data_packs",
-      "required": false
-    }
-  ]
-}
-```
-
-::::
-
-::::{tab-item} Pause Screen Additions
-
-`data/minecraft/tag/dialogs/pause_screen_additions.json`
+`data/smithed/dialogs/data_packs.json`
 ```json
 {
   "type": "minecraft:dialog_list",
@@ -116,6 +100,22 @@ Dialogs can also specify exit actions that occur when using {kbd}`ESC` or clicki
     },
     "width": 200
   }
+}
+```
+
+::::
+
+::::{tab-item} Pause Screen Additions
+
+`data/minecraft/tag/dialogs/pause_screen_additions.json`
+```json
+{
+  "values": [
+    {
+      "id": "smithed:data_packs",
+      "required": false
+    }
+  ]
 }
 ```
 

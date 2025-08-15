@@ -1,4 +1,4 @@
-# Conventions
+# {{new_bdg}} Conventions
 Smithed imposes conventions for pack creators to follow allowing for a compatible pack ecosystem. These conventions are highly recommended to help . They allow for pack interoperability both within and without the ecosystem (i.e. they are designed to work in normal worlds).
 
 ----

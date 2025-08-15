@@ -10,20 +10,20 @@ myst:
 {{ convention_header }}
 
 ```{warning}
-This convention is using the *brand-new*, ✨ experimental ✨ [dialogs](https://minecraft.wiki/w/Dialog) from **Minecraft 1.21.6**. This means single player worlds that open a data pack using this convention will display the experimental warning. Additionally, since they also use the experimental registry system, any changes to loaded dialogs while a world is being played (either during development or users loading new data packs and `/reload`ing) will **not** reload dialogs instead requiring world / server restarts which might cause problems with how this convention is implemented with your pack.
+This convention is using the ✨ experimental ✨ [dialogs](https://minecraft.wiki/w/Dialog) from **Minecraft 1.21.6**. This means single player worlds that open a data pack using this convention will display the experimental warning. Additionally, any changes to loaded dialogs while a world is being played (either during development or users loading new data packs and `/reload`ing) will **not** reload dialogs instead requiring world / server restarts.
 
-Considering this, you may *not* want to implement this convention until this feature is stabilized. If you already use experimental features, there's not much change in behavior using this convention.
+Considering these caveat, you may *not* want to implement this convention until this feature is stabilized. If you already use experimental features, there's not much change in behavior using this convention.
 ```
 
-The introduction of dialogs provided a brand-new opportunity for data packs to provide a similar "Mod Menu" experience via the `#minecraft:pause_screen_additions` dialog tag which displays a dialog menu directly in the pause screen. This convention is designed to coordinate and centralize a home for data pack dialogs. These dialogs can be used as a way to describe a data pack, link to external resources (Github, Wiki, Discord), and provide sub-menus for extra configuration or options for a data packs functionality.
+This convention adds a data pack menu to the `#minecraft:pause_screen_additions` [dialog](https://minecraft.wiki/w/Dialog) tag which provides an interface for data packs to describe themselves, link to external resources, and provide sub-menus for configuration or options. The main scope of this convention is to provide a central location for data packs to display their information in a consistent manner, similar to the "Mod Menu" experience found in many modded Minecraft clients.
 
-Packs using this convention will be including a small set of files (akin to the [`yellow_shulker_box.json`](/guides/yellow-shulker-box) file and the [Lantern Load](github.com/lanternmc/load) convention). This will be available as a library but also can be easily copy pasted into your pack.
+Packs using this convention will be including a small set of files (akin to the [`yellow_shulker_box.json`](/guides/yellow-shulker-box) file and the [Lantern Load](https://github.com/lanternmc/load) convention). This will be available as a library but also can be easily copy pasted into your pack.
 
 ![An example of 4 data packs loaded on the data pack menu](../assets/conventions/data-pack-menu.png)
 
 ## Usage
 
-First, you'll need to bundle some files with your data pack. These will be available as a library on Smithed but you can also directly copy these files into your pack. These are just tag definitons alongside the official smithed dialog file that will be used to display the data pack menu.
+First, you'll need to bundle some files with your data pack. These will be available as a library on Smithed but you can also directly copy these files into your pack. These are just tag definitions alongside the official smithed dialog file that will be used to display the data pack menu.
 
 Then, you'll want to make your own data pack dialog file. This dialog should be placed in the `#smithed:data_packs` dialog tag like so:
 

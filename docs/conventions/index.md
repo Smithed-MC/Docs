@@ -55,7 +55,7 @@ Tag Specification
 
 A set of custom tags to respect while interacting with blocks, entities, and items
 ```
-<!-- 
+
 ```{grid-item-card}
 :link: data-pack-menu
 :link-type: doc
@@ -65,7 +65,6 @@ A set of custom tags to respect while interacting with blocks, entities, and ite
 
 The "mod menu" for data packs!
 ```
--->
 
 ::::
 
@@ -87,5 +86,5 @@ pack-ids
 cmd-prefixing
 vanilla-overrides
 tag-specification
-<!-- data-pack-menu -->
+data-pack-menu
 ```

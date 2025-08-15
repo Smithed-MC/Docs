@@ -69,9 +69,9 @@ Dialogs can also specify exit actions that occur when using {kbd}`ESC` or clicki
 ## Appendix
 
 :::::{tab-set}
-::::{tab-item} Pause Screen Additions
+::::{tab-item} Root Data Pack Dialog
 
-`data/minecraft/tag/dialogs/pause_screen_additions.json`
+`data/smithed/dialogs/data_packs`
 ```json
 {
   "values": [
@@ -80,6 +80,42 @@ Dialogs can also specify exit actions that occur when using {kbd}`ESC` or clicki
       "required": false
     }
   ]
+}
+```
+
+::::
+
+::::{tab-item} Pause Screen Additions
+
+`data/minecraft/tag/dialogs/pause_screen_additions.json`
+```json
+{
+  "type": "minecraft:dialog_list",
+  "external_title": {
+    "translate": "menu.smithed.data_packs",
+    "fallback": "%s...",
+    "with": [
+      {
+        "translate": "selectWorld.dataPacks"
+      }
+    ]
+  },
+  "title": {
+    "translate": "menu.smithed.data_packs.title",
+    "fallback": "%s",
+    "with": [
+      {
+        "translate": "selectWorld.dataPacks"
+      }
+    ]
+  },
+  "dialogs": "#smithed:data_packs",
+  "exit_action": {
+    "label": {
+      "translate": "gui.back"
+    },
+    "width": 200
+  }
 }
 ```
 

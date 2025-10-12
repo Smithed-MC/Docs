@@ -20,6 +20,9 @@
 ```{include} generated/packs/id/meta.inc
 ```
 
+```{include} generated/packs/id/gallery/index.inc
+```
+
 ```{include} generated/packs/id/versions.inc
 ```
 

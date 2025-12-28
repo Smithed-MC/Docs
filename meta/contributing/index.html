@@ -1,0 +1,486 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="prev" title="Yellow Shulker Box" href="../../guides/yellow-shulker-box/" />
+        <link rel="canonical" href="https://docs.smithed.dev/meta/contributing.html" />
+
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
+        <title>Contributing - Smithed Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #3f3f3f;
+  --color-code-foreground: #dcdccc;
+  --color-brand-content: #1b48c4;
+  --color-brand-primary: #1b48c4;
+  --font-stack: Inconsolata, sans-serif;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-content: #6b83c5;
+  --color-brand-primary: #6b83c5;
+  --font-stack: Inconsolata, sans-serif;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-content: #6b83c5;
+  --color-brand-primary: #6b83c5;
+  --font-stack: Inconsolata, sans-serif;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     <a href='/weld'> Checkout the in-depth weld docs! <a/> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../"><div class="brand">Smithed Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/icon.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../conventions/"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Conventions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/namespacing/">Namespacing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/pack-ids/">Pack IDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/cmd-prefixing/">CMD Prefixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/vanilla-overrides/">Vanilla Overrides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/tag-specification/">Tag Specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/data-pack-menu/"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Data Pack Menu Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../libraries/">Libraries</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/actionbar/">Actionbar (v0.4.1)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../libraries/crafter/">Crafter (v0.2.0)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../libraries/crafter/data_types/">Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../libraries/crafter/function_tag/">Function Tag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/custom-block/">Custom Block (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/damage/">Damage (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/prevent-aggression/">Prevent Aggression (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/prevent-aggression/#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/item/">Item (v0.2.1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/title/">Title (v0.0.1)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../weld/">Weld</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../weld/merging/"><span class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary">v1</span> Custom Merging Rules</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/rule/">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/source/">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/priority/">Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/condition/">Condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/mcmeta/"><code class="docutils literal notranslate"><span class="pre">pack.mcmeta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../launcher/">Launcher</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/">Api Layer</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/data-types/">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/routes/">Routes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../guides/">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/yellow-shulker-box/">Yellow Shulker Box</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Smithed-MC">Smithed Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://smithed.dev">Smithed Website</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">#</a></h1>
+<p>Contributions are welcome! Make sure you open an issue to discuss changes or open a pull request if you have changes you want to make over at our <a class="reference external" href="https://github.com/Smithed-MC/Docs">Github</a>.</p>
+<blockquote>
+<div><p>We use <a class="reference external" href="https://python-poetry.org/docs/">poetry</a> to manage our dependencies and <a class="reference external" href="https://github.com/vberlier/mudkip">mudkip</a> to build, deploy, and maintain our docs.</p>
+</div></blockquote>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<p>If you wish to build docs locally, follow our setup guide. You'll need to install <a class="reference external" href="https://python-poetry.org/docs/">poetry</a> via the official instructions. Then, setup can proceed like so:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Smithed-MC/Docs<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Docs
+$<span class="w"> </span>poetry<span class="w"> </span>install
+</pre></div>
+</div>
+<p>To actively develop your docs, you can use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>mudkip<span class="w"> </span>develop
+</pre></div>
+</div>
+<p>This will open a local web server at <code class="docutils literal notranslate"><span class="pre">localhost:5000</span></code> to access your locally built docs alongside watching any changes made within the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory so you can watch your changes build live.</p>
+<section id="libraries">
+<h3>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading">#</a></h3>
+<p>Additionally, parts of the <code class="docutils literal notranslate"><span class="pre">libraries</span></code> documentation are generated automatically by extracting api docstrings directly from the source code. We actually install the <a class="reference external" href="https://github.com/Smithed-MC/Libraries/"><code class="docutils literal notranslate"><span class="pre">smithed-libraries</span></code></a> package directly and run the documentation plugin within to extract the docs directly into the <code class="docutils literal notranslate"><span class="pre">docs/libraries/</span></code> directory. Files generated this way get committed to the repo, but should not be touched as they will immediately get overwritten by library updates.</p>
+<p>If you need to manually update your library docs, you locally run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>beet<span class="w"> </span>-p<span class="w"> </span>docs/libraries
+$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>mudkip<span class="w"> </span>develop
+</pre></div>
+</div>
+</section>
+</section>
+<section id="style">
+<h2>Style<a class="headerlink" href="#style" title="Permalink to this heading">#</a></h2>
+<p>Mudkip is a tool to make building <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a> based documentation much easier to work with. Mudkip bundles several sphinx plugins to make documentation easier to write, with the <a class="reference external" href="https://myst-parser.readthedocs.io">MyST</a> plugin being the most useful as it enables us to write in normal <code class="docutils literal notranslate"><span class="pre">markdown</span></code>.</p>
+<p>Additionally, we also use the follow extensions:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sphinx-design.readthedocs.io/">Sphinx Design</a></p>
+<ul>
+<li><p>This extension adds several useful cards, grids, icons, and dropdowns to make the documentation look nicer.</p></li>
+</ul>
+</li>
+<li><p>Colon Fences</p>
+<ul>
+<li><p>Makes using &quot;:::&quot; and &quot;::::&quot; instead of pure &quot;```&quot; and &quot;````&quot; which is nicer to use within <code class="docutils literal notranslate"><span class="pre">markdown</span></code> files.</p></li>
+<li><p>We prefer using &quot;::::&quot; for grids and groupings while &quot;```&quot; for simple cards and dropdowns.</p></li>
+</ul>
+</li>
+<li><p>Substitution</p>
+<ul>
+<li><p>Allows the use of simple Jinja2 substitutions within YAML frontmatter.</p></li>
+</ul>
+</li>
+</ul>
+<section id="id1">
+<h3>Libraries<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Much of the libraries source, especially API docs are written alongside the actual source. To keep consistency with how these docs are rendered within the main docs, we use the following system.</p>
+<ul class="simple">
+<li><p>The documentation plugin's generation of files produce folders and files within the <code class="docutils literal notranslate"><span class="pre">libraries</span></code>.</p>
+<ul>
+<li><p>These files should <strong>not</strong> be altered directly.</p></li>
+</ul>
+</li>
+<li><p>Instead, these files should be referenced via the <code class="docutils literal notranslate"><span class="pre">{include}</span></code> directive.</p>
+<ul>
+<li><p>Please see the existing library files such as <span class="xref myst">actionbar</span> source to see an example.</p></li>
+</ul>
+</li>
+<li><p>Within the library api docs, you should <strong>not</strong> use top level <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Header</span></code> lines.</p>
+<ul>
+<li><p>Instead, use <code class="docutils literal notranslate"><span class="pre">##</span></code> or <code class="docutils literal notranslate"><span class="pre">###</span></code> and below for hierachy.</p></li>
+<li><p>This ensures the sidebar doesn't get polluted with internal markings.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="mcfunction-syntax">
+<h3><code class="docutils literal notranslate"><span class="pre">mcfunction</span></code> syntax<a class="headerlink" href="#mcfunction-syntax" title="Permalink to this heading">#</a></h3>
+<p>Instead of using raw, vanilla syntax, we bend the rules of the original syntax slightly for legibility:</p>
+<ul class="simple">
+<li><p>Commands longer than 80 characters are often seperated into multiple lines</p></li>
+<li><p>Multiple files (such as loot tables or functions) are represented in the same file</p></li>
+</ul>
+<p>Here is an example of how that usually looks:</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="nb">execute</span><span class="w"> </span><span class="kc">as</span><span class="w"> </span><span class="nv">@a</span><span class="w"> </span><span class="kc">if</span><span class="w"> </span><span class="kc">score</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">my_obj</span><span class="w"> </span><span class="kc">matches</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="kc">if</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="p">{</span><span class="na">Health</span><span class="p">:</span><span class="w"> </span><span class="mf">20.0f</span><span class="p">}</span><span class="w"> </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">namespace:hello_world</span>
+
+<span class="c1"># namespace:hello_world</span>
+<span class="nb">scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">my_obj</span><span class="w"> </span><span class="mf">10</span>
+<span class="nb">tag</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">remove</span><span class="w"> </span><span class="kc">self</span>
+<span class="nb">tellraw</span><span class="w"> </span><span class="nv">@a</span><span class="w"> </span><span class="p">[{</span><span class="na">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Really long tellraw&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="na">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;like, really, really long&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="na">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;like whoa&quot;</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p><em>versus</em></p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="nb">execute</span>
+<span class="w">    </span><span class="kc">as</span><span class="w"> </span><span class="nv">@a</span>
+<span class="w">    </span><span class="kc">if</span><span class="w"> </span><span class="kc">score</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">my_obj</span><span class="w"> </span><span class="kc">matches</span><span class="w"> </span><span class="mf">10</span>
+<span class="w">    </span><span class="kc">if</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="p">{</span><span class="na">Health</span><span class="p">:</span><span class="w"> </span><span class="mf">20.0f</span><span class="p">}</span>
+<span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">namespace:hello_world</span><span class="err">:</span>
+<span class="w">        </span><span class="kc">scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">my_obj</span><span class="w"> </span><span class="mf">10</span>
+<span class="w">        </span><span class="kc">tag</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">remove</span><span class="w"> </span><span class="kc">self</span>
+<span class="w">        </span><span class="kc">tellraw</span><span class="w"> </span><span class="nv">@a</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span><span class="na">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Really long tellraw&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span><span class="na">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;like, really, really long&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span><span class="na">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;like whoa&quot;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The commands in sphinx are handled by <a class="reference external" href="https://github.com/pygments/pygments">pygments</a>, a python-based syntax highlighter. You can explore how <code class="docutils literal notranslate"><span class="pre">mcfunction</span></code> gets highlighted by checking out the project and testing out the highlighter by itself!</p>
+<p>In terms of how we control multi-line commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">execute</span></code> should stand on it's own lines with each sub-command on their own line</p></li>
+<li><p>Long <code class="docutils literal notranslate"><span class="pre">json</span></code> components can be split as if it's an embedded <code class="docutils literal notranslate"><span class="pre">.json</span></code> file.</p></li>
+<li><p>Other containers such as long selectors or nbt can be treated similar to <code class="docutils literal notranslate"><span class="pre">.json</span></code> files.</p></li>
+<li><p>Embedded files such as loot tables and functions should be written in an indented fashion:</p></li>
+</ul>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="nb">loot_table</span><span class="w"> </span><span class="nf">minecraft:entity/zombie</span><span class="w"> </span><span class="p">{</span><span class="na">&quot;hello&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;world&quot;</span><span class="p">}</span>
+<span class="nb">function</span><span class="w"> </span><span class="nf">namespace:other</span><span class="err">:</span>
+<span class="w">    </span><span class="kc">command</span><span class="w"> </span><span class="mf">1</span>
+<span class="w">    </span><span class="kc">command</span><span class="w"> </span><span class="mf">2</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>All code examples across this documentation are actually based on the <a class="reference external" href="https://github.com/mcbeet/bolt">bolt</a> format which means they can compile directly into normal commands!</p>
+</div></blockquote>
+</section>
+</section>
+<section id="endnote">
+<h2>Endnote<a class="headerlink" href="#endnote" title="Permalink to this heading">#</a></h2>
+<p>The core of good documentation is based on well written text. While we use use many fancy bells and whistles from Sphinx, there's no need to overcomplicate the purpose of these docs and so don't let that dissuade you from making contributions!</p>
+<p>We are always looking to improve our docs so please do not fret to make suggestions and refinements. We will work our best to integrate the best pieces of work so our docs can accurately describe the Smithed ecosystem to the best of our abilities.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="../../guides/yellow-shulker-box/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Yellow Shulker Box</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Contributing</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a><ul>
+<li><a class="reference internal" href="#libraries">Libraries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#style">Style</a><ul>
+<li><a class="reference internal" href="#id1">Libraries</a></li>
+<li><a class="reference internal" href="#mcfunction-syntax"><code class="docutils literal notranslate"><span class="pre">mcfunction</span></code> syntax</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#endnote">Endnote</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
+</html>

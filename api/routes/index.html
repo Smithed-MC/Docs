@@ -1,0 +1,1720 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Guides" href="../../guides/" /><link rel="prev" title="Data Types" href="../data-types/" />
+        <link rel="canonical" href="https://docs.smithed.dev/api/routes.html" />
+
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
+        <title>Routes - Smithed Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #3f3f3f;
+  --color-code-foreground: #dcdccc;
+  --color-brand-content: #1b48c4;
+  --color-brand-primary: #1b48c4;
+  --font-stack: Inconsolata, sans-serif;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-content: #6b83c5;
+  --color-brand-primary: #6b83c5;
+  --font-stack: Inconsolata, sans-serif;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-content: #6b83c5;
+  --color-brand-primary: #6b83c5;
+  --font-stack: Inconsolata, sans-serif;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     <a href='/weld'> Checkout the in-depth weld docs! <a/> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../"><div class="brand">Smithed Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/icon.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../conventions/"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Conventions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/namespacing/">Namespacing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/pack-ids/">Pack IDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/cmd-prefixing/">CMD Prefixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/vanilla-overrides/">Vanilla Overrides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/tag-specification/">Tag Specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../conventions/data-pack-menu/"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Data Pack Menu Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../libraries/">Libraries</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/actionbar/">Actionbar (v0.4.1)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../libraries/crafter/">Crafter (v0.2.0)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../libraries/crafter/data_types/">Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../libraries/crafter/function_tag/">Function Tag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/custom-block/">Custom Block (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/damage/">Damage (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/prevent-aggression/">Prevent Aggression (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/prevent-aggression/#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/item/">Item (v0.2.1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/title/">Title (v0.0.1)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../weld/">Weld</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../weld/merging/"><span class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary">v1</span> Custom Merging Rules</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/rule/">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/source/">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/priority/">Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/condition/">Condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/mcmeta/"><code class="docutils literal notranslate"><span class="pre">pack.mcmeta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../launcher/">Launcher</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Api Layer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data-types/">Data Types</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Routes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../guides/">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/yellow-shulker-box/">Yellow Shulker Box</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/contributing/">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Smithed-MC">Smithed Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://smithed.dev">Smithed Website</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="routes">
+<h1>Routes<a class="headerlink" href="#routes" title="Permalink to this heading">#</a></h1>
+<div class="warning admonition">
+<p class="admonition-title">General Warning</p>
+<p>All routes will return <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">BAD_REQUEST - 400</span> if required parameters are omitted.</p>
+</div>
+<section id="bundles-id">
+<h2>/bundles/:id<a class="headerlink" href="#bundles-id" title="Permalink to this heading">#</a></h2>
+<section id="get">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#get" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a bundle's data</p>
+<section id="url-parameters">
+<h4>URL Parameters<a class="headerlink" href="#url-parameters" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The bundle's UID, unlike packs and users, bundles do not have a plaintext ID</p>
+</section>
+<section id="possible-responses">
+<h4>Possible Responses<a class="headerlink" href="#possible-responses" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">PackBundle</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Retrieve a bundle</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/bundles/123456789&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="delete">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span><a class="headerlink" href="#delete" title="Permalink to this heading">#</a></h3>
+<p>Delete a bundle from the database</p>
+<section id="id1">
+<h4>URL Parameters<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The bundle's UID, unlike packs and users, bundles do not have a plaintext ID</p>
+</section>
+<section id="query-parameters">
+<h4>Query Parameters<a class="headerlink" href="#query-parameters" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+</section>
+<section id="id2">
+<h4>Possible Responses<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id3">
+<h4>Examples<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Delete a bundle</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/bundles/123456789?token=ILOVESMITHED&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="put">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">PUT</span><a class="headerlink" href="#put" title="Permalink to this heading">#</a></h3>
+<p>Update an existing bundle</p>
+<section id="id4">
+<h4>URL Parameters<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The bundle's UID, unlike packs and users, bundles do not have a plaintext ID</p>
+</section>
+<section id="id5">
+<h4>Query Parameters<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+</section>
+<section id="body-parameters">
+<h4>Body Parameters<a class="headerlink" href="#body-parameters" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">data</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackBundle</span></a></label>
+The data to replace the existing with, omitting the <code class="docutils literal notranslate"><span class="pre">owner</span></code> field.</p>
+</section>
+<section id="id6">
+<h4>Possible Responses<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id7">
+<h4>Examples<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Update a bundle</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/bundles/123456789&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">PackBundle</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="bundles-id-download">
+<h2>/bundles/:id/download<a class="headerlink" href="#bundles-id-download" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>Download a pack bundle. This route wraps <code class="docutils literal notranslate"><span class="pre">/download</span></code> and returns the same information.</p>
+<section id="id9">
+<h4>URL Parameters<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The bundle's UID, unlike packs and users, bundles do not have a plaintext ID</p>
+</section>
+<section id="id10">
+<h4>Query Parameters<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">mode</span> <label class="sd-text-secondary">'datapack' | 'resourcepack' | 'both' = 'both'</label>
+Which files should be downloaded from the API.</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">version</span> <label class="sd-text-secondary">string? = '</label>
+'
+Which version of the bundle to download</p>
+</section>
+<section id="id11">
+<h4>Possible Responses<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">ArrayBuffer</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id12">
+<h4>Examples<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Download a bundle's resourcepack</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/bundles/123456789/download?mode=resourcepack&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="bundles">
+<h2>/bundles<a class="headerlink" href="#bundles" title="Permalink to this heading">#</a></h2>
+<section id="post">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span><a class="headerlink" href="#post" title="Permalink to this heading">#</a></h3>
+<p>Update an existing bundle</p>
+<section id="id13">
+<h4>Query Parameters<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+</section>
+<section id="id14">
+<h4>Body Parameters<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">data</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackBundle</span></a></label>
+The data to replace the existing with, omitting the <code class="docutils literal notranslate"><span class="pre">owner</span></code> field.</p>
+</section>
+<section id="id15">
+<h4>Possible Responses<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">CREATED - 201</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id16">
+<h4>Examples<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Upload a new bundle</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/bundles&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">PackBundle</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="download">
+<h2>/download<a class="headerlink" href="#download" title="Permalink to this heading">#</a></h2>
+<section id="id17">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<p>This route facilitates the download and merging of packs off of the platform.</p>
+<section id="id18">
+<h4>Query Parameters<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">pack</span> <label class="sd-text-secondary">string</label>
+The ID (uid or plaintext) of the pack to merge. A specific version can be specified with the following format <code class="docutils literal notranslate"><span class="pre">&lt;id&gt;&#64;&lt;version&gt;</span></code>. Version can be a semver comparison.
+Many packs can be downloaded by specifiying the parameter multiple times</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">version</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">MinecraftVersion</span></a>?</label>
+The targeted version of Minecraft. Any packs that do not have atleast 1 version supporting this will be skipped.</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">mode</span> <label class="sd-text-secondary">'datapack'|'resourcepack'|'both' = 'both'</label>
+What should be downloaded, if both is specified then the datapack and resourcepack are served zipped within the download.</p>
+</section>
+<section id="id19">
+<h4>Possible Responses<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">ArrayBuffer</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">SERVER_ERROR - 500</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id20">
+<h4>Examples<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Download packs</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/download?pack=tcc&amp;pack=manic&amp;version=1.19&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-id">
+<h2>/packs/:id<a class="headerlink" href="#packs-id" title="Permalink to this heading">#</a></h2>
+<section id="id21">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a pack's data</p>
+<section id="id22">
+<h4>URL Parameters<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id23">
+<h4>Possible Responses<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">PackData</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id24">
+<h4>Examples<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Fetch a packs's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-id-contributors">
+<h2>/packs/:id/contributors<a class="headerlink" href="#packs-id-contributors" title="Permalink to this heading">#</a></h2>
+<section id="id25">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
+<p>Get a list of contributors to a pack</p>
+<section id="id26">
+<h4>URL Parameters<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id27">
+<h4>Possible Responses<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id28">
+<h4>Examples<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Set a packs's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/contributors&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="id29">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span><a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<p>Add a list of contributors to a pack</p>
+<section id="id30">
+<h4>URL Parameters<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id31">
+<h4>Query Parameters<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">contributors</span> <label class="sd-text-secondary">string[]</label></p>
+</section>
+<section id="id32">
+<h4>Possible Responses<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id33">
+<h4>Examples<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Set a packs's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&amp;contributors=CreeperMagnet_&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="s1">&#39;POST&#39;</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="id34">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span><a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<p>Remove a list of contributors from a pack</p>
+<section id="id35">
+<h4>URL Parameters<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id36">
+<h4>Query Parameters<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">contributors</span> <label class="sd-text-secondary">string[]</label></p>
+</section>
+<section id="id37">
+<h4>Possible Responses<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id38">
+<h4>Examples<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Set a packs's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&amp;contributors=CreeperMagnet_&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="s1">&#39;DELETE&#39;</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-id-meta">
+<h2>/packs/:id/meta<a class="headerlink" href="#packs-id-meta" title="Permalink to this heading">#</a></h2>
+<section id="id39">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a pack's metadata</p>
+<section id="id40">
+<h4>URL Parameters<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id41">
+<h4>Possible Responses<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">PackMetaData</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id42">
+<h4>Examples<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Set a packs's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/meta&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-id-versions">
+<h2>/packs/:id/versions<a class="headerlink" href="#packs-id-versions" title="Permalink to this heading">#</a></h2>
+<section id="id43">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<p>Get the list of a pack's versions</p>
+<section id="id44">
+<h4>URL Parameters<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id45">
+<h4>Possible Responses<a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">PackVersion</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id46">
+<h4>Examples<a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get a pack's versions</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/versions&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="id47">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span><a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
+<p>Add to the list of a pack's versions</p>
+<section id="id48">
+<h4>URL Parameters<a class="headerlink" href="#id48" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id49">
+<h4>Query Parameters<a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">version</span> <label class="sd-text-secondary">string</label>
+The valid semver version number to assign</p>
+</section>
+<section id="id50">
+<h4>Body Parameters<a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">data</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackVersion</span></a></label>
+The data to add to the list</p>
+</section>
+<section id="id51">
+<h4>Possible Responses<a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id52">
+<h4>Examples<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Add a version to a pack</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/versions?token=FOO&amp;version=0.0.1&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">PackVersion</span><span class="o">&gt;</span><span class="p">},</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-id-versions-versionid">
+<h2>/packs/:id/versions/:versionId<a class="headerlink" href="#packs-id-versions-versionid" title="Permalink to this heading">#</a></h2>
+<section id="patch">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">PATCH</span><a class="headerlink" href="#patch" title="Permalink to this heading">#</a></h3>
+<p>Add to the list of a pack's versions</p>
+<section id="id53">
+<h4>URL Parameters<a class="headerlink" href="#id53" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.
+<strong>versionId</strong>:
+The version number to target</p>
+</section>
+<section id="id54">
+<h4>Query Parameters<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+</section>
+<section id="id55">
+<h4>Body Parameters<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">data</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackVersion</span></a></label>
+The data to merge/overwrite with</p>
+</section>
+<section id="id56">
+<h4>Possible Responses<a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id57">
+<h4>Examples<a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Add a version to a pack</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/versions/0.0.1?token=FOO&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PATCH&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">PackVersion</span><span class="o">&gt;</span><span class="p">},</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="id58">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span><a class="headerlink" href="#id58" title="Permalink to this heading">#</a></h3>
+<p>Add to the list of a pack's versions</p>
+<section id="id59">
+<h4>URL Parameters<a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.
+<strong>versionId</strong>:
+The version number to target</p>
+</section>
+<section id="id60">
+<h4>Query Parameters<a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+</section>
+<section id="id61">
+<h4>Possible Responses<a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id62">
+<h4>Examples<a class="headerlink" href="#id62" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Delete a version</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/versions/0.0.1?token=FOO&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-id-versions-latest">
+<h2>/packs/:id/versions/latest<a class="headerlink" href="#packs-id-versions-latest" title="Permalink to this heading">#</a></h2>
+<section id="id63">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span><a class="headerlink" href="#id63" title="Permalink to this heading">#</a></h3>
+<p>Returns the latest version of the specified pack</p>
+<section id="id64">
+<h4>URL Parameters<a class="headerlink" href="#id64" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id65">
+<h4>Query Parameters<a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">version</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">MinecraftVersion</span></a>?</label>
+Optionally, get the latest version for the specified game version</p>
+</section>
+<section id="id66">
+<h4>Possible Responses<a class="headerlink" href="#id66" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">PackVersion</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id67">
+<h4>Examples<a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get the latest version for 1.19</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc/versions/latest?version=1.19&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs">
+<h2>/packs<a class="headerlink" href="#packs" title="Permalink to this heading">#</a></h2>
+<section id="id68">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id68" title="Permalink to this heading">#</a></h3>
+<p>Get a list of packs which meet the specified criteria</p>
+<section id="id69">
+<h4>Query Parameters<a class="headerlink" href="#id69" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">search</span> <label class="sd-text-secondary">string</label>
+A search query against the name or id of the pack</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">sort</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">SortOptions</span></a></label>
+How to sort the requested data</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">limit</span> <label class="sd-text-secondary">int = 20</label>
+How many packs to send. Maximum of 100 per request.</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">start</span> <label class="sd-text-secondary">int = 0</label>
+How far into the queries should be counted</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">category</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackCategory</span></a>[]?</label>
+Which categories should the pack be a part of</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">version</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">MinecraftVersion</span></a>[]?</label>
+Which versions should the pack support</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">hidden</span> <label class="sd-text-secondary">boolean = false</label>
+Should unlisted packs be returned.</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">scope</span> <label class="sd-text-secondary">string[]?</label>
+A list of variable lookups starting with <code class="docutils literal notranslate"><span class="pre">data.</span></code> or <code class="docutils literal notranslate"><span class="pre">meta.</span></code></p>
+</section>
+<section id="id70">
+<h4>Possible Responses<a class="headerlink" href="#id70" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{id: string, displayName: string, data?: any, meta?: any}</label></p>
+</section>
+<section id="id71">
+<h4>Examples<a class="headerlink" href="#id71" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get a list of packs that are marked as Extensive and their descriptions</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs?category=Extensive&amp;scope=data.display.description&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="id72">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span><a class="headerlink" href="#id72" title="Permalink to this heading">#</a></h3>
+<p>Upload a new pack to the plaform</p>
+<section id="id73">
+<h4>Query Parameters<a class="headerlink" href="#id73" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">id</span> <label class="sd-text-secondary">string</label>
+The plaintext id for the pack</p>
+</section>
+<section id="id74">
+<h4>Body Parameters<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">data</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackData</span></a></label></p>
+</section>
+<section id="id75">
+<h4>Possible Responses<a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{packId: string}</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">CONFLICT - 409</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id76">
+<h4>Examples<a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Upload a new pack called foobar</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/coc?token=NOT_TODAY_HAHA&amp;id=foobar&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Pack</span><span class="w"> </span><span class="nx">Data</span><span class="o">&gt;</span><span class="p">},</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="packs-count">
+<h2>/packs/count<a class="headerlink" href="#packs-count" title="Permalink to this heading">#</a></h2>
+<section id="id77">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h3>
+<p>Similar to /packs, this route returns the number of packs which match the criteria</p>
+<section id="id78">
+<h4>Query Parameters<a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">search</span> <label class="sd-text-secondary">string</label>
+A search query against the name or id of the pack</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">category</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">PackCategory</span></a>[]?</label>
+Which categories should the pack be a part of</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">version</span> <label class="sd-text-secondary"><a class="reference internal" href="../data-types/"><span class="doc std std-doc">MinecraftVersion</span></a>[]?</label>
+Which versions should the pack support</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">hidden</span> <label class="sd-text-secondary">boolean = false</label>
+Should unlisted packs be returned.</p>
+</section>
+<section id="id79">
+<h4>Possible Responses<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">number</label></p>
+</section>
+<section id="id80">
+<h4>Examples<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Number of packs which contain <code class="docutils literal notranslate"><span class="pre">the</span></code></p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/packs/count?search=the&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="sanitize">
+<h2>/sanitize<a class="headerlink" href="#sanitize" title="Permalink to this heading">#</a></h2>
+<section id="id81">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h3>
+<p>Sanitize a value to a consistent format (Alphanumeric + <code class="docutils literal notranslate"><span class="pre">-</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">_</span></code>)</p>
+<section id="id82">
+<h4>Query Parameters<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">value</span> <label class="sd-text-secondary">string</label>
+The value too properly sanitize</p>
+</section>
+<section id="id83">
+<h4>Possible Responses<a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+</section>
+<section id="id84">
+<h4>Examples<a class="headerlink" href="#id84" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Sanitize a username</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/sanitize?value=Jachro&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Returns &quot;jachro&quot;</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="supported-versions">
+<h2>/supported-versions<a class="headerlink" href="#supported-versions" title="Permalink to this heading">#</a></h2>
+<section id="id85">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id85" title="Permalink to this heading">#</a></h3>
+<p>Retrieve the list of all <a class="reference internal" href="../data-types/"><span class="doc std std-doc">MinecraftVersion</span></a> supported by the platform</p>
+<section id="id86">
+<h4>Possible Responses<a class="headerlink" href="#id86" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">MinecraftVersion[]</label></p>
+<br/>
+</section>
+</section>
+</section>
+<section id="tokens">
+<h2>/tokens<a class="headerlink" href="#tokens" title="Permalink to this heading">#</a></h2>
+<section id="id87">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span><a class="headerlink" href="#id87" title="Permalink to this heading">#</a></h3>
+<p>This route allows the creation of a PAT</p>
+<section id="id88">
+<h4>Query Parameters<a class="headerlink" href="#id88" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Specifically a Firebase ID Token, not another PAT</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">expires</span> <label class="sd-text-secondary">string</label>
+How long should the token be valid for, in the form `<num>&lt;h|&gt;</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">name</span> <label class="sd-text-secondary">string?</label>
+Name of token shown in the UI</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">scopes</span> <label class="sd-text-secondary">PermissionScope[]? = []</label>
+List of permissions for the token</p>
+</section>
+<section id="id89">
+<h4>Possible Responses<a class="headerlink" href="#id89" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{tokenDocId: string, tokenEntry: PAToken, token: string}</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">SERVER_ERROR - 500</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id90">
+<h4>Examples<a class="headerlink" href="#id90" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get a 1 day token</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/tokens?token=&lt;ID Token Here&gt;&amp;expires=1d&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="id91">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h3>
+<p>This route gets all tokens owned by the user</p>
+<section id="id92">
+<h4>Query Parameters<a class="headerlink" href="#id92" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Specifically a Firebase ID Token, not another PAT</p>
+</section>
+<section id="id93">
+<h4>Possible Responses<a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{tokenDocId, tokenEntry: PAToken}[]</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">SERVER_ERROR - 500</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id94">
+<h4>Examples<a class="headerlink" href="#id94" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get all tokens</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/tokens?token=&lt;ID Token Here&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="tokens-id">
+<h2>/tokens/:id<a class="headerlink" href="#tokens-id" title="Permalink to this heading">#</a></h2>
+<section id="id95">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span><a class="headerlink" href="#id95" title="Permalink to this heading">#</a></h3>
+<p>This route deletes a given token</p>
+<section id="id96">
+<h4>URL Parameters<a class="headerlink" href="#id96" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id: string</strong>:
+The Doc Id for the token</p>
+</section>
+<section id="id97">
+<h4>Query Parameters<a class="headerlink" href="#id97" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Specifically a Firebase ID Token, not another PAT</p>
+</section>
+<section id="id98">
+<h4>Possible Responses<a class="headerlink" href="#id98" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">SERVER_ERROR - 500</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id99">
+<h4>Examples<a class="headerlink" href="#id99" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get a token</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/tokens/123456?token=&lt;ID Token Here&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="tokens-id-refresh">
+<h2>/tokens/:id/refresh<a class="headerlink" href="#tokens-id-refresh" title="Permalink to this heading">#</a></h2>
+<section id="id100">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span><a class="headerlink" href="#id100" title="Permalink to this heading">#</a></h3>
+<p>This refreshes a given token</p>
+<section id="id101">
+<h4>URL Parameters<a class="headerlink" href="#id101" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id: string</strong>:
+The Doc Id for the token</p>
+</section>
+<section id="id102">
+<h4>Query Parameters<a class="headerlink" href="#id102" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Specifically a Firebase ID Token, not another PAT</p>
+</section>
+<section id="id103">
+<h4>Possible Responses<a class="headerlink" href="#id103" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{tokenEntry: PAToken, token: string}</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">SERVER_ERROR - 500</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id104">
+<h4>Examples<a class="headerlink" href="#id104" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Get a token</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/tokens/123456?token=&lt;ID Token Here&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="users-id-bundles">
+<h2>/users/:id/bundles<a class="headerlink" href="#users-id-bundles" title="Permalink to this heading">#</a></h2>
+<section id="id105">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id105" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a specific users owned and contributed packs</p>
+<section id="id106">
+<h4>URL Parameters<a class="headerlink" href="#id106" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The user's UID or plaintext username. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id107">
+<h4>Possible Responses<a class="headerlink" href="#id107" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string[]</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id108">
+<h4>Examples<a class="headerlink" href="#id108" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Fetch a user's bundles</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/users/TheNuclearNexus/bundles&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="users-id">
+<h2>/users/:id<a class="headerlink" href="#users-id" title="Permalink to this heading">#</a></h2>
+<section id="id109">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id109" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a specific users information</p>
+<section id="id110">
+<h4>URL Parameters<a class="headerlink" href="#id110" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The user's UID or plaintext username. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id111">
+<h4>Possible Responses<a class="headerlink" href="#id111" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{uid: string, cleanName: string, displayName: string, role: string}</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id112">
+<h4>Examples<a class="headerlink" href="#id112" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Fetch a user's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/users/TheNuclearNexus&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+<section id="patch-put">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">PATCH/PUT</span><a class="headerlink" href="#patch-put" title="Permalink to this heading">#</a></h3>
+<p>Set a specific users information</p>
+<section id="id113">
+<h4>URL Parameters<a class="headerlink" href="#id113" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The pack's UID or plaintext id. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id114">
+<h4>Query Parameters<a class="headerlink" href="#id114" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">token</span> <label class="sd-text-secondary">string</label>
+Either Firebase Id Token or a valid PAT</p>
+</section>
+<section id="id115">
+<h4>Body Parameters<a class="headerlink" href="#id115" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">data</span> <label class="sd-text-secondary">Omit&lt;UserData, ['cleanName', 'creationTime', 'uid]&gt;</label></p>
+</section>
+<section id="id116">
+<h4>Possible Responses<a class="headerlink" href="#id116" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id117">
+<h4>Examples<a class="headerlink" href="#id117" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Set a user's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/users/TheNuclearNexus?token=NOT_TODAY_HAHA&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="s1">&#39;PATCH&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">User</span><span class="w"> </span><span class="nx">Data</span><span class="o">&gt;</span><span class="p">},</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="users-id-pfp">
+<h2>/users/:id/pfp<a class="headerlink" href="#users-id-pfp" title="Permalink to this heading">#</a></h2>
+<section id="id118">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id118" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a specific user's pfp</p>
+<section id="id119">
+<h4>URL Parameters<a class="headerlink" href="#id119" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The user's UID or plain text username. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id120">
+<h4>Possible Responses<a class="headerlink" href="#id120" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">ArrayBuffer</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id121">
+<h4>Examples<a class="headerlink" href="#id121" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Fetch a user's pfp</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/users/TheNuclearNexus/pfp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="users-id-packs">
+<h2>/users/:id/packs<a class="headerlink" href="#users-id-packs" title="Permalink to this heading">#</a></h2>
+<section id="id122">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id122" title="Permalink to this heading">#</a></h3>
+<p>Retrieve a specific users owned and contributed packs</p>
+<section id="id123">
+<h4>URL Parameters<a class="headerlink" href="#id123" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><strong>id</strong>:
+The user's UID or plaintext username. Using UID is more performant as it is a direct lookup.</p>
+</section>
+<section id="id124">
+<h4>Possible Responses<a class="headerlink" href="#id124" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">string[]</label></p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label></p>
+</section>
+<section id="id125">
+<h4>Examples<a class="headerlink" href="#id125" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Fetch a user's data</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/users/TheNuclearNexus/packs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+<section id="validate-download">
+<h2>/validate-download<a class="headerlink" href="#validate-download" title="Permalink to this heading">#</a></h2>
+<section id="id126">
+<h3><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span><a class="headerlink" href="#id126" title="Permalink to this heading">#</a></h3>
+<p>This route is used to ensure that a download url is valid and reachable by the Smithed servers.</p>
+<section id="id127">
+<h4>Query Parameters<a class="headerlink" href="#id127" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-dark sd-bg-text-dark">url</span> <label class="sd-text-secondary">string</label>
+The download url</p>
+</section>
+<section id="id128">
+<h4>Possible Responses<a class="headerlink" href="#id128" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">OK - 200</span> <label class="sd-text-secondary">{valid: boolean}</label></p>
+</section>
+<section id="id129">
+<h4>Examples<a class="headerlink" href="#id129" title="Permalink to this heading">#</a></h4>
+<div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
+<div class="note admonition">
+<p class="admonition-title">Validate a github url</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.smithed.dev/v2/validate-download?url=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;https://github.com/TheNuclearNexus/CallOfChaos/releases/download/0.0.5/Call.of.Chaos.0.0.5.zip&#39;</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<br/>
+</section>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../guides/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Guides</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../data-types/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Data Types</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Routes</a><ul>
+<li><a class="reference internal" href="#bundles-id">/bundles/:id</a><ul>
+<li><a class="reference internal" href="#get"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#url-parameters">URL Parameters</a></li>
+<li><a class="reference internal" href="#possible-responses">Possible Responses</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#delete"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span></a><ul>
+<li><a class="reference internal" href="#id1">URL Parameters</a></li>
+<li><a class="reference internal" href="#query-parameters">Query Parameters</a></li>
+<li><a class="reference internal" href="#id2">Possible Responses</a></li>
+<li><a class="reference internal" href="#id3">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#put"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">PUT</span></a><ul>
+<li><a class="reference internal" href="#id4">URL Parameters</a></li>
+<li><a class="reference internal" href="#id5">Query Parameters</a></li>
+<li><a class="reference internal" href="#body-parameters">Body Parameters</a></li>
+<li><a class="reference internal" href="#id6">Possible Responses</a></li>
+<li><a class="reference internal" href="#id7">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bundles-id-download">/bundles/:id/download</a><ul>
+<li><a class="reference internal" href="#id8"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id9">URL Parameters</a></li>
+<li><a class="reference internal" href="#id10">Query Parameters</a></li>
+<li><a class="reference internal" href="#id11">Possible Responses</a></li>
+<li><a class="reference internal" href="#id12">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bundles">/bundles</a><ul>
+<li><a class="reference internal" href="#post"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span></a><ul>
+<li><a class="reference internal" href="#id13">Query Parameters</a></li>
+<li><a class="reference internal" href="#id14">Body Parameters</a></li>
+<li><a class="reference internal" href="#id15">Possible Responses</a></li>
+<li><a class="reference internal" href="#id16">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#download">/download</a><ul>
+<li><a class="reference internal" href="#id17"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id18">Query Parameters</a></li>
+<li><a class="reference internal" href="#id19">Possible Responses</a></li>
+<li><a class="reference internal" href="#id20">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-id">/packs/:id</a><ul>
+<li><a class="reference internal" href="#id21"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id22">URL Parameters</a></li>
+<li><a class="reference internal" href="#id23">Possible Responses</a></li>
+<li><a class="reference internal" href="#id24">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-id-contributors">/packs/:id/contributors</a><ul>
+<li><a class="reference internal" href="#id25"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id26">URL Parameters</a></li>
+<li><a class="reference internal" href="#id27">Possible Responses</a></li>
+<li><a class="reference internal" href="#id28">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id29"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span></a><ul>
+<li><a class="reference internal" href="#id30">URL Parameters</a></li>
+<li><a class="reference internal" href="#id31">Query Parameters</a></li>
+<li><a class="reference internal" href="#id32">Possible Responses</a></li>
+<li><a class="reference internal" href="#id33">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span></a><ul>
+<li><a class="reference internal" href="#id35">URL Parameters</a></li>
+<li><a class="reference internal" href="#id36">Query Parameters</a></li>
+<li><a class="reference internal" href="#id37">Possible Responses</a></li>
+<li><a class="reference internal" href="#id38">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-id-meta">/packs/:id/meta</a><ul>
+<li><a class="reference internal" href="#id39"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id40">URL Parameters</a></li>
+<li><a class="reference internal" href="#id41">Possible Responses</a></li>
+<li><a class="reference internal" href="#id42">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-id-versions">/packs/:id/versions</a><ul>
+<li><a class="reference internal" href="#id43"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id44">URL Parameters</a></li>
+<li><a class="reference internal" href="#id45">Possible Responses</a></li>
+<li><a class="reference internal" href="#id46">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id47"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span></a><ul>
+<li><a class="reference internal" href="#id48">URL Parameters</a></li>
+<li><a class="reference internal" href="#id49">Query Parameters</a></li>
+<li><a class="reference internal" href="#id50">Body Parameters</a></li>
+<li><a class="reference internal" href="#id51">Possible Responses</a></li>
+<li><a class="reference internal" href="#id52">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-id-versions-versionid">/packs/:id/versions/:versionId</a><ul>
+<li><a class="reference internal" href="#patch"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">PATCH</span></a><ul>
+<li><a class="reference internal" href="#id53">URL Parameters</a></li>
+<li><a class="reference internal" href="#id54">Query Parameters</a></li>
+<li><a class="reference internal" href="#id55">Body Parameters</a></li>
+<li><a class="reference internal" href="#id56">Possible Responses</a></li>
+<li><a class="reference internal" href="#id57">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id58"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span></a><ul>
+<li><a class="reference internal" href="#id59">URL Parameters</a></li>
+<li><a class="reference internal" href="#id60">Query Parameters</a></li>
+<li><a class="reference internal" href="#id61">Possible Responses</a></li>
+<li><a class="reference internal" href="#id62">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-id-versions-latest">/packs/:id/versions/latest</a><ul>
+<li><a class="reference internal" href="#id63"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span></a><ul>
+<li><a class="reference internal" href="#id64">URL Parameters</a></li>
+<li><a class="reference internal" href="#id65">Query Parameters</a></li>
+<li><a class="reference internal" href="#id66">Possible Responses</a></li>
+<li><a class="reference internal" href="#id67">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs">/packs</a><ul>
+<li><a class="reference internal" href="#id68"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id69">Query Parameters</a></li>
+<li><a class="reference internal" href="#id70">Possible Responses</a></li>
+<li><a class="reference internal" href="#id71">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id72"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span></a><ul>
+<li><a class="reference internal" href="#id73">Query Parameters</a></li>
+<li><a class="reference internal" href="#id74">Body Parameters</a></li>
+<li><a class="reference internal" href="#id75">Possible Responses</a></li>
+<li><a class="reference internal" href="#id76">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packs-count">/packs/count</a><ul>
+<li><a class="reference internal" href="#id77"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id78">Query Parameters</a></li>
+<li><a class="reference internal" href="#id79">Possible Responses</a></li>
+<li><a class="reference internal" href="#id80">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sanitize">/sanitize</a><ul>
+<li><a class="reference internal" href="#id81"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id82">Query Parameters</a></li>
+<li><a class="reference internal" href="#id83">Possible Responses</a></li>
+<li><a class="reference internal" href="#id84">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#supported-versions">/supported-versions</a><ul>
+<li><a class="reference internal" href="#id85"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id86">Possible Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tokens">/tokens</a><ul>
+<li><a class="reference internal" href="#id87"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span></a><ul>
+<li><a class="reference internal" href="#id88">Query Parameters</a></li>
+<li><a class="reference internal" href="#id89">Possible Responses</a></li>
+<li><a class="reference internal" href="#id90">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id91"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id92">Query Parameters</a></li>
+<li><a class="reference internal" href="#id93">Possible Responses</a></li>
+<li><a class="reference internal" href="#id94">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tokens-id">/tokens/:id</a><ul>
+<li><a class="reference internal" href="#id95"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">DELETE</span></a><ul>
+<li><a class="reference internal" href="#id96">URL Parameters</a></li>
+<li><a class="reference internal" href="#id97">Query Parameters</a></li>
+<li><a class="reference internal" href="#id98">Possible Responses</a></li>
+<li><a class="reference internal" href="#id99">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tokens-id-refresh">/tokens/:id/refresh</a><ul>
+<li><a class="reference internal" href="#id100"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">POST</span></a><ul>
+<li><a class="reference internal" href="#id101">URL Parameters</a></li>
+<li><a class="reference internal" href="#id102">Query Parameters</a></li>
+<li><a class="reference internal" href="#id103">Possible Responses</a></li>
+<li><a class="reference internal" href="#id104">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#users-id-bundles">/users/:id/bundles</a><ul>
+<li><a class="reference internal" href="#id105"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id106">URL Parameters</a></li>
+<li><a class="reference internal" href="#id107">Possible Responses</a></li>
+<li><a class="reference internal" href="#id108">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#users-id">/users/:id</a><ul>
+<li><a class="reference internal" href="#id109"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id110">URL Parameters</a></li>
+<li><a class="reference internal" href="#id111">Possible Responses</a></li>
+<li><a class="reference internal" href="#id112">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#patch-put"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">PATCH/PUT</span></a><ul>
+<li><a class="reference internal" href="#id113">URL Parameters</a></li>
+<li><a class="reference internal" href="#id114">Query Parameters</a></li>
+<li><a class="reference internal" href="#id115">Body Parameters</a></li>
+<li><a class="reference internal" href="#id116">Possible Responses</a></li>
+<li><a class="reference internal" href="#id117">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#users-id-pfp">/users/:id/pfp</a><ul>
+<li><a class="reference internal" href="#id118"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id119">URL Parameters</a></li>
+<li><a class="reference internal" href="#id120">Possible Responses</a></li>
+<li><a class="reference internal" href="#id121">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#users-id-packs">/users/:id/packs</a><ul>
+<li><a class="reference internal" href="#id122"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id123">URL Parameters</a></li>
+<li><a class="reference internal" href="#id124">Possible Responses</a></li>
+<li><a class="reference internal" href="#id125">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#validate-download">/validate-download</a><ul>
+<li><a class="reference internal" href="#id126"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">GET</span></a><ul>
+<li><a class="reference internal" href="#id127">Query Parameters</a></li>
+<li><a class="reference internal" href="#id128">Possible Responses</a></li>
+<li><a class="reference internal" href="#id129">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
+</html>

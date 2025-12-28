@@ -1,0 +1,539 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="NEWNEW Data Pack Menu Dialog" href="../data-pack-menu/" /><link rel="prev" title="Vanilla Overrides" href="../vanilla-overrides/" />
+        <link rel="canonical" href="https://docs.smithed.dev/conventions/tag-specification.html" />
+
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
+        <title>Tag Specification - Smithed Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #3f3f3f;
+  --color-code-foreground: #dcdccc;
+  --color-brand-content: #1b48c4;
+  --color-brand-primary: #1b48c4;
+  --font-stack: Inconsolata, sans-serif;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-content: #6b83c5;
+  --color-brand-primary: #6b83c5;
+  --font-stack: Inconsolata, sans-serif;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-content: #6b83c5;
+  --color-brand-primary: #6b83c5;
+  --font-stack: Inconsolata, sans-serif;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     <a href='/weld'> Checkout the in-depth weld docs! <a/> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../"><div class="brand">Smithed Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/icon.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Conventions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../namespacing/">Namespacing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pack-ids/">Pack IDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd-prefixing/">CMD Prefixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vanilla-overrides/">Vanilla Overrides</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Tag Specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-pack-menu/"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Data Pack Menu Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../libraries/">Libraries</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/actionbar/">Actionbar (v0.4.1)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../libraries/crafter/">Crafter (v0.2.0)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../libraries/crafter/data_types/">Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../libraries/crafter/function_tag/">Function Tag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/custom-block/">Custom Block (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/damage/">Damage (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/prevent-aggression/">Prevent Aggression (v0.2.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/prevent-aggression/#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/item/">Item (v0.2.1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../libraries/title/">Title (v0.0.1)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../weld/">Weld</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../weld/merging/"><span class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary">v1</span> Custom Merging Rules</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/rule/">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/source/">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/priority/">Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/condition/">Condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weld/merging/mcmeta/"><code class="docutils literal notranslate"><span class="pre">pack.mcmeta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../launcher/">Launcher</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/">Api Layer</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/data-types/">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/routes/">Routes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../guides/">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/yellow-shulker-box/">Yellow Shulker Box</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/contributing/">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Smithed-MC">Smithed Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://smithed.dev">Smithed Website</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="tag-specification">
+<h1>Tag Specification<a class="headerlink" href="#tag-specification" title="Permalink to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 sd-pl-3 sd-outline-muted sd-border-1 sd-rounded-1 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p><strong>Summary</strong></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-10 sd-col-md-10 sd-col-lg-10 docutils">
+<p>Standarized tags to specify on your custom entities and items</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p><strong>Required</strong></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-10 sd-col-md-10 sd-col-lg-10 docutils">
+<p>On any custom entity or item you add. Also for selectors selecting arbitrary entities</p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p><strong>Example</strong></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-10 sd-col-md-10 sd-col-lg-10 docutils">
+<p>Transforming zombies into a custom frozen zombie would need a <code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code> tag</p>
+</div>
+</div>
+</div>
+<p>Smithed contains a set of standardized entity and item tags to help protect and indicate custom behavior to other packs. These allow packs to understand which blocks, entities, and items are normal and which ones are &quot;custom.&quot;</p>
+<section id="custom-entities">
+<h2>Custom Entities<a class="headerlink" href="#custom-entities" title="Permalink to this heading">#</a></h2>
+<p>Custom entities are specified by tags on the entity itself. All custom mobs should have these tags to allow other datapacks to distinguish between a normal mob and a custom one.</p>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>If I add a custom mob that is a variant of the husk, it should be exempt from someone else's pack that gives all husks new armor.</p>
+</div>
+<p>You should use these tags by either summoning it with the entity or applying it afterwards.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="c1"># We could apply this data now or later, which ever you prefer</span>
+<span class="nb">summon</span><span class="w"> </span><span class="kc">zombie</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="p">{</span><span class="na">CustomName</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&quot;My Juicy Zombie&quot;&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">Health</span><span class="p">:</span><span class="mf">200.0f</span><span class="p">,</span><span class="w"> </span><span class="na">Tags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="na">&quot;smithed.entity&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+<p>You should <em>respect</em> these tags by excluding it from certain <code class="docutils literal notranslate"><span class="pre">&#64;e</span></code> calls.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note, we only convert zombies to juicy zombies if they aren&#39;t a `smithed.entity`</span>
+<span class="nb">execute</span><span class="w"> </span><span class="kc">as</span><span class="w"> </span><span class="nv">@e</span><span class="p">[</span><span class="na">type</span><span class="p">=</span><span class="nt">random</span><span class="p">,</span><span class="w"> </span><span class="na">limit</span><span class="p">=</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="na">type</span><span class="p">=</span><span class="nt">zombie</span><span class="p">,</span><span class="w"> </span><span class="na">tag</span><span class="p">=!</span><span class="nt">smithed.entity</span><span class="p">]</span>
+<span class="w">  </span><span class="kc">run</span><span class="nb"> data</span><span class="w"> </span><span class="kc">merge</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="p">{</span><span class="na">CustomName</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&quot;My Juicy Zombie&quot;&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">Health</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0f</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>When and where you decide to exclude a tag is based off of the specific tag described below:</p>
+<section id="smithed-entity">
+<h3><code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code><a class="headerlink" href="#smithed-entity" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>This tag functions as a separator between vanilla entities and base entities of custom mobs.</p>
+</div></blockquote>
+<p>Entities with this tag should be exempt to:</p>
+<ul class="simple">
+<li><p>Changes specific to the vanilla entity they are using as a base.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>Mobs based on the wandering trader, such as TCC’s iceologer, should have <code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code>, and selectors to give the vanilla wandering trader new trades should have <code class="docutils literal notranslate"><span class="pre">tag=!smithed.entity</span></code>.</p>
+</div>
+<p>Entities with this tag should not be exempt to:</p>
+<ul class="simple">
+<li><p>Damage from commands</p></li>
+<li><p>Having effects applied via command</p></li>
+<li><p>Basically anything you can do to a bat in survival mode without operator permissions.</p></li>
+</ul>
+</section>
+<section id="smithed-strict">
+<h3><code class="docutils literal notranslate"><span class="pre">smithed.strict</span></code><a class="headerlink" href="#smithed-strict" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Functions as a modifier for <code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code>.</p>
+</div></blockquote>
+<div class="warning admonition">
+<p class="admonition-title">Warning</p>
+<p>Including this tag on your entity <strong>requires</strong> you to include <code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code>.</p>
+</div>
+<p>This is intended for boss entities or invisible technical marker entities.</p>
+<p>Entities with this tag should be exempt to:</p>
+<ul class="simple">
+<li><p>Changes to position, rotation</p></li>
+<li><p>Basically everything listed under “not exempt” under <code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code></p></li>
+</ul>
+<p>Entities with this tag should not be exempt to:</p>
+<ul class="simple">
+<li><p>Damage from commands</p></li>
+<li><p>Note that damage from commands should be ignored if the entity has <code class="docutils literal notranslate"><span class="pre">{Invulnerable:1b}</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="custom-blocks">
+<h2>Custom Blocks<a class="headerlink" href="#custom-blocks" title="Permalink to this heading">#</a></h2>
+<p>Custom blocks are specified by tags on an entity inside the block. All custom blocks should have an entity with this tag to allow other datapacks to distinguish between a normal block and a custom one.</p>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>If I add a custom crafter that uses a barrel, it should be exempt from someone else's pack that allows for pushable nbt blocks.</p>
+</div>
+<p>You should use the tag by summoning it with the entity when the block is placed.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="c1"># We could apply this data now or later, which ever you prefer</span>
+<span class="nb">setblock</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="kc">obsidian</span>
+<span class="nb">summon</span><span class="w"> </span><span class="kc">marker</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w">  </span>
+<span class="w">  </span><span class="p">{</span><span class="na">CustomName</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&quot;My Custom Block&quot;&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">Tags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="na">&quot;smithed.block&quot;</span><span class="p">,</span><span class="na">&quot;smithed.entity&quot;</span><span class="p">,</span><span class="na">&quot;smithed.strict&quot;</span><span class="p">]}</span>
+</pre></div>
+</div>
+<p>You should <em>respect</em> these tags by checking for the entity during certain block checks.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note, we only convert obsidian to deepslate if the blocks don&#39;t have a `smithed.block` inside</span>
+<span class="nb">execute</span><span class="w"> </span><span class="kc">at</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">align</span><span class="w"> </span><span class="kc">xyz</span><span class="w"> </span><span class="kc">positioned</span><span class="w"> </span><span class="o">~</span><span class="mf">0.5</span><span class="w"> </span><span class="o">~</span><span class="mf">0.5</span><span class="w"> </span><span class="o">~</span><span class="mf">0.5</span><span class="w"> </span><span class="kc">if</span><span class="w"> </span><span class="kc">block</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="kc">obsidian</span><span class="w"> </span>
+<span class="w">  </span><span class="kc">unless</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@e</span><span class="p">[</span><span class="na">tag</span><span class="p">=</span><span class="nt">smithed.block</span><span class="p">,</span><span class="na">distance</span><span class="p">=</span><span class="l">..</span><span class="mf">0.5</span><span class="p">]</span><span class="w"> </span><span class="kc">run</span><span class="nb"> </span>
+<span class="nb">  setblock</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="kc">deepslate</span>
+</pre></div>
+</div>
+<section id="smithed-block">
+<h3><code class="docutils literal notranslate"><span class="pre">smithed.block</span></code><a class="headerlink" href="#smithed-block" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>This tag functions as a separator between vanilla blocks and base blocks of custom blocks.
+Entities with this tag are to be used as custom block markers.</p>
+</div></blockquote>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>Armor stands inside of a custom crafter should be marked with this tag.</p>
+</div>
+</section>
+</section>
+<section id="custom-items">
+<h2>Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this heading">#</a></h2>
+<p>Custom items are specified by tags on in custom item nbt. All custom items should have these tags to allow other datapacks to distinguish between a normal item and a custom one.</p>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>If I add a custom item that is a clock, it should be exempt from someone else's pack that allows for clocks to change the time of day.</p>
+</div>
+<p>You should use these tags when creating the item.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="c1"># We could apply this data now or later, which ever you prefer</span>
+<span class="nb">give</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">coal</span><span class="p">[</span><span class="na">item_name</span><span class="p">=</span><span class="s1">&#39;Fossil Fuel&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">custom_data</span><span class="p">={</span><span class="na">smithed</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="na">ignore</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="na">functionality</span><span class="p">:</span><span class="w"> </span><span class="m m-Byte">1b</span><span class="p">}}}]</span>
+</pre></div>
+</div>
+<p>You should <em>respect</em> these tags by excluding it from certain item checks.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span># Note, we only apply effects to players holding coal if the item doesn&#39;t have the ignore flag
+execute
+  as @a
+  if items entity @s weapon.mainhand coal[custom_data~{smithed: {ignore: {functionality: 1b}}}]
+  run effect give @s weakness 10 0
+</pre></div>
+</div>
+<section id="smithed-ignore-functionality-1b">
+<h3><code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{functionality:1b}}}</span></code><a class="headerlink" href="#smithed-ignore-functionality-1b" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>This tag should be used to mark an item that shouldn’t act like the base item for custom abilities.</p>
+</div></blockquote>
+<p>Items with this tag should be exempt to:</p>
+<ul class="simple">
+<li><p>Gameplay specific changes to the vanilla item they are using as a base.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>Custom &quot;poison apples&quot; should use <code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{functionality:1b}}}</span></code> and food balance modules shouldn't count apples with <code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{functionality:1b}}}</span></code> as having eaten an apple.</p>
+</div>
+</section>
+<section id="smithed-ignore-crafting-1b">
+<h3><code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{crafting:1b}}}</span></code><a class="headerlink" href="#smithed-ignore-crafting-1b" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>This tag should be used to mark an item that shouldn’t act like the base item as a crafting ingredient.</p>
+</div></blockquote>
+<p>Items with this tag should be exempt to:</p>
+<ul class="simple">
+<li><p>Crafting with the vanilla item they are using as a base.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Example</p>
+<p>Custom chestplates should use <code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{crafting:1b}}}</span></code> and custom crafting recipes shouldn't consider chestplates with <code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{crafting:1b}}}</span></code> as a valid chestplate item.</p>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../data-pack-menu/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="light-only"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">NEW</span></span><span class="dark-only"><span class="sd-sphinx-override sd-badge sd-outline-success sd-text-success">NEW</span></span> Data Pack Menu Dialog</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../vanilla-overrides/">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Vanilla Overrides</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Tag Specification</a><ul>
+<li><a class="reference internal" href="#custom-entities">Custom Entities</a><ul>
+<li><a class="reference internal" href="#smithed-entity"><code class="docutils literal notranslate"><span class="pre">smithed.entity</span></code></a></li>
+<li><a class="reference internal" href="#smithed-strict"><code class="docutils literal notranslate"><span class="pre">smithed.strict</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#custom-blocks">Custom Blocks</a><ul>
+<li><a class="reference internal" href="#smithed-block"><code class="docutils literal notranslate"><span class="pre">smithed.block</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#custom-items">Custom Items</a><ul>
+<li><a class="reference internal" href="#smithed-ignore-functionality-1b"><code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{functionality:1b}}}</span></code></a></li>
+<li><a class="reference internal" href="#smithed-ignore-crafting-1b"><code class="docutils literal notranslate"><span class="pre">{smithed:{ignore:{crafting:1b}}}</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    </body>
+</html>

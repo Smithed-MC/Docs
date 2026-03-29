@@ -57,5 +57,5 @@ And you need to update the following output :
 | 'Success of operation'                        | score        | $temp                   | smithed.data                     |
 | 'Item to replace in the crafter'              | entity       | @s                      | weapon.mainhand                  |
 
-The default value of 'Success of operation' is 0, which by default juste remove one item. This would be the default behavior if your flag is not present. If your flag is present and you want to change the item, set it to 1.
+The default value of 'Success of operation' is 0, which by default just remove one item. This would be the default behavior if your flag is not present. If your flag is present and you want to change the item, set it to 1.
 

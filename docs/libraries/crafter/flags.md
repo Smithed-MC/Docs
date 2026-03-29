@@ -43,19 +43,19 @@ To create your own flag, first pick up a unique name for your flag, for example 
 
 ### `#smithed.crafter:event/advanced_remove`
 
-Register a function to to this function tag, this function has the following inputs :
+Register a function to this function tag, this function has the following inputs :
 
 | Input Name                | Input Type   | Input Source             | Input Objective/Path             |
 | ---                       | ---          | ---                      | ---                              |
 | 'Item to process'         | entity       | @s                       | weapon.mainhand                  |
 | 'Flags list'              | storage      | smithed.crafter:input    | flags                            |
 
-And you need update the following output :
+And you need to update the following output :
 
 | Output Name                                   | Output Type  | Output Destination      | Output Objective/Path            |
 | ---                                           | ---          | ---                     | ---                              |
 | 'Success of operation'                        | score        | $temp                   | smithed.data                     |
 | 'Item to replace in the crafter'              | entity       | @s                      | weapon.mainhand                  |
 
-The default value of 'Success of operation' is 0, which by default juste remove one item. This whould be the default behavior if your flag is not present. If your flag is present and you want to change the item, set it to 1.
+The default value of 'Success of operation' is 0, which by default juste remove one item. This would be the default behavior if your flag is not present. If your flag is present and you want to change the item, set it to 1.
 

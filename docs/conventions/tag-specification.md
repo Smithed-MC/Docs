@@ -6,7 +6,7 @@ myst:
     example: "Transforming zombies into a custom frozen zombie would need a `smithed.entity` tag"
 ---
 
-# Tag Specification
+# {{new_bdg}} Tag Specification
 {{ convention_header }}
 
 Smithed contains a set of standardized entity and item tags to help protect and indicate custom behavior to other packs. These allow packs to understand which blocks, entities, and items are normal and which ones are "custom."
@@ -138,4 +138,17 @@ Items with this tag should be exempt to:
 :class: note
 
 Custom chestplates should use `{smithed:{ignore:{crafting:1b}}}` and custom crafting recipes shouldn't consider chestplates with `{smithed:{ignore:{crafting:1b}}}` as a valid chestplate item.
+```
+### {{new_bdg}} `{smithed:{ignore:{everything:1b}}}`
+> This tag should be used to mark an item that shouldn’t be treated as an item. Specifically, this tag marks an item as purely technical.
+
+Items with this tag should be exempt to: 
+  - Being modified by other datapacks.
+  - Being cleared from the inventory.
+  - Being moved to another inventory. 
+  - Contributing to a counting check. 
+```{admonition} Example
+:class: note
+
+Items stored in the player's body slot for storage purposes should use `{smithed:{ignore:{everything:1b}}}` and datapacks shouldn't consider items with `{smithed:{ignore:{everything:1b}}}` as a valid item. Grave datapacks should not save this item into a different inventory, and datapacks using `/clear` to count items should ignore items with `{smithed:{ignore:{everything:1b}}}`.
 ```

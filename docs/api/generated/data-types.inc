@@ -66,7 +66,6 @@
     downloads: {
       total: number
       today: number
-      pastWeek: number
     }
   }
   owner: string

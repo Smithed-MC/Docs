@@ -77,4 +77,5 @@ Documentation for the implementing crafting recipes
 :hidden:
 data_types
 function_tag
+flags
 ```

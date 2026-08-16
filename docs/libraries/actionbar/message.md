@@ -25,7 +25,7 @@ data modify storage smithed.actionbar:input message set value {
 ### **Example of JSON Message**
 ```mcfunction
 data modify storage smithed.actionbar:input message set value {
-  json: '{"text": "You cannot complete this action!", "color": "red"}',
+  json: {"text": "You cannot complete this action!", "color": "red"},
   priority: 'notification'
 }
 ```

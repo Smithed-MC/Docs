@@ -9,6 +9,7 @@ data_pack:
     - "@smithed_libraries/packs/item"
     - "@smithed_libraries/packs/prevent-aggression"
     - "@smithed_libraries/packs/title"
+    - "@smithed_libraries/packs/tech-slots"
 
 pipeline:
   - smithed_libraries.plugins.documentation

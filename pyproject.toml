@@ -54,6 +54,7 @@ enchanter_version = "0.1.0"
 item_version = "0.2.1"
 prevent_aggression_version = "0.2.0"
 title_version = "0.0.1"
+tech_slots_version = "1.0.0"
 
 convention_header = """
 ::::{grid} 2 2 2 2

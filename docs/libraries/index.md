@@ -195,6 +195,17 @@ Title ・ v{{ title_version }}
 **Required** for packs that use the title & subtitle as it coordinates title & subtitle usage across data packs.
 :::
 
+:::{grid-item-card}
+:link: tech-slots
+:link-type: doc
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/tech-slots/pack.png
+
+Technical Slots ・ v{{ title_version }}
+^^^
+
+Facilitates the use of the player's body and saddle slots for player modifications.
+:::
+
 ::::
 
 ---
@@ -226,4 +237,5 @@ damage
 prevent-aggression
 item
 title
+tech-slots
 ```

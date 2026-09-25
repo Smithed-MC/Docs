@@ -50,7 +50,7 @@ How to properly override vanilla assets to be **Weld** compatible
 :link: tag-specification
 :link-type: doc
 
-{{new_bdg}} Tag Specification
+Tag Specification
 ^^^
 
 A set of custom tags to respect while interacting with blocks, entities, and items
@@ -60,10 +60,20 @@ A set of custom tags to respect while interacting with blocks, entities, and ite
 :link: data-pack-menu
 :link-type: doc
 
-{{new_bdg}} Data Pack Menu Dialog
+Data Pack Menu Dialog
 ^^^
 
 The "mod menu" for data packs!
+```
+
+```{grid-item-card}
+:link: unused-player-slots
+:link-type: doc
+
+{{new_bdg}} Unused Player Slots
+^^^
+
+How to use the player body and saddle slots without overwriting other modifications
 ```
 
 ::::
@@ -87,4 +97,5 @@ cmd-prefixing
 vanilla-overrides
 tag-specification
 data-pack-menu
+unused-player-slots
 ```

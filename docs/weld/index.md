@@ -23,12 +23,10 @@ weld --help
 weld *.zip  # weld all zip files in the current directory
 ```
 
-```{seealso}
-:class: dropdown toggle
+??? tip "See also"
 
-# alternatively
-python -m pip install weld
-```
+    # alternatively
+    python -m pip install weld
 
 ## Merging
 
@@ -47,8 +45,3 @@ Weld implements all of the vanilla merging rules:
 
 To learn more about the custom merging rules, continue to the next page!
 
-```{toctree}
-:hidden: true
-
-merging/index
-```

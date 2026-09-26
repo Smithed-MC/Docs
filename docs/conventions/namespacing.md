@@ -1,13 +1,27 @@
 ---
-myst:
-  substitutions:
-    summary: "Adding friendly prefixes to names of content in your pack"
-    required: "On file paths, tags, scores, teams, and storage"
-    example: "`tcc` as a namespace for the `tcc.dummy` scoreboard"
+summary: "Adding friendly prefixes to names of content in your pack"
+required: "On file paths, tags, scores, teams, and storage"
+example: "`tcc` as a namespace for the `tcc.dummy` scoreboard"
 ---
 
 # Namespacing
-{{ convention_header }}
+<div class="grid" markdown>
+<div class="grid-item" markdown>
+**Summary**
+
+{{ summary }}
+</div>
+<div class="grid-item" markdown>
+**Required**
+
+{{ required }}
+</div>
+<div class="grid-item" markdown>
+**Example**
+
+{{ example }}
+</div>
+</div>
 
 Namespacing is when you prefix your content with something in order to prevent the collision of names.
 

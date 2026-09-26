@@ -1,4 +1,3 @@
 # Data Types
 
-```{include} generated/data-types.inc
-```
+--8<-- "api/generated/data-types.inc"

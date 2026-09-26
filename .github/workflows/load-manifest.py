@@ -5,7 +5,7 @@ from pathlib import Path
 import requests
 import tomlkit as toml
 
-pyproject = Path("pyproject.toml")
+config_path = Path("zensical.toml")
 url = (
     "https://github.com/Smithed-MC/Libraries/blob/releases/"
     f"{os.environ['MC_VERSION']}/manifest.json?raw=true"
@@ -24,10 +24,12 @@ versions = {
 
 print(versions)
 
-# Load into MyST subsitutions (usable inside docs)
-print("Loading into `pyproject.toml`")
-config = toml.loads(pyproject.read_text())
-config["tool"]["mudkip"]["override"]["myst_substitutions"] |= versions
-pyproject.write_text(toml.dumps(config))
+# Load into the Zensical `extra` variables (usable inside docs as `{{ name }}`)
+print("Loading into `zensical.toml`")
+config = toml.loads(config_path.read_text())
+extra = config["project"]["extra"]
+for key, version in versions.items():
+    extra[key] = version
+config_path.write_text(toml.dumps(config))
 
 print("Done!")

@@ -13,8 +13,7 @@ A function tag to implement shaped recipes.
 ### Format :
 The function tag will be called, implement your recipes like this
 
-```{code-block} mcfunction
-:force:
+```mcfunction
 execute 
     # Success of the craft (for performance)
     store result score @s smithed.data 
@@ -30,8 +29,7 @@ execute
 
 #### Heavy Workbench:
 
-```{code-block} mcfunction
-:force:
+```mcfunction
 execute 
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 
@@ -42,8 +40,7 @@ Where ShapedRecipe is [this](https://wiki.smithed.dev/libraries/crafter/data_typ
 
 
 #### Guide : 
-```{code-block} mcfunction
-:force:
+```mcfunction
 execute 
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 
@@ -65,8 +62,7 @@ A function tag to implement shapeless recipes.
 
 ### Format :
 The function tag will be called, implement your recipes like this
-```{code-block} mcfunction
-:force:
+```mcfunction
 execute 
     # Success of the craft (for performance)
     store result score @s smithed.data 
@@ -84,8 +80,7 @@ execute
 
 #### Flint and Copper :
 
-```{code-block} mcfunction
-:force:
+```mcfunction
 execute 
     store result score @s smithed.data 
     if entity @s[scores={smithed.data=0}] 

@@ -2,7 +2,7 @@
 
 In the `pack.mcmeta`, you can define a `__smithed__` field.
 
-{bdg-info-line}`override` <code class="sd-text-secondary">bool (*false*)</code> - If true, every json file defined in this pack will **override** other pack's json files with the same namespace. This should **only** be used for Smithed bundles as it defines destructive behavior (completely skipping the merging process). Internally, this sets the `override` flag in downstream JSON resources to `true`.
+<span class="bdg bdg-info-line">override</span> <code class="sd-text-secondary">bool (*false*)</code> - If true, every json file defined in this pack will **override** other pack's json files with the same namespace. This should **only** be used for Smithed bundles as it defines destructive behavior (completely skipping the merging process). Internally, this sets the `override` flag in downstream JSON resources to `true`.
 
 
 ## Overrides

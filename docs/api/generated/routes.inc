@@ -1,75 +1,50 @@
 
-```{include} generated/bundles/id.inc
-```
+--8<-- "api/generated/bundles/id.inc"
 
-```{include} generated/bundles/id/download.inc
-```
+--8<-- "api/generated/bundles/id/download.inc"
 
-```{include} generated/bundles.inc
-```
+--8<-- "api/generated/bundles.inc"
 
-```{include} generated/download.inc
-```
+--8<-- "api/generated/download.inc"
 
-```{include} generated/packs/id.inc
-```
+--8<-- "api/generated/packs/id.inc"
 
-```{include} generated/packs/id/contributors.inc
-```
+--8<-- "api/generated/packs/id/contributors.inc"
 
-```{include} generated/packs/id/meta.inc
-```
+--8<-- "api/generated/packs/id/meta.inc"
 
-```{include} generated/packs/id/gallery/index.inc
-```
+--8<-- "api/generated/packs/id/gallery/index.inc"
 
-```{include} generated/packs/id/versions.inc
-```
+--8<-- "api/generated/packs/id/versions.inc"
 
-```{include} generated/packs/id/versions/versionId.inc
-```
+--8<-- "api/generated/packs/id/versions/versionId.inc"
 
-```{include} generated/packs/id/versions/latest.inc
-```
+--8<-- "api/generated/packs/id/versions/latest.inc"
 
-```{include} generated/packs.inc
-```
+--8<-- "api/generated/packs.inc"
 
-```{include} generated/packs/count.inc
-```
+--8<-- "api/generated/packs/count.inc"
 
-```{include} generated/sanitize.inc
-```
+--8<-- "api/generated/sanitize.inc"
 
-```{include} generated/supported-versions.inc
-```
+--8<-- "api/generated/supported-versions.inc"
 
-```{include} generated/tokens.inc
-```
+--8<-- "api/generated/tokens.inc"
 
-```{include} generated/tokens/id.inc
-```
+--8<-- "api/generated/tokens/id.inc"
 
-```{include} generated/tokens/id/refresh.inc
-```
+--8<-- "api/generated/tokens/id/refresh.inc"
 
-```{include} generated/users/id/bundles.inc
-```
+--8<-- "api/generated/users/id/bundles.inc"
 
-```{include} generated/users/id.inc
-```
+--8<-- "api/generated/users/id.inc"
 
-```{include} generated/users/id/pfp.inc
-```
+--8<-- "api/generated/users/id/pfp.inc"
 
-```{include} generated/users/id/banner.inc
-```
+--8<-- "api/generated/users/id/banner.inc"
 
-```{include} generated/users/id/packs.inc
-```
+--8<-- "api/generated/users/id/packs.inc"
 
-```{include} generated/users.inc
-```
+--8<-- "api/generated/users.inc"
 
-```{include} generated/validate-download.inc
-```
+--8<-- "api/generated/validate-download.inc"

@@ -8,75 +8,58 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/main.yml"
+      - ".github/workflows/load-manifest.py"
       - "docs/**"
       - "README.md"
-      - "pyproject.toml"
-  
+      - "CONTRIBUTING.md"
+      - "zensical.toml"
+
 env:
-  MC_VERSION: '1.20'
+  MC_VERSION: "1.20"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: docs
+  cancel-in-progress: false
 
 jobs:
-  main:
+  deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      #----------------------------------------------
-      #  -----          gather repo            -----
-      #----------------------------------------------
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
-      #----------------------------------------------
-      #  -----     install python & poetry     -----
-      #----------------------------------------------
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-
-      - name: Cache poetry
-        id: cache-poetry
-        uses: actions/cache@v3
-        with:
-          path: ~/.local
-          key: poetry-${{ runner.os }}
-
-      - name: Install poetry
-        if: steps.cache-poetry.outputs.cache-hit != 'true'
-        uses: snok/install-poetry@v1
-        with:
-          virtualenvs-in-project: true
-
-      #----------------------------------------------
-      #  -----       install dependencies      -----
-      #----------------------------------------------
-      - name: Cache venv
-        id: cache-venv
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
-          restore-keys: |
-            venv-${{ runner.os }}-
+          python-version: "3.12"
 
       - name: Install dependencies
-        if: steps.cache-venv.outputs.cache-hit != 'true'
-        run: poetry install --no-root
-      
-      - name: Update `smithed-libraries`
-        if: github.event.event_type == 'update-libraries'
-        run: |
-          echo "Re-installing `smithed-libraries` to gather updated api docs"
-          poetry run pip install git+https://github.com/Smithed-MC/Libraries
+        run: pip install zensical requests tomlkit
 
-      #----------------------------------------------
-      #  -----       build & deploy docs       -----
-      #----------------------------------------------
-      - name: Build and deploy documentation
-        run: |
-          poetry run python .github/workflows/load-manifest.py
-          git config --global user.name "github-actions"
-          git config --global user.email "action@github.com"
-          poetry run mudkip build --update-gh-pages --repository https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+      - name: Update library versions from the manifest
+        run: python .github/workflows/load-manifest.py
+
+      - name: Build documentation
+        run: zensical build --clean
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

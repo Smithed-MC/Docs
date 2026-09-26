@@ -1,80 +1,53 @@
 # Crafter (v{{ crafter_version }})
 
-::::{grid} 2
+<div class="grid" markdown>
 
-:::{grid-item}
-```{button-link} https://api.smithed.dev/v2/download?pack=crafter
-:color: primary
-:outline:
-:expand:
-{octicon}`download;1em` Crafter Download
-```
-:::
 
-:::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter/
-:color: primary
-:outline:
-:expand:
-{octicon}`mark-github;1em` Crafter Source
-```
-:::
+<div class="grid-item" markdown>
 
-:::{grid-item}
-```{button-link} https://api.smithed.dev/v2/download?pack=crafter-addon
-:color: primary
-:outline:
-:expand:
-{octicon}`download;1em` Crafter-Addon Download
-```
-:::
+[:octicons-download-16: Crafter Download](https://api.smithed.dev/v2/download?pack=crafter){ .md-button }
 
-:::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter-addon/
-:color: primary
-:outline:
-:expand:
-{octicon}`mark-github;1em` Crafter-Addon Source
-```
-:::
+</div>
 
-::::
+<div class="grid-item" markdown>
 
-```{admonition} Disclaimer 
-:class: warning 
-This documentation is extremely technical.
-```
+[:octicons-mark-github-16: Crafter Source](https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter/){ .md-button }
+
+</div>
+
+<div class="grid-item" markdown>
+
+[:octicons-download-16: Crafter-Addon Download](https://api.smithed.dev/v2/download?pack=crafter-addon){ .md-button }
+
+</div>
+
+<div class="grid-item" markdown>
+
+[:octicons-mark-github-16: Crafter-Addon Source](https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter-addon/){ .md-button }
+
+</div>
+
+
+</div>
+
+!!! warning "Disclaimer"
+    This documentation is extremely technical.
 
 ---
 
-::::{grid} 1 1 2 2
-```{grid-item-card}
-:link: data_types
-:link-type: doc
+<div class="grid cards" markdown>
 
-Data Types
-^^^
+- [**Data Types**](data_types.md)
 
-Reference for data structures used for crafting recipes
-```
+    Reference for data structures used for crafting recipes
 
-```{grid-item-card}
-:link: function_tag
-:link-type: doc
+- [**Function Tag**](function_tag.md)
 
-Function Tag
-^^^
+    Documentation for the implementing crafting recipes
 
-Documentation for the implementing crafting recipes
-```
 
-::::
+</div>
 
 ---
 
 
-```{toctree}
-:hidden:
-data_types
-function_tag
-```

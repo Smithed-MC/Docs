@@ -1,8 +1,6 @@
 # Launcher
-```{admonition} 🚧 In Construction 🚧
-:class: warning
+!!! warning "🚧 In Construction 🚧"
 
-This page isn't complete yet, check back often for future updates!
-```
+    This page isn't complete yet, check back often for future updates!
 
 [Smithed](https://smithed.dev)

@@ -1,5 +1,5 @@
 ## /packs/count
-### {bdg-success}`GET`
+### <span class="bdg bdg-success">GET</span>
 
 Similar to /packs, this route returns the number of packs which match the criteria
 
@@ -8,16 +8,16 @@ Similar to /packs, this route returns the number of packs which match the criter
 #### Query Parameters
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-dark}`search` <label class="sd-text-secondary">string</label>
+<span class="bdg bdg-dark">search</span> <label class="sd-text-secondary">string</label>
 A search query against the name or id of the pack
 
-{bdg-dark}`category` <label class="sd-text-secondary">[PackCategory](/api/data-types)[]?</label>
+<span class="bdg bdg-dark">category</span> <label class="sd-text-secondary">[PackCategory](data-types.md)[]?</label>
 Which categories should the pack be a part of
 
-{bdg-dark}`version` <label class="sd-text-secondary">[MinecraftVersion](/api/data-types)[]?</label>
+<span class="bdg bdg-dark">version</span> <label class="sd-text-secondary">[MinecraftVersion](data-types.md)[]?</label>
 Which versions should the pack support
 
-{bdg-dark}`hidden` <label class="sd-text-secondary">boolean = false</label>
+<span class="bdg bdg-dark">hidden</span> <label class="sd-text-secondary">boolean = false</label>
 Should unlisted packs be returned.
 
 
@@ -26,19 +26,17 @@ Should unlisted packs be returned.
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">number</label>
+<span class="bdg bdg-primary">OK - 200</span> <label class="sd-text-secondary">number</label>
 
 
 
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Number of packs which contain `the`
-    :class: note        
-```ts
-fetch('https://api.smithed.dev/v2/packs/count?search=the')
-```
-::::
+!!! note "Number of packs which contain `the`"
+    ```ts
+    fetch('https://api.smithed.dev/v2/packs/count?search=the')
+    ```
 
 <br/>
 

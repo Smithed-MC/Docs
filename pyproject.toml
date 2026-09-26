@@ -7,105 +7,12 @@ readme = "README.md"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
-mudkip = "^0.8.0"
-pygments = "^2.15.1"
 python = "^3.10"
-smithed-libraries = "^0.7.3"
-sphinx-copybutton = "^0.5.2"
-sphinx-pyproject = "^0.1.0"
-sphinx_design = "^0.3.0"
+zensical = "^0.0.65"
 
 [tool.poetry.group.dev.dependencies]
 requests = "^2.28.1"
 tomlkit = "^0.11.6"
-
-[tool.mudkip]
-base_url = "https://docs.smithed.dev"
-title = "smithed-docs"
-
-[tool.mudkip.override]
-html_favicon = "assets/favicon.ico"
-html_logo = "assets/icon.png"
-html_theme = "furo"
-html_title = "Smithed Documentation"
-
-extensions = ["sphinx_design", "sphinx.ext.autosectionlabel", "sphinx_copybutton"]
-myst_enable_extensions = ["substitution", "colon_fence"]
-
-html_css_files = [
-  "css/custom.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",
-]
-html_static_path = ["_static"]
-
-pygments_dark_style = "material"
-pygments_style = "zenburn"
-suppress_warnings = ["myst.header", "autosectionlabel.*"]
-
-exclude_patterns = ["libraries/actionbar/*", "libraries/damage/*", "libraries/prevent-aggression/*"]
-
-[tool.mudkip.override.myst_substitutions]
-actionbar_version = "0.4.1"
-crafter_addon_version = "0.2.0"
-crafter_version = "0.2.0"
-custom_block_version = "0.2.0"
-damage_version = "0.2.0"
-enchanter_version = "0.1.0"
-item_version = "0.2.1"
-prevent_aggression_version = "0.2.0"
-title_version = "0.0.1"
-
-convention_header = """
-::::{grid} 2 2 2 2
-:class-container: sd-p-2 sd-pl-3 sd-outline-muted sd-border-1 sd-rounded-1 sd-outline-muted
-
-:::{grid-item}
-:columns: 10 2 2 2
-**Summary**
-:::
-:::{grid-item}
-:columns: 10
-{{ summary }}
-:::
-:::{grid-item}
-:columns: 10 2 2 2
-**Required**
-:::
-:::{grid-item}
-:columns: 10
-{{ required }}
-:::
-:::{grid-item}
-:columns: 10 2 2 2
-**Example**
-:::
-:::{grid-item}
-:columns: 10
-{{ example }}
-:::
-::::
-"""
-new_bdg = '<span class="light-only">{bdg-success}`NEW`</span><span class="dark-only">{bdg-success-line}`NEW`</span>'
-
-[tool.mudkip.override.html_theme_options]
-announcement = "<a href='/weld'> Checkout the in-depth weld docs! <a/>"
-sidebar_hide_name = true
-
-[tool.mudkip.override.html_theme_options.light_css_variables]
-color-brand-content = "#1b48c4"
-color-brand-primary = "#1b48c4"
-font-stack = "Inconsolata, sans-serif"
-
-[tool.mudkip.override.html_theme_options.dark_css_variables]
-color-brand-content = "#6b83c5"
-color-brand-primary = "#6b83c5"
-font-stack = "Inconsolata, sans-serif"
-# color-background-primary = "#282a2c"
-# color-background-secondary = "#12121f"
-# color-admonition-background = "#1b48c4"
-
-[tool.poe.tasks]
-dev = "mudkip develop"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"

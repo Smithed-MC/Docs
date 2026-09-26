@@ -1,5 +1,5 @@
 ## /packs/:id/contributors
-### {bdg-success}`GET`
+### <span class="bdg bdg-success">GET</span>
 
 Get a list of contributors to a pack
 
@@ -16,26 +16,24 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">string</label>
+<span class="bdg bdg-primary">OK - 200</span> <label class="sd-text-secondary">string</label>
 
-{bdg-primary}`NOT_FOUND - 404` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label>
 
 
 
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Set a packs's data
-    :class: note        
-```ts
-fetch('https://api.smithed.dev/v2/packs/coc/contributors')
-```
-::::
+!!! note "Set a packs's data"
+    ```ts
+    fetch('https://api.smithed.dev/v2/packs/coc/contributors')
+    ```
 
 <br/>
 
 
-### {bdg-success}`POST`
+### <span class="bdg bdg-success">POST</span>
 
 Add a list of contributors to a pack
 
@@ -50,10 +48,10 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 #### Query Parameters
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-dark}`token` <label class="sd-text-secondary">string</label>
+<span class="bdg bdg-dark">token</span> <label class="sd-text-secondary">string</label>
 Either Firebase Id Token or a valid PAT
 
-{bdg-dark}`contributors` <label class="sd-text-secondary">string[]</label>
+<span class="bdg bdg-dark">contributors</span> <label class="sd-text-secondary">string[]</label>
 
 
 
@@ -61,32 +59,30 @@ Either Firebase Id Token or a valid PAT
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">string</label>
+<span class="bdg bdg-primary">OK - 200</span> <label class="sd-text-secondary">string</label>
 
-{bdg-primary}`NOT_FOUND - 404` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label>
 
-{bdg-primary}`UNAUTHORIZED - 401` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label>
 
-{bdg-primary}`FORBIDDEN - 403` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label>
 
 
 
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Set a packs's data
-    :class: note        
-```ts
-fetch('https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&contributors=CreeperMagnet_', {
-  method:'POST'
-})
-```
-::::
+!!! note "Set a packs's data"
+    ```ts
+    fetch('https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&contributors=CreeperMagnet_', {
+      method:'POST'
+    })
+    ```
 
 <br/>
 
 
-### {bdg-success}`DELETE`
+### <span class="bdg bdg-success">DELETE</span>
 
 Remove a list of contributors from a pack
 
@@ -101,10 +97,10 @@ The pack's UID or plaintext id. Using UID is more performant as it is a direct l
 #### Query Parameters
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-dark}`token` <label class="sd-text-secondary">string</label>
+<span class="bdg bdg-dark">token</span> <label class="sd-text-secondary">string</label>
 Either Firebase Id Token or a valid PAT
 
-{bdg-dark}`contributors` <label class="sd-text-secondary">string[]</label>
+<span class="bdg bdg-dark">contributors</span> <label class="sd-text-secondary">string[]</label>
 
 
 
@@ -112,27 +108,25 @@ Either Firebase Id Token or a valid PAT
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">string</label>
+<span class="bdg bdg-primary">OK - 200</span> <label class="sd-text-secondary">string</label>
 
-{bdg-primary}`NOT_FOUND - 404` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">NOT_FOUND - 404</span> <label class="sd-text-secondary">ApiError</label>
 
-{bdg-primary}`UNAUTHORIZED - 401` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">UNAUTHORIZED - 401</span> <label class="sd-text-secondary">ApiError</label>
 
-{bdg-primary}`FORBIDDEN - 403` <label class="sd-text-secondary">ApiError</label>
+<span class="bdg bdg-primary">FORBIDDEN - 403</span> <label class="sd-text-secondary">ApiError</label>
 
 
 
 #### Examples
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-::::{admonition} Set a packs's data
-    :class: note        
-```ts
-fetch('https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&contributors=CreeperMagnet_', {
-  method:'DELETE'
-})
-```
-::::
+!!! note "Set a packs's data"
+    ```ts
+    fetch('https://api.smithed.dev/v2/packs/coc/contributors?token=NOT_TODAY_HAHA&contributors=CreeperMagnet_', {
+      method:'DELETE'
+    })
+    ```
 
 <br/>
 

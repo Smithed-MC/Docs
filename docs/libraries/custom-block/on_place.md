@@ -13,8 +13,7 @@ This library tracks the full block data of the placed block in data storage `smi
 
 ### Example Implementation :
 `function: example:give_custom_block`
-```{code-block} mcfunction
-:force:
+```mcfunction
 give @s barrel[
     custom_name='{"translate":"My Custom Block","color":"white","italic":false}',
     container=[{slot:0,item:{id:"minecraft:stone",count:1b,components:{"minecraft:custom_data":{
@@ -26,8 +25,7 @@ give @s barrel[
 
 
 `function: example:on_place`
-```{code-block} mcfunction
-:force:
+```mcfunction
 # check if this is my custom block
 execute 
     if data storage smithed.custom_block:main {blockApi:{id:"example:my_custom_block"}}

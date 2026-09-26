@@ -1,9 +1,6 @@
 # Routes
 
-```{admonition} General Warning
-:class: warning
-All routes will return {bdg-primary}`BAD_REQUEST - 400` if required parameters are omitted.
-```
+!!! warning "General Warning"
+    All routes will return <span class="bdg bdg-primary">BAD_REQUEST - 400</span> if required parameters are omitted.
 
-```{include} generated/routes.inc
-```
+--8<-- "api/generated/routes.inc"

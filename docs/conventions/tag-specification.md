@@ -1,23 +1,35 @@
 ---
-myst:
-  substitutions:
-    summary: "Standarized tags to specify on your custom entities and items"
-    required: "On any custom entity or item you add. Also for selectors selecting arbitrary entities"
-    example: "Transforming zombies into a custom frozen zombie would need a `smithed.entity` tag"
+summary: "Standarized tags to specify on your custom entities and items"
+required: "On any custom entity or item you add. Also for selectors selecting arbitrary entities"
+example: "Transforming zombies into a custom frozen zombie would need a `smithed.entity` tag"
 ---
 
-# {{new_bdg}} Tag Specification
-{{ convention_header }}
+# <span class="bdg bdg-success">NEW</span> Tag Specification
+<div class="grid" markdown>
+<div class="grid-item" markdown>
+**Summary**
+
+{{ summary }}
+</div>
+<div class="grid-item" markdown>
+**Required**
+
+{{ required }}
+</div>
+<div class="grid-item" markdown>
+**Example**
+
+{{ example }}
+</div>
+</div>
 
 Smithed contains a set of standardized entity and item tags to help protect and indicate custom behavior to other packs. These allow packs to understand which blocks, entities, and items are normal and which ones are "custom."
 
 ## Custom Entities
 Custom entities are specified by tags on the entity itself. All custom mobs should have these tags to allow other datapacks to distinguish between a normal mob and a custom one.
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-If I add a custom mob that is a variant of the husk, it should be exempt from someone else's pack that gives all husks new armor.
-```
+    If I add a custom mob that is a variant of the husk, it should be exempt from someone else's pack that gives all husks new armor.
 
 You should use these tags by either summoning it with the entity or applying it afterwards.
 ```mcfunction
@@ -39,11 +51,9 @@ When and where you decide to exclude a tag is based off of the specific tag desc
 Entities with this tag should be exempt to: 
   - Changes specific to the vanilla entity they are using as a base. 
 
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-Mobs based on the wandering trader, such as TCC’s iceologer, should have `smithed.entity`, and selectors to give the vanilla wandering trader new trades should have `tag=!smithed.entity`.
-```
+    Mobs based on the wandering trader, such as TCC’s iceologer, should have `smithed.entity`, and selectors to give the vanilla wandering trader new trades should have `tag=!smithed.entity`.
 
 Entities with this tag should not be exempt to: 
   - Damage from commands 
@@ -52,11 +62,9 @@ Entities with this tag should not be exempt to:
 
 ### `smithed.strict`
 > Functions as a modifier for `smithed.entity`.
-```{admonition} Warning
-:class: warning
+!!! warning "Warning"
 
-Including this tag on your entity **requires** you to include `smithed.entity`.
-```
+    Including this tag on your entity **requires** you to include `smithed.entity`.
 
 This is intended for boss entities or invisible technical marker entities.
 
@@ -70,11 +78,9 @@ Entities with this tag should not be exempt to:
 
 ## Custom Blocks
 Custom blocks are specified by tags on an entity inside the block. All custom blocks should have an entity with this tag to allow other datapacks to distinguish between a normal block and a custom one.
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-If I add a custom crafter that uses a barrel, it should be exempt from someone else's pack that allows for pushable nbt blocks.
-```
+    If I add a custom crafter that uses a barrel, it should be exempt from someone else's pack that allows for pushable nbt blocks.
 You should use the tag by summoning it with the entity when the block is placed.
 ```mcfunction
 # We could apply this data now or later, which ever you prefer
@@ -92,19 +98,15 @@ execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ obsidian
 ### `smithed.block`
 > This tag functions as a separator between vanilla blocks and base blocks of custom blocks. 
 Entities with this tag are to be used as custom block markers. 
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-Armor stands inside of a custom crafter should be marked with this tag.
-```
+    Armor stands inside of a custom crafter should be marked with this tag.
 
 ## Custom Items
 Custom items are specified by tags on in custom item nbt. All custom items should have these tags to allow other datapacks to distinguish between a normal item and a custom one.
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-If I add a custom item that is a clock, it should be exempt from someone else's pack that allows for clocks to change the time of day.
-```
+    If I add a custom item that is a clock, it should be exempt from someone else's pack that allows for clocks to change the time of day.
 
 You should use these tags when creating the item.
 ```mcfunction
@@ -124,22 +126,18 @@ execute
 
 Items with this tag should be exempt to: 
   - Gameplay specific changes to the vanilla item they are using as a base. 
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-Custom "poison apples" should use `{smithed:{ignore:{functionality:1b}}}` and food balance modules shouldn't count apples with `{smithed:{ignore:{functionality:1b}}}` as having eaten an apple.
-```
+    Custom "poison apples" should use `{smithed:{ignore:{functionality:1b}}}` and food balance modules shouldn't count apples with `{smithed:{ignore:{functionality:1b}}}` as having eaten an apple.
 ### `{smithed:{ignore:{crafting:1b}}}`
 > This tag should be used to mark an item that shouldn’t act like the base item as a crafting ingredient.
 
 Items with this tag should be exempt to: 
   - Crafting with the vanilla item they are using as a base. 
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-Custom chestplates should use `{smithed:{ignore:{crafting:1b}}}` and custom crafting recipes shouldn't consider chestplates with `{smithed:{ignore:{crafting:1b}}}` as a valid chestplate item.
-```
-### {{new_bdg}} `{smithed:{ignore:{everything:1b}}}`
+    Custom chestplates should use `{smithed:{ignore:{crafting:1b}}}` and custom crafting recipes shouldn't consider chestplates with `{smithed:{ignore:{crafting:1b}}}` as a valid chestplate item.
+### <span class="bdg bdg-success">NEW</span> `{smithed:{ignore:{everything:1b}}}`
 > This tag should be used to mark an item that shouldn’t be treated as an item. Specifically, this tag marks an item as purely technical.
 
 Items with this tag should be exempt to: 
@@ -147,8 +145,6 @@ Items with this tag should be exempt to:
   - Being cleared from the inventory.
   - Being moved to another inventory. 
   - Contributing to a counting check. 
-```{admonition} Example
-:class: note
+!!! note "Example"
 
-Items stored in the player's body slot for storage purposes should use `{smithed:{ignore:{everything:1b}}}` and datapacks shouldn't consider items with `{smithed:{ignore:{everything:1b}}}` as a valid item. Grave datapacks should not save this item into a different inventory, and datapacks using `/clear` to count items should ignore items with `{smithed:{ignore:{everything:1b}}}`.
-```
+    Items stored in the player's body slot for storage purposes should use `{smithed:{ignore:{everything:1b}}}` and datapacks shouldn't consider items with `{smithed:{ignore:{everything:1b}}}` as a valid item. Grave datapacks should not save this item into a different inventory, and datapacks using `/clear` to count items should ignore items with `{smithed:{ignore:{everything:1b}}}`.

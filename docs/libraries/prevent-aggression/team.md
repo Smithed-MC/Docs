@@ -36,8 +36,7 @@ This is the recommended way to create a villager that isn't tracked by hostiles.
 
 ---  
 `function: example:protect_village`
-```{code-block} mcfunction
-:force:
+```mcfunction
 # make villagers safe while nearby a guardian player
 tag @e[type=villager] remove protected
 execute

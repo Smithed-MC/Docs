@@ -1,32 +1,27 @@
 # Damage (v{{ damage_version }})
 
-```{caution}
-This library is deprecated as of Minecraft 1.20 with the introduction of the `/damage` command.
-```
+!!! warning
+    This library is deprecated as of Minecraft 1.20 with the introduction of the `/damage` command.
 
 > This library implements complex damage calculation math in order to emulate applying damage to both players and entities
 
-::::{grid} 2
+<div class="grid" markdown>
 
-:::{grid-item}
-```{button-link} https://api.smithed.dev/v2/download?pack=damage
-:color: primary
-:outline:
-:expand:
-{octicon}`download;1em` Download
-```
-:::
 
-:::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/damage/
-:color: primary
-:outline:
-:expand:
-{octicon}`mark-github;1em` Source
-```
-:::
+<div class="grid-item" markdown>
 
-::::
+[:octicons-download-16: Download](https://api.smithed.dev/v2/download?pack=damage){ .md-button }
+
+</div>
+
+<div class="grid-item" markdown>
+
+[:octicons-mark-github-16: Source](https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/damage/){ .md-button }
+
+</div>
+
+
+</div>
 
 
 | Library Function                          | Description 
@@ -39,14 +34,11 @@ This library is deprecated as of Minecraft 1.20 with the introduction of the `/d
 ## `#smithed.damage:entity/apply*`
 > Note, the interface for all of the functions above are the same
 
-```{include} damage/entity/apply.md
-```
+--8<-- "libraries/damage/entity/apply.md"
 
 ## Custom Death Messages Events
-```{include} damage/player/damage_messages.md
-```
+--8<-- "libraries/damage/player/damage_messages.md"
 
 
 ## Damage Events
-```{include} damage/player/damage_events.md
-```
+--8<-- "libraries/damage/player/damage_events.md"

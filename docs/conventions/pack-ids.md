@@ -1,13 +1,27 @@
 ---
-myst:
-  substitutions:
-    summary:  "Extra `id` metadata to include in your `pack.mcmeta`"
-    required: "For every pack should include this field in their `pack.mcmeta`"
-    example:  "The Creeper's Code should include an `id` field in `pack.mcmeta` of \"tcc\""
+summary:  "Extra `id` metadata to include in your `pack.mcmeta`"
+required: "For every pack should include this field in their `pack.mcmeta`"
+example:  "The Creeper's Code should include an `id` field in `pack.mcmeta` of \"tcc\""
 ---
 
 # Pack IDs
-{{ convention_header }}
+<div class="grid" markdown>
+<div class="grid-item" markdown>
+**Summary**
+
+{{ summary }}
+</div>
+<div class="grid-item" markdown>
+**Required**
+
+{{ required }}
+</div>
+<div class="grid-item" markdown>
+**Example**
+
+{{ example }}
+</div>
+</div>
 
 Pack IDs are simply a new field to be added to `pack.mcmeta` to help **identify** packs. Just add `id` as a top level field and use a unique string that represents your pack. This `id` should be stable (it shouldn't change) once you have published your pack and it should match the id chosen when uploading your pack to Smithed.
 
@@ -27,6 +41,5 @@ While pack ids seem like a minor addition, it gives us the ability to identity a
 
 Pack creators adding an `id` field will allow us to build tooling to understand packs making tools such as `weld` more powerful in recognizing and correctly merging packs.
 
-```{seealso}
-[Weld](https://weld.smithed.dev) uses pack ids to be able to set priorities and pack conditions possible. This lets your pack to be able to rely on other packs (such as ensuring your pack runs after `tcc`, for example).
-```
+!!! tip "See also"
+    [Weld](https://weld.smithed.dev) uses pack ids to be able to set priorities and pack conditions possible. This lets your pack to be able to rely on other packs (such as ensuring your pack runs after `tcc`, for example).

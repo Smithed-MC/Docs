@@ -4,23 +4,13 @@ As a community, we've developed a treasure trove of techniques that has empowere
 
 ---
 
-::::{grid} 2
-:gutter: 3
+<div class="grid cards" markdown>
 
-```{grid-item-card}
-:link: yellow-shulker-box
-:link-type: doc
 
-Yellow Shulker Box
-^^^
+- [**Yellow Shulker Box**](yellow-shulker-box.md)
 
-Manipulating player inventories with ease!
-```
+    Manipulating player inventories with ease!
 
-::::
 
-```{toctree}
-:hidden:
-:caption: Guides
-yellow-shulker-box
-```
+</div>
+

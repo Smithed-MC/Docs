@@ -1,7 +1,7 @@
 ## /supported-versions
-### {bdg-success}`GET`
+### <span class="bdg bdg-success">GET</span>
 
-Retrieve the list of all [MinecraftVersion](/api/data-types) supported by the platform
+Retrieve the list of all [MinecraftVersion](data-types.md) supported by the platform
 
 
 
@@ -10,7 +10,7 @@ Retrieve the list of all [MinecraftVersion](/api/data-types) supported by the pl
 #### Possible Responses
 <div class='sd-bg-secondary' style='width: 95%; height: 1px; margin: 0em 0em 0.1em 0em'></div>
 
-{bdg-primary}`OK - 200` <label class="sd-text-secondary">MinecraftVersion[]</label>
+<span class="bdg bdg-primary">OK - 200</span> <label class="sd-text-secondary">MinecraftVersion[]</label>
 
 
 <br/>

@@ -5,117 +5,53 @@ Welcome to the Smithed ecosystem, a tool for Minecraft: Java Edition pack develo
 
 -----
 
-::::{grid} 1 2 2 2
-:gutter: 3
+<div class="grid cards" markdown>
 
-```{grid-item-card}
-:link: conventions/index
-:link-type: doc
 
-📙 ・ Conventions
-^^^
+- [**📙 ・ Conventions**](conventions/index.md)
 
-Common conventions for pack developers to follow increasing compatibility in the wild
-```
+    Common conventions for pack developers to follow increasing compatibility in the wild
 
-```{grid-item-card}
-:link: libraries/index
-:link-type: doc
+- [**📚 ・ Libraries**](libraries/index.md)
 
-📚 ・ Libraries
-^^^
+    An optional set of "standard" libraries for pack creators to use
 
-An optional set of "standard" libraries for pack creators to use
-```
+- [**🔧 ・ Weld**](weld/index.md)
 
-```{grid-item-card}
-:link: weld/index
-:link-type: doc
+    A novel way of merging packs providing extra compatibility benefits
 
-🔧 ・ Weld
-^^^
+- [**📝 ・ Guides**](guides/index.md)
 
-A novel way of merging packs providing extra compatibility benefits
-```
+    Distilled guides for specific pack making techniques
 
-```{grid-item-card}
-:link: guides/index
-:link-type: doc
 
-📝 ・ Guides
-^^^
-
-Distilled guides for specific pack making techniques
-```
-
-::::
+</div>
 
 -----
 
-::::{grid} 2
-:gutter: 4
+<div class="grid cards" markdown>
 
-```{grid-item-card}
-:link: https://discord.gg/gkp6UqEUph
-:link-type: url
 
-{fab}`discord` ・ Discord
-^^^
+- [**:fontawesome-brands-discord: ・ Discord**](https://discord.gg/gkp6UqEUph)
 
-Checkout our Discord community for the latest updates!
-```
+    Checkout our Discord community for the latest updates!
 
-```{grid-item-card}
-:link: https://github.com/Smithed-MC
-:link-type: url
+- [**:fontawesome-brands-github: ・ Github**](https://github.com/Smithed-MC)
 
-{fab}`github` ・ Github
-^^^
+    Contribute to us on Github. We are proudly Open Source!
 
-Contribute to us on Github. We are proudly Open Source!
-```
+- [**🫂 ・ Contributing**](meta/contributing.md)
 
-```{grid-item-card}
-:link: meta/contributing
-:link-type: doc
-:columns: 12
+    Want to help us improve these docs? Checkout our contribution docs!
 
-🫂 ・ Contributing
-^^^
+- [**🌐 ・ Website**](https://smithed.dev)
 
-Want to help us improve these docs? Checkout our contribution docs!
-```
+    Start playing with Smithed packs through our website!
 
-```{grid-item-card}
-:link: https://smithed.dev
-:link-type: url
-:columns: 12
 
-🌐 ・ Website
-^^^
-
-Start playing with Smithed packs through our website!
-```
-
-::::
+</div>
 
 -----
 
-```{toctree}
-:hidden:
-conventions/index
-libraries/index
-weld/index
-launcher/index
-api/index
-guides/index
-meta/contributing
-```
 
 
-```{toctree}
-:caption: Project links
-:hidden:
-Smithed Github <https://github.com/Smithed-MC>
-Smithed Website <https://smithed.dev>
-```

@@ -1,90 +1,48 @@
-# {{new_bdg}} Conventions
+# <span class="bdg bdg-success">NEW</span> Conventions
 Smithed imposes conventions for pack creators to follow allowing for a compatible pack ecosystem. These conventions are highly recommended to help . They allow for pack interoperability both within and without the ecosystem (i.e. they are designed to work in normal worlds).
 
 ----
 
-::::{grid} 2
-:gutter: 3
+<div class="grid cards" markdown>
 
-```{grid-item-card}
-:link: namespacing
-:link-type: doc
 
-Namespacing
-^^^
+- [**Namespacing**](namespacing.md)
 
-How to name your tags, scores, and more!
-```
+    How to name your tags, scores, and more!
 
-```{grid-item-card}
-:link: pack-ids
-:link-type: doc
+- [**Pack IDs**](pack-ids.md)
 
-Pack IDs
-^^^
+    Extra metadata to include in your `pack.mcmeta`
 
-Extra metadata to include in your `pack.mcmeta`
-```
+- [**CMD ID Prefixing**](cmd-prefixing.md)
 
-```{grid-item-card}
-:link: cmd-prefixing
-:link-type: doc
+    What format to choose for the `custom_model_data` component on items
 
-CMD ID Prefixing
-^^^
+- [**Vanilla Overrides**](vanilla-overrides.md)
 
-What format to choose for the `custom_model_data` component on items
-```
+    How to properly override vanilla assets to be **Weld** compatible
 
-```{grid-item-card}
-:link: vanilla-overrides
-:link-type: doc
+- [**<span class="bdg bdg-success">NEW</span> Tag Specification**](tag-specification.md)
 
-Vanilla Overrides
-^^^
+    A set of custom tags to respect while interacting with blocks, entities, and items
 
-How to properly override vanilla assets to be **Weld** compatible
-```
+- [**<span class="bdg bdg-success">NEW</span> Data Pack Menu Dialog**](data-pack-menu.md)
 
-```{grid-item-card}
-:link: tag-specification
-:link-type: doc
+    The "mod menu" for data packs!
 
-{{new_bdg}} Tag Specification
-^^^
 
-A set of custom tags to respect while interacting with blocks, entities, and items
-```
-
-```{grid-item-card}
-:link: data-pack-menu
-:link-type: doc
-
-{{new_bdg}} Data Pack Menu Dialog
-^^^
-
-The "mod menu" for data packs!
-```
-
-::::
+</div>
 
 
 ----
 
-```{card}
-Credits
-^^^
-Many of these ideas were curated and refined from the Minecraft Datapack Discord Server. The current set of conventions were completely created from scratch from the learnings of this project.
-+++
-[MC Datapack Server Conventions](https://ooboomberoo.github.io/mcdatapacks-wiki)
-```
+<div class="grid cards" markdown>
 
-```{toctree}
-:hidden:
-namespacing
-pack-ids
-cmd-prefixing
-vanilla-overrides
-tag-specification
-data-pack-menu
-```
+- **Credits**
+
+    Many of these ideas were curated and refined from the Minecraft Datapack Discord Server. The current set of conventions were completely created from scratch from the learnings of this project.
+
+    [MC Datapack Server Conventions](https://ooboomberoo.github.io/mcdatapacks-wiki)
+
+</div>
+

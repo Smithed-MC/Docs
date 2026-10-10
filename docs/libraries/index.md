@@ -163,6 +163,17 @@ Allows you to apply score-based damage values to both players and entities
 :::
 
 :::{grid-item-card}
+:link: interaction
+:link-type: doc
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/interaction/pack.png
+
+Interaction ・ {{ interaction_version }}
+^^^
+
+Enables easier usage of interaction entities.
+:::
+
+:::{grid-item-card}
 :link: prevent-aggression
 :link-type: doc
 :img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/prevent-aggression/pack.png
@@ -223,6 +234,7 @@ actionbar
 crafter/index
 custom-block
 damage
+interaction
 prevent-aggression
 item
 title

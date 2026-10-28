@@ -27,15 +27,15 @@ Usage entails putting data on the interaction entity. Specifically, giving the i
 
 Usually, this is done by summoning the interaction with the relevant data like below:
 ```{code-block} mcfunction
-summon minecraft:interaction ~ ~ ~ { \
-  Tags: ["smithed.interaction"], \
-  data: { \
-    smithed_interaction: { \
-      on_right_click: { \
-        command: "say hello world" \
-      } \
-    } \
-  } \
+summon minecraft:interaction ~ ~ ~ {
+  Tags: ["smithed.interaction"],
+  data: {
+    smithed_interaction: {
+      on_right_click: {
+        command: "say hello world"
+      }
+    }
+  }
 }
 ```
 However, you can also use `/tag` and `/data` to add the tag and data respectively if you wish.

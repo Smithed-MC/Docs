@@ -1,15 +1,15 @@
 Example usage:
 ```{code-block} mcfunction
-summon minecraft:interaction ~ ~ ~ { \
-  Tags: ["smithed.interaction"], \
-  data: { \
-    smithed_interaction: { \
-      on_right_click: { \
-        custom: "sit", \
-        height: 0.5 \
-      } \
-    } \
-  } \
+summon minecraft:interaction ~ ~ ~ {
+  Tags: ["smithed.interaction"],
+  data: {
+    smithed_interaction: {
+      on_right_click: {
+        custom: "sit",
+        height: 0.5
+      }
+    }
+  }
 }
 ```
 

@@ -6,3 +6,5 @@ Both of these support the following fields
 - `command` : String representing a valid command.
 - `function` : String representing a valid function [resource location](https://minecraft.wiki/w/Identifier).
 - `custom` : A custom string representing a custom interaction type. This will run a function tag using the interaction type (right or left click) and this custom string.
+
+Additionally, it is supported behaviour to utilize any combination of actions at the same time. They will run in the order Custom, Function, Command.

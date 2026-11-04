@@ -66,6 +66,18 @@ A set of custom tags to respect while interacting with blocks, entities, and ite
 The "mod menu" for data packs!
 ```
 
+```
+
+```{grid-item-card}
+:link: pack-enabled-tag
+:link-type: doc
+
+{{new_bdg}} Pack Enabled Tag
+^^^
+
+A predicate tag and number provider tag to mark a datapack as enabled, and return its version.
+```
+
 ::::
 
 
@@ -87,4 +99,5 @@ cmd-prefixing
 vanilla-overrides
 tag-specification
 data-pack-menu
+pack-enabled-tag
 ```

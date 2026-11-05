@@ -101,6 +101,22 @@ Where ShapelessRecipe is :
 ]
 ```
 
+## `#smithed.crafter:event/query_tags`
+
+By default, crafter provides all vanilla items tags, but you can add your own tags to be queried during crafting.
+
+
+| Input Name                | Input Type   | Input Source             | Input Objective/Path             | 
+| ---                       | ---          | ---                      | ---                              |
+| 'Item to process'         | entity       | @s                       | weapon.mainhand                  |
+
+### Example :
+To add your own tags by adding a line like this :
+```{code-block} mcfunction
+execute
+    if items entity @s weapon.mainhand #namespace:tag_name
+    run data modify storage smithed.crafter:main root.temp.item_tag append value "#namespace:tag_name"
+```
 
 ## Advanced uses :
 A list of advanced uses of the crafter library.

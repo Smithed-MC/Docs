@@ -112,7 +112,8 @@ You should use these tags when creating the item.
 give @s coal[item_name='Fossil Fuel', custom_data={smithed: {ignore: {functionality: 1b}}}]
 ```
 You should *respect* these tags by excluding it from certain item checks.
-```mcfunction
+```{code-block} mcfunction
+:force:
 # Note, we only apply effects to players holding coal if the item doesn't have the ignore flag
 execute
   as @a

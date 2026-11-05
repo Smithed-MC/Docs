@@ -13,7 +13,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/actionbar/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/actionbar/
 :color: primary
 :outline:
 :expand:

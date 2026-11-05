@@ -13,7 +13,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/interaction/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/interaction/
 :color: primary
 :outline:
 :expand:

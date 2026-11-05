@@ -13,12 +13,19 @@ The library comes with common code to easily run certain functions. These are re
 
 #### Example
 ```{code-block} mcfunction
+:force:
 # ignite the player on fire
-item replace entity @s saddle with minecraft:stick[minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},minecraft:enchantments={"ns:absorption":1}]
+item replace entity @s saddle with minecraft:stick[
+  minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},
+  minecraft:enchantments={"ns:absorption":1},
+]
 function #smithed.tech_slots:modifier/trigger
 
 # give player randomized absorption
-item replace entity @s saddle with minecraft:stick[minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},minecraft:enchantments={"ns:ignite":1}]
+item replace entity @s saddle with minecraft:stick[
+  minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},
+  minecraft:enchantments={"ns:ignite":1},
+]
 function #smithed.tech_slots:modifier/trigger
 
 # clean up
@@ -30,8 +37,12 @@ item replace entity @s saddle with air
 
 #### Example
 ```{code-block} mcfunction
+:force:
 function #smithed.tech_slots:player/set_body_item
-item modify entity @s armor.body {function:"minecraft:set_enchantments", enchantments:{"minecraft:projectile_protection":255}}
+item modify entity @s armor.body {
+  function:"minecraft:set_enchantments", 
+  enchantments:{"minecraft:projectile_protection":255}
+}
 ```
 
 ### `storage/save_modifier`
@@ -50,9 +61,19 @@ function #smithed.tech_slots:storage/save_modifier
 
 Using an inline modifier (id added for uniqueness)
 ```{code-block} mcfunction
+:force:
 function #smithed.tech_slots:player/set_body_item
-item modify entity @s armor.body {function:"minecraft:set_enchantments", enchantments:{"minecraft:blast_protection":255}}
-data modify storage smithed.tech_slots:data input set value {id:"ns:blast_prot_id",modifier:{function:"minecraft:set_enchantments", enchantments:{"minecraft:blast_protection":255}}}
+item modify entity @s armor.body {
+  function:"minecraft:set_enchantments", 
+  enchantments:{"minecraft:blast_protection":255},
+}
+data modify storage smithed.tech_slots:data input set value {
+  id:"ns:blast_prot_id",
+  modifier:{
+    function:"minecraft:set_enchantments", 
+    enchantments:{"minecraft:blast_protection":255},
+  }
+}
 function #smithed.tech_slots:storage/save_modifier
 ```
 

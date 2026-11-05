@@ -105,14 +105,21 @@ Below shows example code to apply an item to the saddle slot for an instananeous
 ```
 
 ```{code-block} mcfunction
+:force:
 :caption: "ns/function/apply_saddle.mcfunction"
 # ignite the player on fire
-item replace entity @s saddle with minecraft:stick[minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},minecraft:enchantments={"ns:ignite":1}]
+item replace entity @s saddle with minecraft:stick[
+  minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},
+  minecraft:enchantments={"ns:ignite":1},
+]
 gamemode spectator @s
 gamemode survival @s
 
 # apply randomized absorption
-item replace entity @s saddle with minecraft:stick[minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},minecraft:enchantments={"ns:absorption":1}]
+item replace entity @s saddle with minecraft:stick[
+  minecraft:equippable={slot:"saddle",equip_sound:"intentionally_empty"},
+  minecraft:enchantments={"ns:absorption":1},
+]
 gamemode spectator @s
 gamemode survival @s
 
@@ -135,15 +142,33 @@ By default, this item and thus its modifiers would be deleted upon death.
 ```
 
 ```{code-block} mcfunction
+:force:
 :caption: "ns/function/apply_body.mcfunction"
 # put an item in the body slot if not already present
-execute unless items entity @s armor.body * run item replace entity @s armor.body with minecraft:poisonous_potato[!minecraft:consumable,minecraft:equippable= {slot:"body",equip_sound:"intentionally_empty"}, enchantments={"minecraft:vanishing_curse":1,"minecraft:binding_curse":1}, minecraft:custom_data={smithed:{ignore:{everything:1b}}}]
+execute 
+  unless items entity @s armor.body * run 
+  item replace entity @s armor.body with minecraft:poisonous_potato[
+    !minecraft:consumable,
+    minecraft:equippable={slot:"body",equip_sound:"intentionally_empty"}, 
+    minecraft:enchantments={"minecraft:vanishing_curse":1,"minecraft:binding_curse":1},
+    minecraft:custom_data={smithed:{ignore:{everything:1b}}},
+  ]
 
 # forcefully add vanishing and binding curses if it doesn’t already exist
-execute unless items entity @s armor.body *[minecraft:enchantments~[{enchantments:["binding_curse","vanishing_curse"]}]] run item modify entity @s armor.body {function:"minecraft:set_enchantments", enchantments:{"minecraft:binding_curse":1,"minecraft:vanishing_curse":1}}
+execute 
+  unless items entity @s armor.body *[
+    minecraft:enchantments~[{enchantments:["binding_curse","vanishing_curse"]}]
+  ] 
+  run item modify entity @s armor.body {
+    function:"minecraft:set_enchantments", 
+    enchantments:{"minecraft:binding_curse":1,"minecraft:vanishing_curse":1},
+  }
 
 # apply projectile protection to the player
-item modify entity @s armor.body {function:"minecraft:set_enchantments", enchantments:{"minecraft:projectile_protection":255}}
+item modify entity @s armor.body {
+  function:"minecraft:set_enchantments", 
+  enchantments:{"minecraft:projectile_protection":255}
+}
 ```
 
 ```{note}

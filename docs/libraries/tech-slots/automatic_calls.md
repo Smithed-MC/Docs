@@ -13,8 +13,15 @@ There is no automatic call for removing a permanent item modifier. This can be a
 All of these calls have the same use pattern: set the input data, and run the function tag. Data storage `smithed.tech_slots:data input` must be set before with a `modifier` and optionally an `id`. While not necessary, the `id` field is recommended when using the `#smithed.tech_slots:modifier/set_permanent` function as a key when removing the modifier defined as an inline modifier. Otherwise the entire modifier will be checked against and may lead to conflicting hits (i.e. deletion of another modifier when forgetting with the modifier itself). 
 
 ### Example
-```mcfunction
-data modify storage smithed.tech_slots:data input set value {id:"ns:blast_prot_id", modifier:{function:"minecraft:set_enchantments", enchantments:{"minecraft:blast_protection":255}}}
+```{code-block} mcfunction
+:force:
+data modify storage smithed.tech_slots:data input set value {
+    id:"ns:blast_prot_id", 
+    modifier:{
+        function:"minecraft:set_enchantments", 
+        enchantments:{"minecraft:blast_protection":255},
+    }
+}
 function #smithed.tech_slots:modifier/set_permanent
 ```
 

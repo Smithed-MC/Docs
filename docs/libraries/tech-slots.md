@@ -1,4 +1,4 @@
-# Technical Slots (v{{ tech_slots_version }})
+# {{new_bdg}} Technical Slots (v{{ tech_slots_version }})
 > A library to facilitate the use of the player's body and saddle slots for player modifications.
 
 ::::{grid} 2

@@ -1,7 +1,7 @@
 ---
 myst:
   substitutions:
-    url_start: "https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/"
+    url_start: "https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/"
     url_end: "/pack.png"
 ---
 
@@ -121,7 +121,7 @@ We use simple parts of bolt within our libraries' source as well!
 :::{grid-item-card}
 :link: actionbar
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/actionbar/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/actionbar/pack.png
 
 Actionbar ・ v{{ actionbar_version }}
 ^^^
@@ -132,7 +132,7 @@ Actionbar ・ v{{ actionbar_version }}
 :::{grid-item-card}
 :link: crafter/index
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/crafter/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/crafter/pack.png
 
 Crafter ・ v{{ crafter_version }}
 ^^^
@@ -143,7 +143,7 @@ Provides a polished custom crafting block for you to use.
 :::{grid-item-card}
 :link: custom-block
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/custom-block/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/custom-block/pack.png
 
 Custom Block ・ v{{ custom_block_version }}
 ^^^
@@ -154,7 +154,7 @@ A customizable API to make custom blocks easier to work with.
 :::{grid-item-card}
 :link: damage
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/damage/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/damage/pack.png
 
 Damage ・ {{ damage_version }}
 ^^^
@@ -163,9 +163,20 @@ Allows you to apply score-based damage values to both players and entities
 :::
 
 :::{grid-item-card}
+:link: interaction
+:link-type: doc
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/interaction/pack.png
+
+Interaction ・ {{ interaction_version }}
+^^^
+
+Enables easier usage of interaction entities.
+:::
+
+:::{grid-item-card}
 :link: prevent-aggression
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/prevent-aggression/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/prevent-aggression/pack.png
 
 Prevent Aggression ・ {{ prevent_aggression_version }}
 ^^^
@@ -176,7 +187,7 @@ Simply protects custom wandering traders from aggressive zombies
 :::{grid-item-card}
 :link: item
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/item/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/item/pack.png
 
 Item ・ {{ item_version }}
 ^^^
@@ -187,7 +198,7 @@ Item ・ {{ item_version }}
 :::{grid-item-card}
 :link: title
 :link-type: doc
-:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/smithed_libraries/packs/title/pack.png
+:img-bottom: https://raw.githubusercontent.com/Smithed-MC/Libraries/main/src/smithed_libraries/packs/title/pack.png
 
 Title ・ v{{ title_version }}
 ^^^
@@ -223,6 +234,7 @@ actionbar
 crafter/index
 custom-block
 damage
+interaction
 prevent-aggression
 item
 title

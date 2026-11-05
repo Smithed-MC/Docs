@@ -12,7 +12,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/crafter/
 :color: primary
 :outline:
 :expand:
@@ -30,7 +30,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/crafter-addon/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/crafter-addon/
 :color: primary
 :outline:
 :expand:

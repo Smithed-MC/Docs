@@ -76,6 +76,16 @@ The "mod menu" for data packs!
 How to use the player body and saddle slots without overwriting other modifications
 ```
 
+```{grid-item-card}
+:link: pack-enabled-tag
+:link-type: doc
+
+{{new_bdg}} Pack Enabled Tag
+^^^
+
+A predicate tag and number provider tag to mark a datapack as enabled, and return its version.
+```
+
 ::::
 
 
@@ -98,4 +108,5 @@ vanilla-overrides
 tag-specification
 data-pack-menu
 unused-player-slots
+pack-enabled-tag
 ```

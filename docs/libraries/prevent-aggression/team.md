@@ -1,4 +1,4 @@
-# Usage
+## Usage
 Every 10 ticks (0.5 seconds), hostile mobs that attack villagers are added to the `smithed.prevent_aggression` team.
 Entities with the `smithed.entity` tag are ignored, but can be added to the team with a separate command.  
 All mobs that naturally attack villagers are added to the team by default:  

@@ -12,7 +12,7 @@
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/prevent-aggression/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/prevent-aggression/
 :color: primary
 :outline:
 :expand:

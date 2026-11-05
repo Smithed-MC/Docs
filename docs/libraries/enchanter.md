@@ -17,7 +17,7 @@ This page isn't complete yet, check back often for future updates!
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/enchanter/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/enchanter/
 :color: primary
 :outline:
 :expand:

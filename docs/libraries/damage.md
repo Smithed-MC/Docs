@@ -18,7 +18,7 @@ This library is deprecated as of Minecraft 1.20 with the introduction of the `/d
 :::
 
 :::{grid-item}
-```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/smithed_libraries/packs/damage/
+```{button-link} https://github.com/Smithed-MC/Libraries/tree/main/src/smithed_libraries/packs/damage/
 :color: primary
 :outline:
 :expand:

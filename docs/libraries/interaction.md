@@ -1,4 +1,4 @@
-# Interaction (v{{ interaction_version }})
+# {{new_bdg}} Interaction (v{{ interaction_version }})
 > A small library that serves to enable easier usage of interaction entities.
 
 ::::{grid} 2

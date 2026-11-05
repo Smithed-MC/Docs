@@ -6,7 +6,7 @@ myst:
     example: "Vanilla Tweaks dialog included in the smithed dialog tag describing itself"
 ---
 
-# {{new_bdg}} Data Pack Menu Dialog
+# Data Pack Menu Dialog
 {{ convention_header }}
 
 ```{warning}

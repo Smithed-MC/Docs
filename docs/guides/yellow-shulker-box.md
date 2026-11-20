@@ -43,10 +43,20 @@ If you are still using this loot table prior to 1.20.5, use the following comman
 Over the years, Mojang has adjusted the loot table format and conditions for this loot table to function properly. The community has upgraded this version over time. We've listed all known versions of this loot table here for reference.
 
 ```{note}
-These loot tables were standardized long before Smithed and `weld` existed. Therefore, there are no `weld` rules generally created for the older tables. However, in 1.20.5, we've decided to introduce `weld` rules to increase compatibility with packs that decide to do other forms of modification to these loot tables.
+These loot tables were standardized long before Smithed and `weld` existed. Therefore, there are no `weld` rules generally created for the older tables. However, since 1.20.5, we've decided to introduce `weld` rules to increase compatibility with packs that decide to do other forms of modification to these loot tables.
 ```
 
-::::{dropdown} **1.20.5+** (Latest)
+
+::::{dropdown} **26.3+ (Latest)**
+
+```{literalinclude} tables/26.3.json
+:language: json
+```
+
+::::
+
+
+::::{dropdown} 1.20.5 - 26.2
 
 ```{important}
 1.20.5 introduced major breaking changes to items which affects this loot table. We've taken the opportunity to modernize this loot table to enable better `weld` adaptability (by separating the logic into multiple pools).

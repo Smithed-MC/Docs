@@ -66,7 +66,6 @@ Data Pack Menu Dialog
 The "mod menu" for data packs!
 ```
 
-```
 
 ```{grid-item-card}
 :link: pack-enabled-tag
